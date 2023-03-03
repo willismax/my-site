@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
   title: 'willismax',
-  tagline: 'Dinosaurs Website',
+  tagline: 'Willismax Website',
   url: 'https://willismax.github.io/', //'https://<<github帳號>>.github.io/, 
   baseUrl: '/my-site/', ///專案名稱 repo name/
   onBrokenLinks: 'throw',
@@ -41,7 +41,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Wlilismax 威力斯',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -51,11 +51,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docusaurus Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/willismax',
             label: 'GitHub',
             position: 'right',
           },
@@ -68,7 +68,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: '官方 Tutorial',
                 to: '/docs/intro',
               },
             ],
@@ -99,12 +99,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/willismax',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Willismax. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
