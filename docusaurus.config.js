@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'willismax',
   tagline: 'Willismax Website',
-  url: 'https://willismax.github.io/', //'https://<<github帳號>>.github.io/, 
+  url: 'https://willismax.github.io/my-site', //'https://<<github帳號>>.github.io/, 
   baseUrl: '/', ///專案名稱 repo name/
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
