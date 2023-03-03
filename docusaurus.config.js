@@ -13,6 +13,22 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   favicon: 'img/favicon.ico',
   organizationName: 'willismax', // Usually your GitHub org/user name.
   projectName: 'my-site', // Usually your repo name.
+  githubHost: 'github.com',
+  i18n: {
+    defaultLocale: 'zh-TW',     // 預設語系
+    locales: ['en', 'zh-TW'],   // 語系配置
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',       // 閱讀方向為左到右
+      },
+      'zh-TW': {
+        label: '繁體中文（台灣）',
+        direction: 'ltr',
+      },
+    },
+  },
+  
 
   presets: [
     [
@@ -43,7 +59,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       navbar: {
         title: 'Willismax 威力斯',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Willismax Site Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -77,16 +93,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/willis-chen/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'iThome',
+                href: 'https://ithelp.ithome.com.tw/users/20121130/',
+              },
+              {
+                label: 'Mail',
+                href: 'willismax.com@gmail.com',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/wiimax9527',
               },
             ],
           },
