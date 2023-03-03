@@ -49,6 +49,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-N364955R5S',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
@@ -130,5 +134,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      plugins: ['@docusaurus/theme-live-codeblock'],
+        themeConfig: {
+          liveCodeBlock: {
+            /**
+             * The position of the live playground, above or under the editor
+             * Possible values: "top" | "bottom"
+             */
+            playgroundPosition: 'bottom',
+          },
+        },
     }),
 });
