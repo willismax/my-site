@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   title: 'willismax',
   tagline: 'Willismax Website',
   url: 'https://willismax.github.io/', //'https://<<github帳號>>.github.io/, 
-  baseUrl: '/my-site/', ///專案名稱 repo name/
+  baseUrl: '/', ///專案名稱 repo name/
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -41,7 +41,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Wlilismax 威力斯',
+        title: 'Willismax 威力斯',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
