@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://willismax.github.io/my-site/blog</id>
+    <id>https://willismax.github.io/blog</id>
     <title>willismax Blog</title>
     <updated>2023-03-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://willismax.github.io/my-site/blog"/>
+    <link rel="alternate" href="https://willismax.github.io/blog"/>
     <subtitle>willismax Blog</subtitle>
-    <icon>https://willismax.github.io/my-site/img/favicon.ico</icon>
+    <icon>https://willismax.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[First Blog Post]]></title>
         <id>first-blog-post</id>
-        <link href="https://willismax.github.io/my-site/blog/first-blog-post"/>
+        <link href="https://willismax.github.io/blog/first-blog-post"/>
         <updated>2023-03-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[- Docusaurus 是一個可以採用 MarkDown 語法的靜態網站生成器，可以混合使用 .md、以React撰寫的元件.js，還有.mdx，是個速度極快的生成器。]]></summary>
         <author>
