@@ -97,16 +97,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             title: 'Community',
             items: [
               {
+                label: 'HackMD',
+                href: 'https://hackmd.io/@wiimax',
+              },
+              {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/in/willis-chen/',
               },
               {
                 label: 'iThome',
                 href: 'https://ithelp.ithome.com.tw/users/20121130/',
-              },
-              {
-                label: 'Mail',
-                href: 'willismax.com@gmail.com',
               },
               {
                 label: 'Twitter',
