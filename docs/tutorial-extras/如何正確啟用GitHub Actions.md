@@ -56,3 +56,5 @@ sidebar_position: 3
             user_name: github-actions[bot]
             user_email: 41898282+github-actions[bot]@users.noreply.github.com
     ```
+
+    - 修改成功後，每次 `git push` 就不用再下 `cmd /C 'set "GIT_USER=<GITHUB ID>"&& yarn deploy'` 指令，透過 Github Actions 觸發部署即可。
