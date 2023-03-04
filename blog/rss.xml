@@ -2,14 +2,14 @@
 <rss version="2.0">
     <channel>
         <title>willismax Blog</title>
-        <link>https://willismax.github.io/my-site/blog</link>
+        <link>https://willismax.ml/blog</link>
         <description>willismax Blog</description>
         <lastBuildDate>Fri, 03 Mar 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[First Blog Post]]></title>
-            <link>https://willismax.github.io/my-site/blog/first-blog-post</link>
+            <link>https://willismax.ml/blog/first-blog-post</link>
             <guid>first-blog-post</guid>
             <pubDate>Fri, 03 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[- Docusaurus 是一個可以採用 MarkDown 語法的靜態網站生成器，可以混合使用 .md、以React撰寫的元件.js，還有.mdx，是個速度極快的生成器。]]></description>
