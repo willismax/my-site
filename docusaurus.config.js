@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'willismax',
   tagline: 'willismax website',
-  url: 'https://willismax.github.io/my-site', //'https://<<github帳號>>.github.io/, 
+  url: 'https://willismax.ml/', //'https://<<github帳號>>.github.io/, 
   baseUrl: '/', ///專案名稱 repo name/
   trailingSlash: false,
   onBrokenLinks: 'throw',
@@ -21,7 +21,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     localeConfigs: {
       en: {
         label: 'English',
-        direction: 'ltr',       // 閱讀方向為左到右
       },
       'zh-TW': {
         label: '繁體中文（台灣）',
