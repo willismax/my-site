@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
   title: 'willismax',
-  tagline: 'Willismax Website',
+  tagline: 'willismax website',
   url: 'https://willismax.github.io/my-site', //'https://<<github帳號>>.github.io/, 
   baseUrl: '/', ///專案名稱 repo name/
   trailingSlash: false,
@@ -36,6 +36,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        gtag: {
+          trackingID: 'G-N364955R5S',
+          anonymizeIP: true,
+        },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -50,10 +54,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        gtag: {
-          trackingID: 'G-N364955R5S',
-          anonymizeIP: true,
-        },
       }),
     ],
   ],
@@ -64,17 +64,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       navbar: {
         title: 'Willismax 威力斯',
         logo: {
-          alt: 'Willismax Site Logo',
+          alt: 'Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
-            position: 'left',
+            position: 'right',
             label: 'Docusaurus Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'right'},
           {
             href: 'https://github.com/willismax',
             label: 'GitHub',
@@ -131,6 +134,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Willismax. Built with Docusaurus.`,
       },
+      metadata: [{ name: "robots", content: "max-image-preview:large" }],
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
