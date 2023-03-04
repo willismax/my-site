@@ -5,6 +5,13 @@ sidebar_position: 3
 # 如何使用 GitHub Action 服務將 Docusaurus 自動部屬在 Github Pages
 - 如果用官網的 GitHub Actions 部署，會出錯
 - 在[此網誌](https://ouch1978.github.io/docs/docusaurus/configuration/deploy-to-github-with-github-action)查到解決方法，仍需要修改。
+## 狀況排除
+
+- 遇到了Action權限的問題，查詢[issue](https://github.com/ad-m/github-push-action/issues/96)發現跟該Repo的 `設定>Action` 最下方的權限設定有關，更改為第一項即可。
+![](https://hackmd.io/_uploads/SyrVG0xJh.png) 
+![](https://hackmd.io/_uploads/BkabGReyn.png)
+
+
 - 修改成果:
   路徑: `.github/workflows/deploy.yml`
     ```yaml
