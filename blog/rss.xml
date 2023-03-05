@@ -4,9 +4,16 @@
         <title>willismax Blog</title>
         <link>https://willismax.github.io/my-site/blog</link>
         <description>willismax Blog</description>
-        <lastBuildDate>Fri, 03 Mar 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Mar 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[用 Colab 免費體驗 AI 繪圖]]></title>
+            <link>https://willismax.github.io/my-site/blog/用 Colab 免費體驗 AI 繪圖</link>
+            <guid>用 Colab 免費體驗 AI 繪圖</guid>
+            <pubDate>Sun, 05 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[您也想要自己用AI繪圖嗎?]]></description>
+        </item>
         <item>
             <title><![CDATA[First Blog Post]]></title>
             <link>https://willismax.github.io/my-site/blog/first-blog-post</link>
