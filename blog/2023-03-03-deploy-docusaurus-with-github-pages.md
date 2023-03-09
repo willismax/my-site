@@ -5,16 +5,23 @@ authors:
   name: Willis Chen
   title: 嚮往自由者
   url: https://willismax.github.io/my-site/
-GA: G-N364955R5S
+GA: G-CH7FZ71WRC
 tags: [GitHub, GitHub Actions, Docusaurus]
 ---
 
 # 使用GitHub Pages 部署 Docusaurus 教學
 ![](https://hackmd.io/_uploads/ryKZyWv1h.png)
 
-在本篇文章中，我們將會介紹如何使用 GitHub Pages 部署 Docusaurus，並提供詳細的步驟指引，讓讀者可以輕鬆地建立自己的網誌。
+如何使用 GitHub Pages 部署 Docusaurus，可以透過以下步驟，輕鬆地建立自己的網誌。
 
-事前準備
+- 步驟1. 事前準備一個 [GitHub](https://github.com/) 帳號，並且安裝 [Git 工具](https://git-scm.com/downloads) 及 [Node.js](https://nodejs.org/)。
+- 步驟2. 創建新的 Repository，作為 GitHub Pages 靜態網頁存放用。
+- 步驟3. 下載 Docusaurus 範本
+- 步驟4. 安裝和測試 Docusaurus
+
+
+
+步驟一：事前準備
 ----
 
 在開始之前，我們需要先確保以下條件都已經滿足：
@@ -23,7 +30,7 @@ tags: [GitHub, GitHub Actions, Docusaurus]
 -   安裝 Git 工具，可以從 [Git 官網](https://git-scm.com/downloads) 下載安裝包進行安裝。
 -   安裝 Node.js 和 npm，可以在 [Node.js 官網](https://nodejs.org/) 下載安裝包進行安裝。
 
-步驟一：創建新的 Repository
+步驟二：創建新的 Repository
 -------------------
 
 首先，在 GitHub 上創建一個新的 Repository，用來存放網誌的代碼和部署文件。以下是創建 Repository 的步驟：
@@ -35,7 +42,7 @@ tags: [GitHub, GitHub Actions, Docusaurus]
 3.  在創建 Repository 的頁面中，填寫 Repository 名稱、描述和設置等信息，然後點擊 “Create repository” 按鈕創建 Repository。
     
 
-步驟二：下載 Docusaurus 範本
+步驟三：下載 Docusaurus 範本
 --------------------
 
 接下來，我們需要下載 Docusaurus 的範本代碼，作為網誌的基礎。以下是下載 Docusaurus 範本的步驟：
@@ -47,7 +54,7 @@ tags: [GitHub, GitHub Actions, Docusaurus]
     ``` 
 3.  執行命令後，Docusaurus 範本會被下載到當前目錄下的 my-blog 文件夾中。
 
-步驟三：安裝和測試 Docusaurus
+步驟四：安裝和測試 Docusaurus
 --------------------
 
 在下載 Docusaurus 範本之後，我們需要進行安裝和測試，以確保網誌可以正常運行。以下是安裝和測試 Docusaurus 的步驟：
@@ -102,5 +109,5 @@ tags: [GitHub, GitHub Actions, Docusaurus]
 
 ## 結語
 
-以上就是使用 Github Pages 部署 Docusaurus 的完整教學。希望這篇文章能夠對你有所幫助，讓你可以輕鬆地建立自己的網站並將其部署到 Github 上。如果你有任何疑問或問題，歡迎在下面的留言區提出，我們會盡快回
+以上使用 Github Pages 部署 Docusaurus 教學，希望能幫助到您。
 
