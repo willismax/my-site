@@ -4,9 +4,16 @@
         <title>willismax Blog</title>
         <link>https://willismax.github.io/my-site/en/blog</link>
         <description>willismax Blog</description>
-        <lastBuildDate>Sun, 05 Mar 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 09 Mar 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO]]></title>
+            <link>https://willismax.github.io/my-site/en/blog/使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO</link>
+            <guid>使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO</guid>
+            <pubDate>Thu, 09 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[如果你是一個 Docusaurus 使用者，你可能已經知道如何使用 Github Pages 部署你的網誌。但是，手動更新並部署你的網誌非常耗時，而且容易出錯。為了解決這個問題，你可以使用 GitHub Actions 來自動生成和部署你的網誌，這樣你就可以專注於撰寫新的文章了。]]></description>
+        </item>
         <item>
             <title><![CDATA[用 Colab 免費體驗 AI 繪圖]]></title>
             <link>https://willismax.github.io/my-site/en/blog/用 Colab 免費體驗 AI 繪圖</link>

@@ -2,11 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willismax.github.io/my-site/en/blog</id>
     <title>willismax Blog</title>
-    <updated>2023-03-05T00:00:00.000Z</updated>
+    <updated>2023-03-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willismax.github.io/my-site/en/blog"/>
     <subtitle>willismax Blog</subtitle>
     <icon>https://willismax.github.io/my-site/en/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO]]></title>
+        <id>使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO</id>
+        <link href="https://willismax.github.io/my-site/en/blog/使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO"/>
+        <updated>2023-03-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[如果你是一個 Docusaurus 使用者，你可能已經知道如何使用 Github Pages 部署你的網誌。但是，手動更新並部署你的網誌非常耗時，而且容易出錯。為了解決這個問題，你可以使用 GitHub Actions 來自動生成和部署你的網誌，這樣你就可以專注於撰寫新的文章了。]]></summary>
+        <author>
+            <name>Willis Chen</name>
+            <uri>https://willismax.github.io/my-site/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[用 Colab 免費體驗 AI 繪圖]]></title>
         <id>用 Colab 免費體驗 AI 繪圖</id>
