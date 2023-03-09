@@ -5,11 +5,12 @@ authors:
   name: Willis Chen
   title: 嚮往自由者
   url: https://willismax.github.io/my-site/
-GA: G-CH7FZ71WRC
+GA: G-N364955R5S
 tags: [GitHub, GitHub Actions, Docusaurus]
 ---
 
 # 使用GitHub Pages 部署 Docusaurus 教學
+![](https://hackmd.io/_uploads/ryKZyWv1h.png)
 
 在本篇文章中，我們將會介紹如何使用 GitHub Pages 部署 Docusaurus，並提供詳細的步驟指引，讓讀者可以輕鬆地建立自己的網誌。
 
