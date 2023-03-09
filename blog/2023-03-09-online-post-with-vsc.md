@@ -14,6 +14,9 @@ tags: [GitHub, GitHub Actions, Docusaurus]
 使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO
 ===========================================
 
+
+[![hackmd-github-sync-badge](https://hackmd.io/pMZX7mLQRN-hD-MG3ASReA/badge)](https://hackmd.io/pMZX7mLQRN-hD-MG3ASReA)
+
 ![](https://hackmd.io/_uploads/ryzvXkw12.png)
 
 如果你是一個 Docusaurus 使用者，你可能已經知道如何使用 Github Pages 部署你的網誌。但是，手動更新並部署你的網誌非常耗時，而且容易出錯。為了解決這個問題，你可以使用 GitHub Actions 來自動生成和部署你的網誌，這樣你就可以專注於撰寫新的文章了。
