@@ -88,11 +88,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'More',
             items: [
               {
-                label: '官方 Tutorial',
-                to: '/docs/intro',
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/willismax',
               },
             ],
           },
@@ -116,20 +120,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
                 href: 'https://twitter.com/wiimax9527',
               },
             ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/willismax',
-              },
-            ],
-          },
+          }, 
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Willismax. Built with Docusaurus.`,
       },
