@@ -67,12 +67,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'right',
-            label: 'Docusaurus Tutorial',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'right',
+          //   label: 'Docusaurus Tutorial',
+          // },
           {
             to: '/blog', 
             label: 'Blog', 
