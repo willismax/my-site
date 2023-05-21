@@ -39,11 +39,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           trackingID: 'G-N364955R5S',
           anonymizeIP: true,
         },
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://willismax.github.io/my-site/edit/main/website/', //改
-        },
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        //   // Please change this to your repo.
+        //   editUrl: 'https://willismax.github.io/my-site/edit/main/website/', //改
+        // },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.

@@ -3,7 +3,7 @@ slug: 使用GitHub Pages 部署 Docusaurus 教學
 title: 使用GitHub Pages 部署 Docusaurus 教學
 authors:
   name: Willis Chen
-  title: 嚮往自由者
+  title: Tech Instructor
   url: https://willismax.github.io/my-site/
 GA: G-CH7FZ71WRC
 tags: [GitHub, GitHub Actions, Docusaurus]
