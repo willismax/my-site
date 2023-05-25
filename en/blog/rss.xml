@@ -4,9 +4,16 @@
         <title>willismax Blog</title>
         <link>https://willismax.github.io/my-site/en/blog</link>
         <description>willismax Blog</description>
-        <lastBuildDate>Thu, 09 Mar 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 May 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[從亞當斯密"看不見的手"認識ESG]]></title>
+            <link>https://willismax.github.io/my-site/en/blog/從亞當斯密"看不見的手"認識ESG</link>
+            <guid>從亞當斯密"看不見的手"認識ESG</guid>
+            <pubDate>Thu, 25 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[你有沒有聽過亞當斯密的「看不見的手」？這是一個經濟學的名詞，指的是市場機能能夠自動調節供需，讓每個人都能追求自己的利益，同時也促進社會的福祉。聽起來很神奇，但是這個「看不見的手」其實有一個隱藏的秘密，那就是它其實是一隻「ESG」的手！今天我想和大家聊聊亞當斯密的"看不見的手"和ESG之間的關係。😊]]></description>
+        </item>
         <item>
             <title><![CDATA[使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO]]></title>
             <link>https://willismax.github.io/my-site/en/blog/使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO</link>
