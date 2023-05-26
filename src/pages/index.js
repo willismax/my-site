@@ -16,8 +16,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            請支援收銀 ⏱️
+            to="/blog">
+            學習心得 ⏱️
           </Link>
         </div>
       </div>
@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Willismax 的個人站 <head />">
+      description="威力斯學習筆記 <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
