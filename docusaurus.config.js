@@ -108,6 +108,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           },
         ],
       },
+      gtag: {
+        trackingID: 'G-N364955R5S',
+        anonymizeIP: true,
+      },
       footer: {
         style: 'dark',
         // links: [
