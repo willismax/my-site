@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  /* --ifm-color-primary: linear-gradient(red,blue); */
   --ifm-color-primary: #198cb6;
   --ifm-color-primary-dark: #127295;
   --ifm-color-primary-darker: #147092;

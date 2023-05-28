@@ -7,7 +7,7 @@ authors:
   title: Tech Instructor
   url: https://willismax.github.io/my-site/
 GA: G-CH7FZ71WRC
-tags: [GitHub, GitHub Actions, Docusaurus]
+tags: [GitHub Actions, Docusaurus, Tech]
 ---
 
 # 使用GitHub Pages 部署 Docusaurus 教學

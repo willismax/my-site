@@ -75,15 +75,31 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         },
         items: [
           {
-            to: '/blog', 
-            label: 'Blog', 
-            position: 'left'
+            to: "/blog",
+            activeBasePath: "blog",
+            label: "Blog",
+            position: "left",
+            items: [
+              {
+                label: "Tech",
+                to: "/blog/tags/Tech",
+              },
+              {
+                label: "ESG",
+                to: "/blog/tags/ESG",
+              },
+            ],
           },
           {
             type: 'doc',
             docId: 'intro',
             position: 'right',
             label: '如何使用 Docusaurus',
+          },
+          {
+            href: "https://hackmd.io/@wiimax",
+            label: "HackMD",
+            position: "right",
           },
           {
             href: 'https://github.com/willismax',
@@ -94,44 +110,44 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: '關於我',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'HackMD',
-                href: 'https://hackmd.io/@wiimax',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/willismax',
-              },
-              {
-                label: 'iThome',
-                href: 'https://ithelp.ithome.com.tw/users/20121130/',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
+        // links: [
+        //   {
+        //     title: '關於我',
+        //     items: [
+        //       {
+        //         label: 'Blog',
+        //         to: '/blog',
+        //       },
+        //       {
+        //         label: 'HackMD',
+        //         href: 'https://hackmd.io/@wiimax',
+        //       },
+        //       {
+        //         label: 'GitHub',
+        //         href: 'https://github.com/willismax',
+        //       },
+        //       {
+        //         label: 'iThome',
+        //         href: 'https://ithelp.ithome.com.tw/users/20121130/',
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: 'More',
+        //     items: [
               
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/willis-chen/',
-              },
+        //       {
+        //         label: 'LinkedIn',
+        //         href: 'https://www.linkedin.com/in/willis-chen/',
+        //       },
               
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/wiimax9527',
-              },
-            ],
-          }, 
-        ],
+        //       {
+        //         label: 'Twitter',
+        //         href: 'https://twitter.com/wiimax9527',
+        //       },
+        //     ],
+        //   }, 
+        // ],
         copyright: `Copyright © ${new Date().getFullYear()} Willismax. Built with Docusaurus.`,
       },
       metadata: [{ name: "robots", content: "max-image-preview:large" }],

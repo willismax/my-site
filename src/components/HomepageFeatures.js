@@ -4,22 +4,20 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: '技術成長',
+    title: '我的GitHub',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        來 <a href="https://github.com/willismax">Github</a> 看看賞星星 
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: '關於我',
+    Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        從事訓練專案及技術講師，喜歡持續學習與分享，分享資料幾乎都在 <a href="https://hackmd.io/@wiimax">HackMD</a>
       </>
     ),
   },
