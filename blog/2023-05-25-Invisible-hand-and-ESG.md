@@ -1,6 +1,6 @@
 ---
-slug: 從亞當斯密"看不見的手"認識ESG
-title: 從亞當斯密"看不見的手"認識ESG
+slug: 從亞當斯密看不見的手認識ESG
+title: 從亞當斯密看不見的手認識ESG
 authors:
   name: Willis Chen
   title: Tech Instructor

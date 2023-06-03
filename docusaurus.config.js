@@ -78,7 +78,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             to: "/blog",
             activeBasePath: "blog",
             label: "Blog",
-            position: "left",
+            position: "right",
             items: [
               {
                 label: "Tech",
@@ -94,7 +94,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'doc',
             docId: 'intro',
             position: 'right',
-            label: '如何使用 Docusaurus',
+            label: 'Docs',
           },
           {
             href: "https://hackmd.io/@wiimax",
@@ -102,15 +102,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             position: "right",
           },
           {
-            href: 'https://github.com/willismax',
+            href: 'https://github.com/willismax/my-site',
             label: 'GitHub',
             position: 'right',
           },
         ],
-      },
-      gtag: {
-        trackingID: 'G-N364955R5S',
-        anonymizeIP: true,
       },
       footer: {
         style: 'dark',
@@ -152,9 +148,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         //     ],
         //   }, 
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} Willismax. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} willismax. Built with Docusaurus.`,
       },
       metadata: [{ name: "robots", content: "max-image-preview:large" }],
+      metadata: [{name: '威力斯', content: '技術分享, ICT, 教學'}],
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

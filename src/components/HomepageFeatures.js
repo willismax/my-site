@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        來 <a href="https://github.com/willismax">Github</a> 看看賞星星 
+        來 <a href="https://github.com/willismax">Github</a> 看看賞星星，有不少基於 Python 的應用。 
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
-        從事訓練專案及技術講師，喜歡持續學習與分享，分享資料幾乎都在 <a href="https://hackmd.io/@wiimax">HackMD</a>
+        持續學習與分享，分享資料幾乎都在 <a href="https://hackmd.io/@wiimax">HackMD</a> ，邀課與合作 willismax.com@gmail.com
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        以 React 為基礎的 Meta 開源專案 "Docusaurus".
+        這神奇的網站是以 React 為基礎的 Meta 開源專案 "Docusaurus" 架構，文件用 React 或 MarkDown 撰寫皆可
       </>
     ),
   },
