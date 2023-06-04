@@ -49,6 +49,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           trackingID: 'G-N364955R5S',
           anonymizeIP: true,
         },
+        
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
@@ -133,7 +134,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         //     ],
         //   },
         //   {
-        //     title: 'More',
+        //     title: 'Social',
         //     items: [
               
         //       {
@@ -150,8 +151,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         // ],
         copyright: `Copyright © ${new Date().getFullYear()} willismax. Built with Docusaurus.`,
       },
-      metadata: [{ name: "robots", content: "max-image-preview:large" }],
-      metadata: [{name: '威力斯', content: '技術分享, ICT, 教學'}],
+      metadata: [
+        { name: "robots", content: "max-image-preview:large" },
+        { name: '威力斯', content: 'Python, ICT, Python, Tech, ESG'}
+    ],
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
@@ -163,8 +166,19 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
              * The position of the live playground, above or under the editor
              * Possible values: "top" | "bottom"
              */
-            playgroundPosition: 'bottom',
-          },
+          playgroundPosition: 'bottom',
         },
+      },
+      giscus: {
+        repo: 'willismax/my-site',
+        repoId: 'R_kgDOJEzR1A',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOJEzR1M4CW7nQ',
+        theme: 'light',
+        darkTheme: 'dark',
+      },
+      facebookPixelId : {
+        facebookAppId: '212741651307312',
+      },
     }),
 });
