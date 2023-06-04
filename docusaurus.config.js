@@ -39,11 +39,26 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           customCss: [require.resolve('./src/css/custom.css')],
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: true, // When set to false, the "x min read" won't be shown
+          readingTime: ({content, frontMatter, defaultReadingTime}) =>
+            defaultReadingTime({content, options: {wordsPerMinute: 300}}),
           blogTitle: '威力斯技術填坑分享部落格!',
           blogDescription: '威力斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
           editUrl:
             'https://willismax.github.io/my-site/edit/main/website/', //改
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} willismax.`,
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              return defaultCreateFeedItems({
+                // keep only the 10 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 10),
+                ...rest,
+              });
+            },
+          },
+            
         },
         gtag: {
           trackingID: 'G-N364955R5S',
