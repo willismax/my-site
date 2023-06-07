@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
-        持續學習與分享，分享資料幾乎都在 <a href="https://hackmd.io/@wiimax">HackMD</a> ，邀課與合作 willismax.com@gmail.com
+        持續學習與分享，共享資料幾乎都在 <a href="https://hackmd.io/@wiimax">HackMD</a> ，邀課與合作 willismax.com@gmail.com
       </>
     ),
   },

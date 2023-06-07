@@ -168,7 +168,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
       metadata: [
         { name: "robots", content: "max-image-preview:large" },
-        { name: '威力斯', content: 'Python, ICT, Python, Tech, ESG'}
+        { name: '威力斯', content: 'Python, ICT, Python, Tech, ESG'},
+        { name: "robots", content: "max-image-preview:large" }
     ],
       prism: {
         theme: lightCodeTheme,
