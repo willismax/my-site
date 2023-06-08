@@ -16,19 +16,32 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   projectName: 'my-site', // Usually your repo name.
   githubHost: 'github.com',
   i18n: {
-    defaultLocale: 'zh-TW',     // 預設語系
-    locales: ['en', 'zh-TW'],   // 語系配置
+    defaultLocale: 'zh-TW',     
+    locales: ['en', 'zh-TW'],  
     localeConfigs: {
       en: {
         label: 'English',
+        direction: 'ltr',       
       },
       'zh-TW': {
         label: '繁體中文（台灣）',
         direction: 'ltr',
       },
     },
+    
   },
-  
+
+  // scripts: [
+    
+  //   // String format.
+  //   'https://docusaurus.io/script.js',
+  //   // Object format.
+  //   {
+  //     src:
+  //       'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+  //     async: true,    // 是否同步
+  //   },
+  // ],
 
   presets: [
     [
@@ -69,20 +82,25 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           changefreq: 'weekly',
           priority: 0.5,
         },
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        //   // Please change this to your repo.
-        //   editUrl: 'https://willismax.github.io/my-site/edit/main/website/', //改
-        // },
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          editUrl: 'https://willismax.github.io/my-site/edit/main/website/', //改
+        },
        
         
       },
     ],
   ],
-
+  
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: 'OFA1T05UBL',
+        apiKey: 'e7a3c71f44c9ee5d90b59add67b98624',
+        indexName: 'willismax',
+      },
       navbar: {
         title: 'willismax 威力斯',
         logo: {
@@ -112,6 +130,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             position: 'right',
             label: 'Docs',
           },
+
           {
             href: "https://hackmd.io/@wiimax",
             label: "HackMD",
@@ -122,8 +141,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'search',
+            position: 'right',
+          },
         ],
       },
+
       footer: {
         style: 'dark',
         // links: [

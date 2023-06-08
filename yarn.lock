@@ -1552,7 +1552,7 @@
     react-live "2.2.3"
     tslib "^2.4.0"
 
-"@docusaurus/theme-search-algolia@2.4.1":
+"@docusaurus/theme-search-algolia@^2.4.1", "@docusaurus/theme-search-algolia@2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@docusaurus/theme-search-algolia/-/theme-search-algolia-2.4.1.tgz"
   integrity sha512-6BcqW2lnLhZCXuMAvPRezFs1DpmEKzXFKlYjruuas+Xy3AQeFzDJKTJFIm49N77WFCTyxff8d3E4Q9pi/+5McQ==
