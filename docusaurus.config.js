@@ -95,10 +95,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    ({  
       algolia: {
-        appId: 'OFA1T05UBL',
-        apiKey: 'e7a3c71f44c9ee5d90b59add67b98624',
+        appId: 'HRS5TFT9KD',
+        apiKey: '079bfb99b9ac37548344f80d32d2e07e',
         indexName: 'willismax',
       },
       navbar: {
