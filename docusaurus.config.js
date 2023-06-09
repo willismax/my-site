@@ -209,6 +209,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           playgroundPosition: 'bottom',
         },
       },
+      plugins: ["posthog-docusaurus"],
+      themeConfig: {
+        posthog: {
+          apiKey: process.env.POSTHOG_API_KEY || "DEV",
+          appUrl: "https://app.posthog.com", // optional
+          enableInDevelopment: false, // optional
+        },
+      },
       giscus: {
         repo: 'willismax/my-site',
         repoId: 'R_kgDOJEzR1A',
@@ -222,3 +230,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
     }),
 });
+
+// module.exports = {
+//   plugins: ["posthog-docusaurus"],
+//   themeConfig: {
+//     posthog: {
+//       apiKey: process.env.POSTHOG_API_KEY || "DEV",
+//       appUrl: "https://app.posthog.com", // optional
+//       enableInDevelopment: false, // optional
+//     },
+//   },
+// };
