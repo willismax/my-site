@@ -58,7 +58,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           blogTitle: '威力斯技術填坑分享部落格!',
           blogDescription: '威力斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
           editUrl:
-            'https://willismax.github.io/my-site/edit/main/website/', //改
+            'https://github.com/willismax/my-site/edit/main/', //改
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} willismax.`,
@@ -85,7 +85,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://willismax.github.io/my-site/edit/main/website/', //改
+          editUrl: 'https://github.com/willismax/my-site/edit/main/',
         },
        
         
