@@ -198,33 +198,38 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         { name: "robots", content: "max-image-preview:large" },
         { name: '威力斯', content: 'Python, ICT, Python, Tech, ESG'},
         { name: "robots", content: "max-image-preview:large" }
-    ],
+      ],
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      plugins: ['@docusaurus/theme-live-codeblock', "posthog-docusaurus"],
-        themeConfig: {
-          liveCodeBlock: {
-            /**
-             * The position of the live playground, above or under the editor
-             * Possible values: "top" | "bottom"
-             */
-          playgroundPosition: 'bottom',
-        },
-          posthog: {
+      plugins: [
+        [
+          '@docusaurus/theme-live-codeblock',
+          {
+            themeConfig: {
+              liveCodeBlock: {
+                playgroundPosition: 'bottom', //"top" | "bottom"
+              },
+            }
+          },
+          "posthog-docusaurus",
+          {
             apiKey: process.env.POSTHOG_API_KEY || "DEV",
             appUrl: "https://app.posthog.com", // optional
             enableInDevelopment: false, // optional
-        },
-      },
-      giscus: {
-        repo: 'willismax/my-site',
-        repoId: 'R_kgDOJEzR1A',
-        category: 'Announcements',
-        categoryId: 'DIC_kwDOJEzR1M4CW7nQ',
-        theme: 'light',
-        darkTheme: 'dark',
-      },
+          },
+          "giscus",
+           {
+            repo: 'willismax/my-site',
+            repoId: 'R_kgDOJEzR1A',
+            category: 'Announcements',
+            categoryId: 'DIC_kwDOJEzR1M4CW7nQ',
+            theme: 'light',
+            darkTheme: 'dark',
+          },
+        ],
+      ],
+    
     }),
 });
