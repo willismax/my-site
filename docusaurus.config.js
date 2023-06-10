@@ -130,17 +130,21 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             position: 'right',
             label: 'Docs',
           },
+          { 
+            to: "about/", 
+            label: "About Me", 
+            position: "right" },
 
-          {
-            href: "https://hackmd.io/@wiimax",
-            label: "HackMD",
-            position: "right",
-          },
-          {
-            href: 'https://github.com/willismax/my-site',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // {
+          //   href: "https://hackmd.io/@wiimax",
+          //   label: "HackMD",
+          //   position: "right",
+          // },
+          // {
+          //   href: 'https://github.com/willismax/my-site',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
           {
             type: 'search',
             position: 'right',
