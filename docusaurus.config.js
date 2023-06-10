@@ -199,7 +199,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      plugins: ['@docusaurus/theme-live-codeblock'],
+      plugins: ['@docusaurus/theme-live-codeblock', "posthog-docusaurus"],
         themeConfig: {
           liveCodeBlock: {
             /**
@@ -208,13 +208,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
              */
           playgroundPosition: 'bottom',
         },
-      },
-      plugins: ["posthog-docusaurus"],
-      themeConfig: {
-        posthog: {
-          apiKey: process.env.POSTHOG_API_KEY || "DEV",
-          appUrl: "https://app.posthog.com", // optional
-          enableInDevelopment: false, // optional
+          posthog: {
+            apiKey: process.env.POSTHOG_API_KEY || "DEV",
+            appUrl: "https://app.posthog.com", // optional
+            enableInDevelopment: false, // optional
         },
       },
       giscus: {
