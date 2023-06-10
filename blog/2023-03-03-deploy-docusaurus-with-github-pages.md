@@ -1,6 +1,6 @@
 ---
-title: 使用GitHub Pages 部署 Docusaurus 教學
-slug: 使用GitHub Pages 部署 Docusaurus 教學
+title: 使用GitHubPages部署Docusaurus
+slug: 使用GitHubPages部署Docusaurus
 date: 2023-03-03T10:00
 authors:
   name: Willis Chen

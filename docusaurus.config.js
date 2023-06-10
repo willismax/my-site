@@ -225,19 +225,5 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         theme: 'light',
         darkTheme: 'dark',
       },
-      facebookPixelId : {
-        facebookAppId: '212741651307312',
-      },
     }),
 });
-
-// module.exports = {
-//   plugins: ["posthog-docusaurus"],
-//   themeConfig: {
-//     posthog: {
-//       apiKey: process.env.POSTHOG_API_KEY || "DEV",
-//       appUrl: "https://app.posthog.com", // optional
-//       enableInDevelopment: false, // optional
-//     },
-//   },
-// };
