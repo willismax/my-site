@@ -1,8 +1,8 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "willismax Blog",
+    "title": "Will is MAX Blog",
     "home_page_url": "https://willismax.github.io/my-site/en/blog",
-    "description": "willismax Blog",
+    "description": "Will is MAX Blog",
     "items": [
         {
             "id": "https://willismax.github.io/my-site/en/blog/用HackMD API打造個人專屬LINE BOT助手",
