@@ -4,8 +4,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
-  title: 'willismax',
-  tagline: '威力斯 技術分享',
+  title: 'Will is MAX',
+  tagline: '學而時習之，不亦悅乎',
   url: 'https://willismax.github.io/', //'https://<<github帳號>>.github.io/, 
   baseUrl: '/my-site/', ///專案名稱 repo name/
   trailingSlash: false,
@@ -55,7 +55,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           showReadingTime: true, // When set to false, the "x min read" won't be shown
           readingTime: ({content, frontMatter, defaultReadingTime}) =>
             defaultReadingTime({content, options: {wordsPerMinute: 300}}),
-          blogTitle: '威力斯技術填坑分享部落格!',
+          blogTitle: 'Willismax 威力斯資訊技部落格!',
           blogDescription: '威力斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
           editUrl:
             'https://github.com/willismax/my-site/blob/main/', //改
@@ -102,7 +102,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         indexName: 'willismax',
       },
       navbar: {
-        title: 'willismax 威力斯',
+        title: 'Willismax 威力斯',
         logo: {
           alt: 'Site Logo',
           src: 'img/logo.svg',
@@ -135,16 +135,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             label: "About Me", 
             position: "right" },
 
-          // {
-          //   href: "https://hackmd.io/@wiimax",
-          //   label: "HackMD",
-          //   position: "right",
-          // },
-          // {
-          //   href: 'https://github.com/willismax/my-site',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
+          {
+            href: "https://hackmd.io/@wiimax",
+            label: "HackMD",
+            position: "right",
+          },
+          {
+            href: 'https://github.com/willismax/my-site',
+            label: 'GitHub',
+            position: 'right',
+          },
           {
             type: 'search',
             position: 'right',
