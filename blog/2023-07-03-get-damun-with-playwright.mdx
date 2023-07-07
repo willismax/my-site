@@ -1,18 +1,23 @@
 ---
-slug: 用PlayWright抓取巴哈姆特動漫瘋彈幕分析
-title: 用PlayWright抓取巴哈姆特動漫瘋彈幕分析
+slug: 用PlayWright抓取動態網站資料
+title: 用PlayWright抓取動態網站資料
 authors:
   name: Willis Chen
   title: Tech Instructor
   url: https://willismax.github.io/my-site/
 GA: G-CH7FZ71WRC
-tags: [web,Tech]
+tags: [Python, Tech, PlayWright, 爬蟲, 資料分析]
 ---
 
-# 用PlayWright抓取巴哈姆特動漫瘋彈幕分析
+# 用PlayWright抓取巴哈姆特動漫瘋彈幕
 
 
-在這篇文章中，將探討如何使用Python的PlayWright模組來抓取和分析巴哈姆特動漫瘋的彈幕數據。我們將一步步教你如何安裝PlayWright，如何利用它控制網頁行為，並如何抓取和儲存需要的數據。
+在這篇文章中，將探討如何使用Python的PlayWright模組來抓取巴哈姆特動漫瘋的彈幕數據。
+目標如下:
+- 認識PlayWright
+- 如何安裝PlayWright。
+- 如何利用PlayWright控制網頁行為。
+- 如何改寫腳本，抓取、整理和儲存需要的數據。
 
 什麼是PlayWright?
 --------------
@@ -29,10 +34,10 @@ tags: [web,Tech]
 > pip install playwright
 ``` 
 
-使用PlayWright
+如何利用PlayWright控制網頁行為
 ------------
 
-首先，我們需要啟動一個PlayWright的實例，並且以我們選定的瀏覽器來執行我們的程式。以下是一個以Chromium瀏覽器為例的程式碼：
+首先，我們需要啟動一個PlayWright的實例，並且以我們選定的瀏覽器來執行我們的程式。以下是一個以Chromium瀏覽器為例的程式碼，同理也可以使用webkit瀏覽器：
 
 
 ```
@@ -53,8 +58,7 @@ codegen命令包含一些可用的參數，例如：
 > python -m playwright codegen --target python -o damun.py -b webkit https://ani.gamer.com.tw/
 ```
 
-## 修改PlayWright腳本
-為了包含抓取後的解析及整理，可以在前面透過點選產製的damun.py腳本中，新增解析的程式
+此時的`damun.py`內容參考如下:
 
 ```python
 
@@ -76,10 +80,88 @@ def run(playwright: Playwright, sn) -> None:
     # screenshot
     page.screenshot(path='ani.jpg', full_page = True)
     
-    # use Beautiful to get damun
+    ### 稍後加上網頁解析
+    ### 稍後加上內容萃取
+    ### 稍後加上資料儲存
+    
+    page.close()
+
+    # ---------------------
+    context.close()
+    browser.close()
+
+
+with sync_playwright() as playwright:
+    run(playwright, sys.argv[1])
+```
+
+
+
+## 修改PlayWright腳本
+為了包含抓取後的解析及整理，可以在前面透過點選產製的damun.py腳本中，新增解析的程式
+
+- 網頁解析: `page`內容為HTML，將其轉換成`BeautifulSoup`物件，方便後續操作。
+    ```python
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(page.content(), 'lxml')
+    ```
+- 內容萃取: 
+  這邊藏的一個很關鍵的做法，用For迴圈直接將結果設計為JSON like的Python Dictionary格式。
+    - 每次回圈的過程一次性的將擷取對象整理好。
+    ```python
+    # for-loops
+    res = []
+    k = {}
+    for li in soup.select('.sub-list-li'):
+        k['userid'] = li.select_one('.name > span').text.strip()
+        k['text'] = li.select_one('.sub_content').text.strip()
+        k['msg_time'] = li.select_one('b').text.strip()
+        print(k)
+        res.append(k)
+    ```    
+    - 如果你熟悉列表推導式(list comprehension)，以下改寫更為直觀:
+    ```python
+        res = [ {
+            'userid': li.select_one('.name > span').text.strip(),
+            'text' : li.select_one('.sub_content').text.strip(),
+            'msg_time' : li.select_one('b').text.strip()
+        } for li in soup.select('.sub-list-li')]
+    ```
+
+- 資料儲存: 將Dict樣式存成JSON格式，方便後續運用。
+    ```python
+    import json
+
+    with open(f'damun_{sn}.json', 'w') as f:
+        json.dump(res, f)
+    ```
+
+- 最終的`damun.py`腳本內容:
+```python
+
+from playwright.sync_api import Playwright, sync_playwright
+from bs4 import BeautifulSoup
+import json
+import sys
+import time
+
+
+def run(playwright: Playwright, sn) -> None:
+    browser = playwright.chromium.launch(headless=False)
+    context = browser.new_context()
+    page = context.new_page()
+
+    page.goto(f"https://ani.gamer.com.tw/animeVideo.php?sn={sn}")
+    time.sleep(5)
+
+    # screenshot
+    page.screenshot(path='ani.jpg', full_page = True)
+    
+    # 網頁解析
     soup = BeautifulSoup(page.content(), 'lxml')
 
-    # 列表推導式
+    # 內容萃取(列表推導式)
     res = [ {
         'userid': li.select_one('.name > span').text.strip(),
         'text' : li.select_one('.sub_content').text.strip(),
@@ -89,7 +171,7 @@ def run(playwright: Playwright, sn) -> None:
     print(res)
 
     
-    # write JSON data to a file
+    # 資料儲存(JSON檔)
     with open(f'damun_{sn}.json', 'w') as f:
         json.dump(res, f)
 
@@ -110,22 +192,28 @@ with sync_playwright() as playwright:
 執行playwright腳本
 --------------
 
-接下來，我們將執行我們生成的腳本，並將結果儲存到變數中。然後，使用Python的ast模組將結果轉換為Python對象。以下是一個實際的例子：
+接下來，執行我們生成的腳本，可以在命令列執行腳本。
 > 33846為動畫的編號，可以更換成想要分析的動畫序號。
+```
+> python damun.py 33846
+```
+然後，使用Python的`ast`模組將結果轉換為Python對象。以下是一個實際的例子：
 
-```res = ! python damun.py 33846
+```
+# 此欄位內容於ipynb執行
+res = ! python damun.py 33846
 import ast
 res = [ast.literal_eval(i) for i in res]
 print(res)
 ``` 
 
-將[out]內容存至page.json
+將內容存為`page.json`
 ---------------------
 
 有兩種方式可以將我們獲得的結果儲存為json格式。一種方式是使用linux的命令行將結果重定向到一個json檔案中。例如：
 
 ```
-python damun.py 33846 > page.json
+> python damun.py 33846 > page.json
 ```
 
 另一種方式是直接在Python腳本中將結果儲存為json檔案。以下是一個實際的例子：
@@ -147,6 +235,16 @@ with open(file_name, 'r', encoding='utf-8') as f:
 ![](https://hackmd.io/_uploads/rkQ5rwxF2.png)
 
 
-在上述的Python腳本中，首先定義了我們的檔案名稱。然後，我們使用Python的內建函數open讀取該檔案。最後，我們使用json模組的loads函數將讀取到的資料轉換為Python對象。
+擷取完成!
 
-以上就是如何使用PlayWright抓取並分析巴哈姆特動漫瘋的彈幕數據的全過程。透過這個過程，我們不僅學習到如何使用PlayWright，也學習到如何將抓取到的數據儲存與分析。希望這對你的學習有所幫助。
+## 重點精華
+- PlayWright可以輕鬆的將使用者操作流程紀錄為程式碼。
+- PlayWright與Selenium最大的差異，不用刻意搜尋並安裝對應版本的模擬瀏覽器。
+- 結合常用的Beautiful可以快速解析內容，我偏好用類似CSS Selec。
+- 用列表推導式將爬梳的資料整理成字典，語法相當簡潔。
+- 將結果儲存成JSON2檔案，方便後續運用
+
+## 小結
+在上述的Python腳本中，首先定義了我們的檔案名稱。然後，我們使用Python的內建函數open讀取該檔案。最後，我們使用json模組的loads函數將讀取到的資料轉換為Python物件。
+
+以上就是如何使用PlayWright抓取並分析巴哈姆特動漫瘋的彈幕數據的全過程。透過這個過程，我們不僅學習到如何使用PlayWright，如果有興趣，後續再介紹如何進一步分析數據，歡迎留言讓我知道。
