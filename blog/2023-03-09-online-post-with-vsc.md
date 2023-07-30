@@ -2,10 +2,7 @@
 slug: 使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO
 title: 使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO
 date: 2023-03-09T23:00
-authors:
-  name: Willis Chen
-  title: Tech Instructor
-  url: https://willismax.github.io/my-site/
+authors: Willis
 GA: G-CH7FZ71WRC
 tags: [GitHub Actions, Docusaurus, Tech]
 ---

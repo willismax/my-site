@@ -113,16 +113,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             activeBasePath: "blog",
             label: "Blog",
             position: "right",
-            items: [
-              {
-                label: "Tech",
-                to: "/blog/tags/Tech",
-              },
-              {
-                label: "ESG",
-                to: "/blog/tags/ESG",
-              },
-            ],
+            // items: [
+            //   {
+            //     label: "Tech",
+            //     to: "/blog/tags/Tech",
+            //   },
+            //   {
+            //     label: "ESG",
+            //     to: "/blog/tags/ESG",
+            //   },
+            // ],
           },
           {
             type: 'doc',
