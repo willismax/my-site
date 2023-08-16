@@ -2,18 +2,20 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 
+
+
 const FeatureList = [
   {
     title: '我的GitHub',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        來 <a href="https://github.com/willismax">Github</a> 看看賞星星，有不少基於 Python 的應用。 
+        Give me a star at here <a target="_blank" rel="noopener noreferrer" href="https://github.com/willismax/my-site">GitHub</a>
       </>
     ),
   },
   {
-    title: '關於我',
+    title: '關於我 About',
     Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
@@ -22,11 +24,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Contact Me',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        這神奇的網站是以 React 為基礎的 Meta 開源專案 "Docusaurus" 架構，文件用 React 或 MarkDown 撰寫皆可
+        willismax.com@gmail.com
       </>
     ),
   },

@@ -101,6 +101,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         apiKey: '079bfb99b9ac37548344f80d32d2e07e',
         indexName: 'willismax',
       },
+      announcementBar: {
+        id: 'support_us',
+        content: '⭐️ 如果這個網站能幫助到你，歡迎給一個Star支持作者  <a target="_blank" rel="noopener noreferrer" href="https://github.com/willismax/my-site">GitHub</a>',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      }, 
       navbar: {
         title: 'Willismax 威力斯',
         logo: {
@@ -111,7 +118,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           {
             to: "/blog",
             activeBasePath: "blog",
-            label: "Blog",
+            label: "文章 Posts",
             position: "right",
             // items: [
             //   {
