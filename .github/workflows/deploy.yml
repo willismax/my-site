@@ -21,6 +21,8 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Browserslist update
+        run: npx update-browserslist-db@latest
       - name: Build website
         run: yarn build
         env:

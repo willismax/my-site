@@ -23,7 +23,7 @@ tags: [Selenium, Python]
     ```
     pip install selenium
     ```
-2. 然後，你還需要手動[下載]((https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/))與你的 Chrome 版本相對應的 WebDriver。
+2. 然後，你還需要手動[下載](https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/)與你的 Chrome 版本相對應的 WebDriver。
 3. 解壓縮 WebDriver，然後將其放入指定目錄。
 
 ### 過渡版本- 需額外的 webdriver_manager
