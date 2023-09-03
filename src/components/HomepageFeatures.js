@@ -6,11 +6,11 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: '我的GitHub',
+    title: '我的技術文件',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Give me a star at here <a target="_blank" rel="noopener noreferrer" href="https://github.com/willismax/my-site">GitHub</a>
+        我的教學內容如可以釋出，會放在 <a rel="noopener noreferrer" href="https://willismax.github.io/my-site/docs/intro">文件Doc</a>
       </>
     ),
   },

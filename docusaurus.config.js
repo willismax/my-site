@@ -135,18 +135,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'doc',
             docId: 'intro',
             position: 'right',
-            label: 'Docs',
+            label: '文件 Doc',
           },
           { 
             to: "about/", 
             label: "About Me", 
             position: "right" },
 
-          {
-            href: "https://hackmd.io/@wiimax",
-            label: "HackMD",
-            position: "right",
-          },
+          // {
+          //   href: "https://hackmd.io/@wiimax",
+          //   label: "HackMD",
+          //   position: "right",
+          // },
           {
             href: 'https://github.com/willismax/my-site',
             label: 'GitHub',

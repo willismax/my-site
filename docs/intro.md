@@ -2,50 +2,17 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 教學與技術文件
 
-Let's discover **Docusaurus in less than 5 minutes**.
+這裡的教學與技術文件有以下特色
+- 此網誌的文章可以是`.md`、`.mdx`及`.js`，最常採用的是`md`檔，方便撰寫技術文件。
+- 這裡的程式碼許多為Python的筆記本格式`.ipynb`轉`.md`檔，說明如下:
+    1. 在Colab執行存放在GitHub Repo的ipynb檔
+    2. 在Colab修改後，會以儲存副本的方式回存GitHub Repo，並且附帶在Colab開啟的小徽章
+    3. 最後，將ipynb轉md呈現，儲存在此網誌的技術文件資料夾之中
+- 這樣希望達到以下效果
+    1. 在Colab隨時可以編輯GitHub的檔案
+    2. 也在HackMD可以隨時編輯GitHub的檔案
+    3. ipynb的程式碼及文件可以迅速傳遞，減少編輯時間
 
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
-
-<script src="https://giscus.app/client.js"
-        data-repo="willismax/my-site"
-        data-repo-id="R_kgDOJEzR1A"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOJEzR1M4CW7nQ"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-TW"
-        crossorigin="anonymous"
-        async>
-</script>
+以上小技巧請享用
