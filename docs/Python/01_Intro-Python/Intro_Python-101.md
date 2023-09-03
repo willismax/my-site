@@ -11,6 +11,9 @@ jupyter:
     name: python3
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/nYIxNqCcTo6WSFRd_LlMnA/badge)](https://hackmd.io/nYIxNqCcTo6WSFRd_LlMnA)
+
+
 <!-- #region id="view-in-github" colab_type="text" -->
 <a href="https://colab.research.google.com/github/willismax/MediaSystem-Python-Course/blob/main/01.Intro-Python/Intro_Python-101.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
