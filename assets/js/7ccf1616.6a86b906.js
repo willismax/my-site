@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_site=self.webpackChunkmy_site||[]).push([[2749],{9419:e=>{e.exports=JSON.parse('{"label":"Selenium","permalink":"/my-site/blog/tags/selenium","allTagsPath":"/my-site/blog/tags","count":1}')}}]);
