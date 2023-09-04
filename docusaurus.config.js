@@ -17,7 +17,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   githubHost: 'github.com',
   i18n: {
     defaultLocale: 'zh-TW',     
-    locales: ['en', 'zh-TW'],  
+    locales: ['zh-TW','en'],  
     localeConfigs: {
       en: {
         label: 'English',
@@ -109,17 +109,23 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         isCloseable: true,
       }, 
       navbar: {
-        title: 'Willismax 威力斯',
+        title: 'WillisMax',
         logo: {
           alt: 'Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            to: "/blog",
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: '教學與技術文',
+          },
+          {
+            to: "/blog", 
             activeBasePath: "blog",
-            label: "文章 Posts",
-            position: "right",
+            label: "文章",
+            position: "left",
             // items: [
             //   {
             //     label: "Tech",
@@ -131,21 +137,19 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             //   },
             // ],
           },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'right',
-            label: '文件 Doc',
-          },
           { 
             to: "about/", 
-            label: "About Me", 
+            label: "關於我", 
             position: "right" },
 
           // {
           //   href: "https://hackmd.io/@wiimax",
           //   label: "HackMD",
           //   position: "right",
+          // },
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'left',
           // },
           {
             href: 'https://github.com/willismax/my-site',
@@ -199,7 +203,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         //     ],
         //   }, 
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} willismax. Built with Docusaurus.`,
+        copyright: `Copyright © 2022-${new Date().getFullYear()} willismax. Built with Docusaurus.`,
       },
       metadata: [
         { name: "robots", content: "max-image-preview:large" },

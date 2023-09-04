@@ -7,13 +7,16 @@ import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 import logo from '../../static/img/logo.svg'
 
+import Translate, {translate} from '@docusaurus/Translate';
+
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <h1 className="hero__title">
+          {siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
@@ -33,9 +36,9 @@ export default function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="威力斯學習筆記 <head />">
-      <HomepageHeader />
+        <HomepageHeader />
       <main>
-        <HomepageFeatures />
+          <HomepageFeatures />
       </main>
     </Layout>
   );
