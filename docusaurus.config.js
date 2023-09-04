@@ -65,8 +65,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             createFeedItems: async (params) => {
               const {blogPosts, defaultCreateFeedItems, ...rest} = params;
               return defaultCreateFeedItems({
-                // keep only the 10 most recent blog posts in the feed
-                blogPosts: blogPosts.filter((item, index) => index < 10),
+                // keep only the 15 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 15),
                 ...rest,
               });
             },
