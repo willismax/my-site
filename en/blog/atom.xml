@@ -2,12 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willismax.github.io/my-site/en/blog</id>
     <title>Will is MAX Blog</title>
-    <updated>2023-09-03T10:00:00.000Z</updated>
+    <updated>2023-09-09T21:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willismax.github.io/my-site/en/blog"/>
     <subtitle>Will is MAX Blog</subtitle>
     <icon>https://willismax.github.io/my-site/en/img/favicon.ico</icon>
     <rights>Copyright © 2023 willismax.</rights>
+    <entry>
+        <title type="html"><![CDATA[使用 LM Studio 輕鬆在筆電上建立自己的聊天機器人]]></title>
+        <id>https://willismax.github.io/my-site/en/blog/使用 LM Studio 輕鬆在筆電上建立自己的聊天機器人</id>
+        <link href="https://willismax.github.io/my-site/en/blog/使用 LM Studio 輕鬆在筆電上建立自己的聊天機器人"/>
+        <updated>2023-09-09T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[對於剛接觸人工智慧的學生來說，建立自己的聊天機器人可能聽起來有點遙不可及。不過，現在有越來越多的工具讓這個過程變得簡單。本篇文章會介紹如何使用 LM Studio 快速在筆電上實現大型語言模型（LLM）。]]></summary>
+        <content type="html"><![CDATA[<p>對於剛接觸人工智慧的學生來說，建立自己的聊天機器人可能聽起來有點遙不可及。不過，現在有越來越多的工具讓這個過程變得簡單。本篇文章會介紹如何使用 LM Studio 快速在筆電上實現大型語言模型（LLM）。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="背景知識大型語言模型與開源社群">背景知識：大型語言模型與開源社群<a href="#背景知識大型語言模型與開源社群" class="hash-link" aria-label="Direct link to 背景知識：大型語言模型與開源社群" title="Direct link to 背景知識：大型語言模型與開源社群">​</a></h2><p>在開始之前，讓我們先簡單了解一下什麼是大型語言模型。簡單來說，它是一種能夠理解和生成人類語言的人工智慧模型。目前有很多開源的大型語言模型，像是 Meta 的 LLaMa 系列和 Hugging Face（簡稱 HF）的各種模型。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="步驟-1安裝-lm-studio-應用程式">步驟 1：安裝 LM Studio 應用程式<a href="#步驟-1安裝-lm-studio-應用程式" class="hash-link" aria-label="Direct link to 步驟 1：安裝 LM Studio 應用程式" title="Direct link to 步驟 1：安裝 LM Studio 應用程式">​</a></h2><p>首先，請至 <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio 官網</a> 下載適用於 Windows 或 Mac 的桌面應用程式。</p><p><img loading="lazy" src="https://hackmd.io/_uploads/rkezQzgcR2.png" alt="LM Studio 下載頁面" class="img_ev3q"></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="步驟-2選擇適合的模型">步驟 2：選擇適合的模型<a href="#步驟-2選擇適合的模型" class="hash-link" aria-label="Direct link to 步驟 2：選擇適合的模型" title="Direct link to 步驟 2：選擇適合的模型">​</a></h2><p>安裝完畢後，打開 LM Studio。在首頁，你會看到最新或最熱門的模型資訊。使用搜尋框可以找到你需要的模型。例如，我搜尋 "Taiwan"，找到了一個名為 <code>audreyt/Taiwan-LLaMa-v1.0-GGUF</code> 的模型。</p><p><img loading="lazy" src="https://hackmd.io/_uploads/rkyqMecA2.png" alt="模型選擇" class="img_ev3q"></p><blockquote><p><strong>備註：</strong> 模型資訊通常會包含在 HF 的模型卡（Model Card）和相關的論文連結。</p></blockquote><h2 class="anchor anchorWithStickyNavbar_LWe7" id="步驟-3下載模型到本地">步驟 3：下載模型到本地<a href="#步驟-3下載模型到本地" class="hash-link" aria-label="Direct link to 步驟 3：下載模型到本地" title="Direct link to 步驟 3：下載模型到本地">​</a></h2><p>選擇一個適合你硬體配置的模型進行下載。如果你的筆電不是高性能的，建議選擇小型的模型。</p><p><img loading="lazy" src="https://hackmd.io/_uploads/rJpHMx9Rh.png" alt="模型下載" class="img_ev3q"></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="步驟-4開始與聊天機器人對話">步驟 4：開始與聊天機器人對話<a href="#步驟-4開始與聊天機器人對話" class="hash-link" aria-label="Direct link to 步驟 4：開始與聊天機器人對話" title="Direct link to 步驟 4：開始與聊天機器人對話">​</a></h2><p>下載完成後，在左側選擇聊天頁籤。選擇你剛才下載的模型，等待模型加載完成後，就可以開始與聊天機器人對話了。</p><p><img loading="lazy" src="https://hackmd.io/_uploads/S1LszecRh.png" alt="聊天界面" class="img_ev3q"></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="結論與後續步驟">結論與後續步驟<a href="#結論與後續步驟" class="hash-link" aria-label="Direct link to 結論與後續步驟" title="Direct link to 結論與後續步驟">​</a></h2><p>建立自己的聊天機器人是一個不斷演進的過程。儘管 LM Studio 提供了一個相當方便的平台，但要達到商業應用水平，還需要進一步的微調和量化調教。如果你想要更進一步，可以考慮使用 OpenAI、Azure、Google 或 AWS 等平台的 API 進行模型的微調。</p><p>希望這篇文章能幫助你更輕鬆地入手聊天機器人的建立，祝你在人工智慧的旅程中一切順利！</p><p>如果有任何問題或需要進一步的說明，歡迎留言。</p>]]></content>
+        <author>
+            <name>Willis Chen</name>
+            <uri>https://willismax.github.io/my-site/</uri>
+        </author>
+        <category label="LLM" term="LLM"/>
+        <category label="AIGC" term="AIGC"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Selenium升級4.x版修正筆記]]></title>
         <id>https://willismax.github.io/my-site/en/blog/Selenium升級4.x版修正筆記</id>
