@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_site=self.webpackChunkmy_site||[]).push([[2262],{7164:t=>{t.exports=JSON.parse('{"title":"Python","slug":"/category/python","permalink":"/my-site/en/docs/category/python","navigation":{"next":{"title":"Intro_Python_101","permalink":"/my-site/en/docs/Python/Intro-Python/Intro_Python_101"}}}')}}]);
