@@ -1,4 +1,4 @@
-# [Day 18 : 深度學習(神經網絡)自動調參術 - KerasTuner](https://ithelp.ithome.com.tw/articles/10265801)
+# Day 18 : 深度學習(神經網絡)自動調參術 - KerasTuner
 
 
 ###### tags: `MLOps`

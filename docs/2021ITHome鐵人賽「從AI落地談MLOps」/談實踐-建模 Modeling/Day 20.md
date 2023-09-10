@@ -1,4 +1,4 @@
-# [Day 20 : 模型優化 - 訓練後量化 Post Training Quantization](https://ithelp.ithome.com.tw/articles/10267328)
+# Day 20 : 模型優化 - 訓練後量化 Post Training Quantization
 
 ###### tags: `MLOps`
 [![](https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker "第 13 屆鐵人賽鍊成")第 13 屆鐵人賽鍊成](https://ithelp.ithome.com.tw/users/20121130/ironman/4015)

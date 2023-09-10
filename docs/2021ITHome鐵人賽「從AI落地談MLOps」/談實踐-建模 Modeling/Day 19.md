@@ -1,4 +1,4 @@
-# [Day 19 : 深度學習(神經網絡)自動建模術 - AutoMLs](https://ithelp.ithome.com.tw/articles/10266499)
+# Day 19 : 深度學習(神經網絡)自動建模術 - AutoMLs
 
 ###### tags: `MLOps`
 [![](https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker "第 13 屆鐵人賽鍊成")第 13 屆鐵人賽鍊成](https://ithelp.ithome.com.tw/users/20121130/ironman/4015)

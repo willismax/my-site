@@ -1,6 +1,5 @@
-# [Day 22 : 模型優化 - 知識蒸餾 Knowledge Distillation](https://ithelp.ithome.com.tw/articles/10268783)
+# Day 22 : 模型優化 - 知識蒸餾 Knowledge Distillation
 
-###### tags: `MLOps`
 [![](https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker "第 13 屆鐵人賽鍊成")第 13 屆鐵人賽鍊成](https://ithelp.ithome.com.tw/users/20121130/ironman/4015)
 [![](https://img.shields.io/badge/iThome%E9%90%B5%E4%BA%BA%E8%B3%BD2021-%E5%A8%81%E5%88%A9%E6%96%AF-blue)](https://ithelp.ithome.com.tw/articles/10268783)
 

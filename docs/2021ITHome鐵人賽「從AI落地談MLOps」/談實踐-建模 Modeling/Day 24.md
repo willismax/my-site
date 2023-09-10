@@ -1,4 +1,4 @@
-### [Day 24 : 負責任的 AI - Responsible AI (RAI)](https://ithelp.ithome.com.tw/articles/10270241)
+### Day 24 : 負責任的 AI - Responsible AI (RAI)
 
 ###### tags: `MLOps`
 [![](https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker "第 13 屆鐵人賽鍊成")第 13 屆鐵人賽鍊成](https://ithelp.ithome.com.tw/users/20121130/ironman/4015)
