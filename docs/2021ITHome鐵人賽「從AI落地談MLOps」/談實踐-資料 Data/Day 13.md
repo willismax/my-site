@@ -13,7 +13,7 @@ Visual Relationship Detection, VRD 視覺關係偵測
 
 -   VRD 說明:
     -   通常圖片內容物都有物體之間的關聯性，定義描述為為`a subject <predictate> object` 。例如， `person riding bicycle` ， “person” 和 “bicycle” 分別是主詞和受詞， “riding” 是關係動詞。
-    -   此範例源自 [snorkel-tutorials](https://github.com/snorkel-team/snorkel-tutorials/blob/master/visual_relation/visual_relation_tutorial.ipynb)，目的為對[視覺關係檢測 (VRD) 數據集](https://cs.stanford.edu/people/ranjaykrishna/vrd/)進行操作，專注於圖片內物件之間的關係分類任務。
+    -   此範例源自 [snorkel-tutorials](https://github.com/snorkel-team/snorkel-tutorials/blob/master/visual_relation/visual_relation_tutorial.ipynb)，目的為對視覺關係檢測 (VRD) 數據集進行操作，專注於圖片內物件之間的關係分類任務。
     -   以下圖示紅色框代表主題，而綠色框代表對象。該謂詞（如踢）表示什麼關係連接主體和客體。
 
 ![](https://camo.githubusercontent.com/a4dd89f1ae5fbffbc4349daf6b32cbaf85fb7e02/68747470733a2f2f63732e7374616e666f72642e6564752f70656f706c652f72616e6a61796b726973686e612f7672642f646174617365742e706e67)
