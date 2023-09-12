@@ -57,6 +57,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             defaultReadingTime({content, options: {wordsPerMinute: 300}}),
           blogTitle: 'Willismax 威力斯資訊技部落格!',
           blogDescription: '威力斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
+          postsPerPage: 'ALL',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
           editUrl:
             'https://github.com/willismax/my-site/blob/main/', //改
           feedOptions: {
@@ -207,7 +210,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
       metadata: [
         { name: "robots", content: "max-image-preview:large" },
-        { name: '威力斯', content: 'Python, ICT, Python, Tech, ESG'},
+        { name: '威力斯', content: 'Python, ICT, Tech'},
         { name: "robots", content: "max-image-preview:large" }
       ],
       prism: {
