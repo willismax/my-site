@@ -2,12 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://willismax.github.io/my-site/en/blog</id>
     <title>Will is MAX Blog</title>
-    <updated>2023-09-10T12:00:00.000Z</updated>
+    <updated>2023-09-23T10:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://willismax.github.io/my-site/en/blog"/>
     <subtitle>Will is MAX Blog</subtitle>
     <icon>https://willismax.github.io/my-site/en/img/favicon.ico</icon>
     <rights>Copyright © 2023 willismax.</rights>
+    <entry>
+        <title type="html"><![CDATA[Python 虛擬環境管理 - pipenv 與 venv 比較]]></title>
+        <id>https://willismax.github.io/my-site/en/blog/Python 虛擬環境管理 - pipenv 與 venv 比較</id>
+        <link href="https://willismax.github.io/my-site/en/blog/Python 虛擬環境管理 - pipenv 與 venv 比較"/>
+        <updated>2023-09-23T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[🐍 Python 是一種非常流行和強大的程式語言，它有許多優秀的套件可以幫助我們完成各種任務，例如資料分析、機器學習、網頁開發等。然而，如果我們同時在不同的專案中使用 Python，我們可能會遇到一些問題，例如：]]></summary>
+        <content type="html"><![CDATA[<p>🐍 Python 是一種非常流行和強大的程式語言，它有許多優秀的套件可以幫助我們完成各種任務，例如資料分析、機器學習、網頁開發等。然而，如果我們同時在不同的專案中使用 Python，我們可能會遇到一些問題，例如：</p><ul><li>不同的專案可能需要不同的 Python 版本或套件版本，這可能會造成版本衝突和相依性問題。</li><li>如果我們在全域環境中安裝或移除套件，可能會影響其他專案的運作。</li><li>如果我們想要部署或分享我們的專案，我們需要記錄和安裝所有需要的套件和版本，這可能會很麻煩和耗時。</li></ul><p>為了解決這些問題，我們可以使用虛擬環境管理工具來創建和管理不同的 Python 環境。虛擬環境是一個隔離的 Python 環境，它可以讓我們在不同的專案中使用不同的 Python 版本和套件，而不會互相干擾。這樣，我們就可以更方便和安全地開發和部署我們的 Python 專案。</p><p>目前，有許多虛擬環境管理工具可以選擇，例如 virtualenv, conda, pyenv 等。在這篇文章中，我將重點介紹 pipenv 和 venv 這兩種工具，並且比較它們的優缺點。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="pipenv">pipenv<a href="#pipenv" class="hash-link" aria-label="Direct link to pipenv" title="Direct link to pipenv">​</a></h2><ul><li>pipenv 是目前 Python 官方推薦的套件管理工具，它集成了 <code>pip</code> 和 <code>virtualenv</code> 的功能，並且改進了它們的一些缺陷 。</li><li>pip 使用 <code>Pipfile</code> 和 <code>Pipfile.lock</code> 來記錄套件的資訊，而不是使用 requirements.txt。<ul><li>Pipfile.lock 包含了套件的Hash值，可以確保安裝的套件是一致和安全的 。</li><li>pipenv 可以自動產生和更新 <code>Pipfile</code> 和 <code>Pipfile.lock</code>，不需要手動維護 。</li></ul></li><li>可以區分開發和生產環境的套件，只需要在安裝時加上 --dev 參數即可 。</li><li>可並行（parallel）同步安裝套件，提升安裝速度。</li><li>pipenv 可以透過 <code>.env</code> 自動載入不同環境變數。</li><li>pipenv 的指令比較簡單和直觀，例如 <ul><li><code>pipenv install</code> 如同 <code>pip install</code></li><li><code>pipenv uninstall</code></li><li><code>pipenv shell</code> 如同 <code>source venv/bin/activate</code>  進入虛擬環。</li><li><code>pipenv run</code> 可以執行虛擬環境內容</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="venv">venv<a href="#venv" class="hash-link" aria-label="Direct link to venv" title="Direct link to venv">​</a></h2><ul><li>venv 是 Python 3.3 之後內建的虛擬環境模組，它可以創建一個隔離的 Python 環境，但是不包含任何套件管理功能。</li><li>venv 使用 <code>python -m venv {虛擬機命名}</code> 來創建虛擬環境，然後使用 <code>source venv/bin/activate</code> 來啟動虛擬環境(Windows 以 <code>venv/Scripts/activate</code> 進入)。</li><li>venv 需要配合 <code>pip</code> 和 <code>requirements.txt</code> 來管理套件，因為venv跟pip是兩回事，這可能會造成版本衝突和相依性問題。</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="比較-pipenv-和-venv-差異">比較 pipenv 和 venv 差異<a href="#比較-pipenv-和-venv-差異" class="hash-link" aria-label="Direct link to 比較 pipenv 和 venv 差異" title="Direct link to 比較 pipenv 和 venv 差異">​</a></h2><p>以下用表格比較 pipenv 和 venv 的差異，我用表格的方式來比較它們的特點：</p><table><thead><tr><th>特點</th><th>pipenv</th><th>venv</th></tr></thead><tbody><tr><td>Python 官方推薦</td><td>是</td><td>曾經是</td></tr><tr><td>集成 pip 和 virtualenv</td><td>是</td><td>否</td></tr><tr><td>使用 Pipfile 和 Pipfile.lock</td><td>是</td><td>否</td></tr><tr><td>自動產生和更新 Pipfile 和 Pipfile.lock</td><td>是</td><td>否</td></tr><tr><td>包含套件的哈希值</td><td>是</td><td>否</td></tr><tr><td>區分開發和生產環境的套件</td><td>是</td><td>否</td></tr><tr><td>使用並行同步安裝套件</td><td>是</td><td>否</td></tr><tr><td>自動載入不同環境變數</td><td>是</td><td>否</td></tr><tr><td>指令簡單和直觀</td><td>是</td><td>否</td></tr></tbody></table><p>從表格中，我們可以看出 pipenv 是一個更先進和完善的虛擬環境管理工具，它可以讓我們更方便和安全地開發 Python 專案。如果你想了解更多關於 pipenv 的資訊，但在基礎Python教學時，我更傾向以venv為主，因為你看到的網路專案大多還是<code>venv</code> + <code>pip install -r requirements.txt</code> 來示範的。可以參考以下的連結：</p><ul><li><a href="https://pipenv.pypa.io/en/latest/" target="_blank" rel="noopener noreferrer">Pipenv 官方文件</a></li><li><a href="https://segmentfault.com/a/1190000015389565" target="_blank" rel="noopener noreferrer">Pipenv 更簡單、更快速的 Python 套件管理工具</a></li><li><a href="https://stackoverflow.com/questions/67065725/conda-env-vs-venv-pyenv-virtualenv-etc" target="_blank" rel="noopener noreferrer">Pipenv vs Virtualenv vs Conda environment</a></li></ul><p>感謝你閱讀這篇文章，如果你有任何問題或建議，歡迎在下方留言。Enjoy Python。再見！</p>]]></content>
+        <author>
+            <name>Willis Chen</name>
+            <email>willismax.com@gmail.com</email>
+            <uri>https://willismax.github.io/my-site/</uri>
+        </author>
+        <category label="python" term="python"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[在 Render 上快速部署 HackMD 與 LINE 的聊天機器人]]></title>
         <id>https://willismax.github.io/my-site/en/blog/在 Render 上快速部署 HackMD 與 LINE 的聊天機器人</id>
