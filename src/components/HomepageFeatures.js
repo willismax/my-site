@@ -7,7 +7,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: '教學與技術文件',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('../../static/img/py.svg').default,
     description: (
       <>
         技術文件及教學文件放在 <a rel="noopener noreferrer" href="https://willismax.github.io/my-site/docs/intro">這裡</a>
@@ -24,8 +24,8 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Contact Me',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: '聯絡資訊',
+    Svg: require('../../static/img/DS3.svg').default,
     description: (
       <>
         willismax.com@gmail.com
