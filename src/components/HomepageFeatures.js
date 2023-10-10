@@ -7,7 +7,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: '教學與技術文件',
-    Svg: require('../../static/img/py.svg').default,
+    Svg: require('../../static/img/Py.svg').default,
     description: (
       <>
         技術文件及教學文件放在 <a rel="noopener noreferrer" href="https://willismax.github.io/my-site/docs/intro">這裡</a>
