@@ -215,4 +215,4 @@ tags: [python, ChatGPT, LINEBOT]
 -   [GPT-3 API 官方文件](https://beta.openai.com/docs/)
 -   [Vercel 官方文件](https://vercel.com/docs)
 -   [GitHub 如何編輯文件](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository)
--   [本專案GitHub Repo](https://github.com/willismax/GPT-Linebot-python-flask-on-vercel)，Forked from [howarder3](https://github.com/howarder3/GPT-Linebot-python-flask-on-vercel)
+-   [本專案GitHub Repo](https://github.com/willismax/LLM-LINEBot-use-python-on-vercel)，Forked & Modified from [howarder3](https://github.com/howarder3/GPT-Linebot-python-flask-on-vercel)
