@@ -8,6 +8,7 @@ tags: [python, ChatGPT, LINEBOT]
 ---
 
 # 客製化你的AI教學助手🤖-蘇格拉底引導教學法
+![](https://hackmd.io/_uploads/SyD7wOz-p.png)
 
 老師們現在不僅對教學充滿熱情，也愈來愈善於運用科技工具，如LINE官方帳號，來與學生和家長保持緊密的溝通。這些努力無疑是朝著以下兩大目標邁進：
 
