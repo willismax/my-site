@@ -13,7 +13,6 @@ jupyter:
 
 <!-- #region id="view-in-github" colab_type="text" -->
 <a href="https://colab.research.google.com/github/willismax/MediaSystem-Python-Course/blob/main/01.Intro-Python/PythonBasic_2.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-
 <!-- #endregion -->
 
 <!-- #region id="6OZu7Iytc9vG" -->
@@ -79,7 +78,11 @@ Python 基礎語法
 
 <!-- #region id="F3KT9XAJbRpA" -->
 ### 變數
-- 如同可以儲存資料內容的標籤，命名不能與關鍵字重複，自訂義的命名也不要跟引入的模組重複。
+- Python變數正確來說是資料內容的「標籤」，變數不是盒子。
+- 物件先存在，所以說是「變數x被指派給(assigned to) something」比較精確。
+- 命名不能與關鍵字重複，自訂義的命名也不要跟引入的模組重複。
+
+
 <!-- #endregion -->
 
 <!-- #region id="KnCzDgJtao2-" -->
@@ -315,7 +318,7 @@ k[2:5]
 !pip install twstock
 ```
 
-```python id="lk8hCNuYAM17" colab={"base_uri": "https://localhost:8080/"} outputId="e8ca968c-088d-4025-aa91-5b6b41ee451d"
+```python id="lk8hCNuYAM17" colab={"base_uri": "https://localhost:8080/"} outputId="1b598552-05ae-40b0-ed73-4e1afac2838b"
 import twstock
 
 stock = twstock.Stock("2330")
@@ -365,30 +368,37 @@ for i in range(100):
 a
 ```
 
-```python id="sd4ZOZRSwDjX" colab={"base_uri": "https://localhost:8080/"} outputId="c5272130-85b0-4756-9191-ba07a58ddeac"
-a = [ i*i for i in range(10)]
+```python id="kQLNC6hlj_16"
+#如以原本寫法如下
+
+L = [9, 5, 2, 7]
+
+result = [] #先創空list
+
+for x in L: #for迴圈逐一判斷
+  if x > 3: #判斷條件
+    result.append(x) #符合的結果附加到result串列裡
+
+print(result)
+```
+
+```python id="5tNAtB4DozqD"
+#列表推導式list comprehension
+
+[x for x in L if x > 3]
+```
+
+```python id="sd4ZOZRSwDjX"
+a = [ i for i in range(10)]
 a
 ```
 
-```python id="jY0LBzIsxOLY" colab={"base_uri": "https://localhost:8080/"} outputId="12211c16-c65f-4860-ac09-ad1f8e9662e1"
-a = [
-    i
-     for i in range(10)
-     ]
-a
-
-```
-
-```python id="AsFVXVT0wYrg" colab={"base_uri": "https://localhost:8080/"} outputId="9077d31a-7cf6-44a6-9dd2-90df22734936"
-b = [
-     i*i
-     for i in range(100)
-     if i % 2 == 1
-     ]
+```python id="AsFVXVT0wYrg"
+b = [ i*i for i in range(10) if i % 2 == 1]
 b
 ```
 
-```python id="_vOnagPZBN2V" colab={"base_uri": "https://localhost:8080/"} outputId="9e022188-28c9-40e1-b7b7-7d2431ce28c2"
+```python id="_vOnagPZBN2V" colab={"base_uri": "https://localhost:8080/"} outputId="f41ec84e-457b-4aca-a66a-280530c51590"
 %%timeit
 a=[ i**2
    for i in range(100)
@@ -396,19 +406,15 @@ a=[ i**2
 a
 ```
 
-```python id="5tNAtB4DozqD"
-#列表推導式list comprehension
-[x for x in L if x > 3]
-```
+```python colab={"base_uri": "https://localhost:8080/"} id="Cap7FWwWRe--" outputId="a1465d7e-4846-4134-bff2-7d9d3dda074b"
+%%timeit
 
-```python id="kQLNC6hlj_16"
-#如以原本寫法如下
-result = [] #先創空list
-for x in L: #for迴圈逐一判斷
-    if x >3: #判斷條件
-        result.append(x) #符合的結果附加到result串列裡
+a=[]
+for i in range(100):
+  if i % 2 == 1:
+    a.append(i*i)
 
-print(result)
+a
 ```
 
 ```python id="7vzuXp_84-9D"
@@ -456,21 +462,21 @@ s.count(i)	|累計 s 中 i 出現的個數
 
 <!-- #endregion -->
 
-```python id="UMAdC1mvwhdO"
+```python id="UMAdC1mvwhdO" colab={"base_uri": "https://localhost:8080/"} outputId="b78bfb71-1c0c-4aba-ca6c-403b206fa7b1"
 t = 2, 4, 6, 8
 type(t)
 ```
 
-```python id="ohA0lfRQze1B"
+```python id="ohA0lfRQze1B" colab={"base_uri": "https://localhost:8080/"} outputId="15a6a4ab-98c3-406d-b3c5-e1fe8d643f3d"
 L
 ```
 
-```python id="oW6mwEnLwl-N"
+```python id="oW6mwEnLwl-N" colab={"base_uri": "https://localhost:8080/", "height": 201} outputId="576240b1-2130-4853-8023-67b70235757e"
 #更改會報錯
 t[0] = 1
 ```
 
-```python id="KXlYCiIKDtOi"
+```python id="KXlYCiIKDtOi" colab={"base_uri": "https://localhost:8080/"} outputId="580d73f3-900a-43ba-e6d2-07d7159ccd0f"
 2 in t
 ```
 
@@ -485,13 +491,13 @@ t[0] = 1
 - 不常用，但用在找出不重複的資料時好用。
 <!-- #endregion -->
 
-```python id="rdCJjxDOxWiG"
+```python id="rdCJjxDOxWiG" colab={"base_uri": "https://localhost:8080/"} outputId="9f8ecd83-3b89-4894-a65c-bf9a15572eed"
 s1 = {9,9,5,5,2,2,7,7}
 s2 = {9,5,2,7}
 s1 == s2
 ```
 
-```python id="PQFwEpzq0Kcv"
+```python id="PQFwEpzq0Kcv" colab={"base_uri": "https://localhost:8080/"} outputId="4bfdc9c9-f4c5-4651-ddba-778eb342e0ad"
 s1
 ```
 
@@ -611,9 +617,13 @@ s.remove(e)	|從 s 中刪除元素 e
 身高體重
 ```
 
-```python id="xZlstgZbWVuS"
+```python id="xZlstgZbWVuS" colab={"base_uri": "https://localhost:8080/"} outputId="4aa4e100-68d5-42c9-90c2-1792a268974b"
 {"one":"a", "two":"b"}
 ```
+
+<!-- #region id="R9DcrdEBUMhW" -->
+- 組成dict的4種方法
+<!-- #endregion -->
 
 ```python id="vNMqqvQTFLUW"
 dict(one="a", two="b")
@@ -957,7 +967,7 @@ HTML(f"""
 !pip install geocoder
 ```
 
-```python id="WtxBQFeGsWoy" colab={"base_uri": "https://localhost:8080/"} outputId="bdcf3c4e-9820-446e-9540-bda5274e1d06"
+```python id="WtxBQFeGsWoy"
 # 查經緯度座標，注意Google MAP經緯度少一位數
 import geocoder
 
@@ -987,7 +997,7 @@ print(url)
 ```python id="xSBGeQbVaAbF"
 import requests
 
-#  https://www.google.com/maps/search/?api=1&map_action=map&zoom=16&query=24.149660,120.684166
+# https://www.google.com/maps/search/?api=1&map_action=map&zoom=16&query=24.149660,120.684166
 payload  = {"api":"1", "map_action":"map", "zoom":"16", "query":"24.149660,120.684166"}
 r = requests.get(
     'https://www.google.com/maps/search/',
