@@ -13,10 +13,12 @@ jupyter:
 
 <!-- #region id="view-in-github" colab_type="text" -->
 <a href="https://colab.research.google.com/github/willismax/MediaSystem-Python-Course/blob/main/01.Intro-Python/PythonBasic_2.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 <!-- #endregion -->
 
 <!-- #region id="6OZu7Iytc9vG" -->
 Python 基礎語法
+
 <!-- #endregion -->
 
 <!-- #region id="TJiUVgRg4YC9" -->
