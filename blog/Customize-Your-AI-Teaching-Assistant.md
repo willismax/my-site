@@ -136,7 +136,7 @@ tags: [python, ChatGPT, LINEBOT]
 
 ### 🚀 專案成果
 
--   **出色的問答回應**: 這個AI助手採用ChatGPT 3.5 Tubo，能在精確及速度獲得很好的平衡，即時地回應學生的問題。 ![出色回應](https://hackmd.io/_uploads/ryjveAW-T.png)
+-   **出色的問答回應**: 這個AI助手自2023年11月7日OpenAI大幅降低費率後，採用GPT 4模型，更能通順的、即時地回應學生的問題。 ![出色回應](https://hackmd.io/_uploads/ryjveAW-T.png)
 -   **問題過濾**: 對於需要更深層次討論的問題，AI助手會提供適當的處理建議，協助老師過濾和分類問題，同時也啟發老師改進教學。 ![問題過濾](https://hackmd.io/_uploads/SkaDCWzbp.png)
 -   **引導學生思考**: 透過蘇格拉底教學法，AI助手不僅回答問題，還能引導學生學會如何提問和解決問題。 
     ```=!

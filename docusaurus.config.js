@@ -90,8 +90,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           // Please change this to your repo.
           editUrl: 'https://github.com/willismax/my-site/blob/main/',
         },
-       
-        
       },
     ],
   ],
@@ -119,7 +117,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         },
         items: [
           {
-            type: 'doc',
+            type: 'doc', 
             docId: 'intro',
             position: 'left',
             label: '教學與技術文',
