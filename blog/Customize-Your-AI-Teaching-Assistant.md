@@ -55,7 +55,6 @@ tags: [python, ChatGPT, LINEBOT]
     
     -   初次註冊有免費額度，API使用需綁信用卡。
     -   本專案預設使用的是2023/11釋出的 **GPT-4-1106-preview**。
-    -   花費約為：輸入1萬字中文約台幣1元，輸出1萬字中文約台幣1.2元。
     -   [OpenAI 費用詳情](https://openai.com/pricing)
     -   ![OpenAI Cost](https://hackmd.io/_uploads/rJE3dzfWp.png)
 -   **LINE 主動訊息**
