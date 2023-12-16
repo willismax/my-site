@@ -7,12 +7,11 @@ GA: G-CH7FZ71WRC
 tags: [python]
 ---
 
-
 # 如何使用 GitHub Codespace 建立並部署 LINE Bot
 ![image](https://hackmd.io/_uploads/H16c3RFLT.png)
 ### 介紹
 
-在這篇文章中，我們將探討如何使用 GitHub Codespace 快速有效地建立和部署 LINE Bot。GitHub Codespace 提供了一個雲端開發環境，使得開發人員可以在任何地方進行開發和部署。這種方式的好處是不需要本地環境配置，且環境變數的設置增加了項目的安全性。
+在這篇文章中，我們將探討如何使用 [GitHub Codespace](https://github.com/features/codespaces) 快速有效地建立和部署 LINE Bot。GitHub Codespace 提供了一個雲端開發環境，使得開發人員可以在任何地方進行開發和部署。這種方式的好處是不需要本地環境配置，且環境變數的設置增加了項目的安全性。
 
 ### 步驟一：設置 GitHub Codespace
 
@@ -21,6 +20,8 @@ tags: [python]
 1.  登入你的 GitHub 帳號。
 2.  找到你的專案倉庫，點擊 "Code" 按鈕，選擇 "Open with Codespaces"。
 3.  選擇 "New codespace" 來建立一個新的開發環境。
+    ![image](https://hackmd.io/_uploads/SJnIn_cIT.png)
+
 
 ### 步驟二：設置環境變數
 
@@ -34,6 +35,7 @@ tags: [python]
     LINE_CHANNEL_SECRET=你的channel_secret
     LINE_CHANNEL_ACCESS_TOKEN=你的access_token 
     ```
+3. 在這個[示範專案](https://github.com/willismax/MediaSystem-Python-Course)，可以將`MediaSystem-Python-Course\06.Line-bot-fly-flask\`的`config-templete.py`另存為`config.py`，也就是環境變數儲存在`config.py`的檔案裡，這是一個簡易用法不建議正式使用，使用環境變數對機密資訊才有較佳的保護。
 
 ### 步驟三：安裝依賴
 
@@ -78,7 +80,6 @@ def handle_message(event):
 if __name__ == "__main__":
     app.run()` 
 ```
-
 
 ### 步驟五：測試與部署
 
