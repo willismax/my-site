@@ -9,9 +9,9 @@
     <icon>https://willismax.github.io/my-site/en/img/favicon.ico</icon>
     <rights>Copyright © 2023 willismax.</rights>
     <entry>
-        <title type="html"><![CDATA[使用 Whisper 離線完成聲音轉文字]]></title>
-        <id>https://willismax.github.io/my-site/en/blog/使用 Whisper 離線完成聲音轉文字</id>
-        <link href="https://willismax.github.io/my-site/en/blog/使用 Whisper 離線完成聲音轉文字"/>
+        <title type="html"><![CDATA[Whisper]]></title>
+        <id>https://willismax.github.io/my-site/en/blog/Whisper</id>
+        <link href="https://willismax.github.io/my-site/en/blog/Whisper"/>
         <updated>2023-12-17T20:00:00.000Z</updated>
         <summary type="html"><![CDATA[image]]></summary>
         <content type="html"><![CDATA[<p><img loading="lazy" src="https://hackmd.io/_uploads/HJewmwhLT.png" alt="image" class="img_ev3q"></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="簡介">簡介<a href="#簡介" class="hash-link" aria-label="Direct link to 簡介" title="Direct link to 簡介">​</a></h2><p>Whisper 是一個高效能的聲音轉文字工具，由 Const-me 開發，基於 OpenAI 的 Whisper 自動語音識別（ASR）模型。這個工具主要是針對 Windows 平台開發，提供了一個高效且易於使用的介面來處理語音識別任務，重點是可以離線使用、速度快，專案網址為 <a href="https://github.com/Const-me/Whisper" target="_blank" rel="noopener noreferrer">https://github.com/Const-me/Whisper</a> ，以下介紹如何安裝與使用。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="快速開始指南">快速開始指南<a href="#快速開始指南" class="hash-link" aria-label="Direct link to 快速開始指南" title="Direct link to 快速開始指南">​</a></h2><p><img loading="lazy" src="https://hackmd.io/_uploads/Hkhd3LhUT.png" alt="image" class="img_ev3q"></p><ol><li><p><strong>下載和安裝</strong>：從 <a href="https://github.com/Const-me/Whisper" target="_blank" rel="noopener noreferrer">GitHub 存儲庫</a>的“<a href="https://github.com/Const-me/Whisper/releases" target="_blank" rel="noopener noreferrer">Releases</a>”部分下載 <code>WhisperDesktop.zip</code>，解壓縮，並運行 <code>WhisperDesktop.exe</code>。
