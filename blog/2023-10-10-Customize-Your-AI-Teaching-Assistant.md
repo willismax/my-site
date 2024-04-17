@@ -115,7 +115,18 @@ tags: [python, ChatGPT, LINEBOT]
 
 1.  **建立 Vercel 專案** ![](https://hackmd.io/_uploads/BJo573bZ6.png)
 2.  **連接 GitHub 和選擇專案** ![](https://hackmd.io/_uploads/B1paQ2W-a.png)
-3.  **設定環境變數並部署** ![](https://hackmd.io/_uploads/SyAIBh-bT.png)
+3.  **設定環境變數並部署**
+- 您需要設定的環境變數為`OPENAI_API_KEY`、`LINE_CHANNEL_ACCESS_TOKEN`及`LINE_CHANNEL_SECRET`，在這裡的環境變數能受到較佳的保護，至少比放在程式碼裡安全許多。
+
+ ![](https://hackmd.io/_uploads/SyAIBh-bT.png)
+
+4. **修正支援的Nodejs版本**
+- 如果遇到Python安裝版本問題，依據[官方文件](https://vercel.com/docs/functions/runtimes/node-js)，Vercel預設的Node.js版本為20.x，不支援Python，請在專案的設定>一般的選項裡，將Node.js改選為18.x版本。
+![image](https://hackmd.io/_uploads/B1l6daTgC.png)
+
+- 修改後請選擇部署，或到專案的佈署歷程中選擇再次部署，就會改用Node.js 18.x版再跑一次。
+![image](https://hackmd.io/_uploads/ryUT9aTx0.png)
+
 
 ### 🎉 完成！ 🎉
 
