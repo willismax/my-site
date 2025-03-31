@@ -1,165 +1,67 @@
 ---
-title: 使用 n8n 串接 LINE BOT + AI：打造智慧回應機器人
-slug: 使用 n8n 串接 LINE BOT + AI：打造智慧回應機器人
-date: 2025-02-16T20:00
+title: 在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗
+slug: 在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗
+date: 2025-03-31T20:00
 authors: Willis
 GA: G-CH7FZ71WRC
 tags: [AI,n8n,LINE]
 ---
 
-
-# 使用 n8n 串接 LINE BOT + AI：打造智慧回應機器人
-
-在聊天機器人盛行的時代，許多人都想透過 **LINE BOT** 為用戶提供即時且智慧的回覆。本篇將示範如何在 **n8n** 這個無程式化自動化工具中，串接 **LINE Webhook** 與 **AI 模型**，打造一個可以自動回應的機器人。
-
-## 目錄
-
-1. [前置準備](#前置準備)  
-2. [流程架構說明](#流程架構說明)  
-3. [詳細步驟教學](#詳細步驟教學)  
-   - [STEP 1. 建立 LINE BOT 與 Webhook](#step-1-建立-line-bot-與-webhook)  
-   - [STEP 2. 在 n8n 新增 Workflow](#step-2-在-n8n-新增-workflow)  
-   - [STEP 3. AI 回應邏輯設定](#step-3-ai-回應邏輯設定)  
-   - [STEP 4. 合併資料並格式化輸出 (Code Node)](#step-4-合併資料並格式化輸出-code-node)  
-   - [STEP 5. 呼叫 LINE Reply API 回覆訊息](#step-5-呼叫-line-reply-api-回覆訊息)  
-4. [兩個常見痛點與解法](#兩個常見痛點與解法)  
-5. [完整 Workflow JSON 參考](#完整-workflow-json-參考)  
-6. [參考來源](#參考來源)
-
----
-
-## 前置準備
-
-1. **LINE Developers 帳號**：  
-   - 前往 [LINE Developers](https://developers.line.biz/) 建立 **Messaging API** Channel，取得 **Channel Access Token** 與 **Channel Secret**。  
-2. **n8n 環境**：  
-   - 可以是自架 n8n 或使用雲端服務，版本建議至少 1.6.0 以上。  
-3. **AI Key**：  
-   - 若使用 OpenAI，需要在 n8n 中綁定你的 OpenAI API Key；若使用其他 AI (如 Google Gemini)，則需相對應的憑證設定。  
+在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗
+---------------------------------------
+![image](https://hackmd.io/_uploads/HkPIUGuTJe.png)
 
 
-## 流程架構說明
+這篇部落格將分享我在 [Zeabur](https://zeabur.com/) 使用 [n8n](https://n8n.io/) 打造 LINE 聊天機器人的經驗，作為台中 AI 小聚假日場的第一位分享者，很榮幸能拋磚引玉與大家討論 Low Code 工具的實戰心得。
 
-以下為大致的流程圖：
+### 為什麼選擇 Zeabur 與 n8n？
 
-```
-(1) 使用者在 LINE 發送訊息
-      ↓
-(2) LINE 將訊息 + replyToken 發送到 n8n Webhook
-      ↓
-(3) n8n 取得訊息後，呼叫 AI 節點產生回應
-      ↓
-(4) 將 AI 回應與 replyToken 整合 (Code Node)
-      ↓
-(5) HTTP Request Node 回呼給 LINE (Reply API)
-      ↓
-(6) 使用者即時收到 AI 生成的回應
-```
+[Zeabur](https://zeabur.com/) 作為一個部署平台，擁有低門檻且豐富的樣板資源，整個部署流程可以用「絲滑」來形容，非常適合新手快速上手。但當實際開始串接 [n8n](https://n8n.io/) 後，我發現情況可能稍有不同。
+![image](https://hackmd.io/_uploads/ByqK8Mup1l.png)
 
+[Zeabur](https://zeabur.com/) 對於初學者來說非常友善，不論是部署速度還是樣板的多樣性，都能顯著降低技術門檻，讓沒有基礎的使用者也能快速啟動專案。
+![image](https://hackmd.io/_uploads/Hk43wfOa1l.png)
 
-## 詳細步驟教學
+### n8n 的真實體驗
 
-### STEP 1. 建立 LINE BOT 與 Webhook
+[n8n](https://n8n.io/) 作為 Low Code 工具，雖然降低了不少開發門檻，但若你原本就習慣程式設計，反而可能需要額外時間熟悉各種節點操作與邏輯，這點可能會有些挫折。不過，對於有 API 串接經驗的人來說，n8n 仍然是個相對容易上手的強大工具。
+> Low Code 工具可以透過圖形控制拖拉等方式串接工作流程，使用者無須複雜的程式碼即可像積木般串接各個節點，達到方便彈性的優勢。
 
-1. 登入 [LINE Developers Console](https://developers.line.biz/)，在 **Messaging API** 中建立一個 Channel。  
-2. 取得 **Channel Access Token** (Long-lived) 並備註。  
-3. 在該 Channel 的 **Webhook settings** 裡面，填入你的 n8n Webhook URL (例如 `https://<你的n8n網域>/webhook/linebot`)，並啟用 Webhook。
+尤其推薦 [5x 紅寶石 n8n 範本](https://zeabur.com/templates/JP88UN)（搜尋 5x 即可找到），內建的登入介面能省下不少初始設置時間。這種內建登入系統能讓新手更快地跳過繁瑣的設定步驟，專注於功能實現。
+![image](https://hackmd.io/_uploads/S1KedMOp1l.png)
 
-### STEP 2. 在 n8n 新增 Workflow
+### 用 n8n 打造彈性的 LINE Bot
 
-1. 建立一個新的 Workflow，新增 **Webhook Node**，HTTP Method 選 **POST**，Path 設為 `linebot` (或其他自訂)。  
-2. 完成後，記得啟用這個 Workflow，使得該 Webhook 可對外接受請求。
-
-### STEP 3. AI 回應邏輯設定
-
-1. 新增一個 **AI 節點** (例如 `AI Agent` 或 `OpenAI Chat Model`)，將上一步 Webhook 輸入的文字 (`message.text`) 當作 Prompt 的一部分，生成自動回覆。  
-2. 可在 Prompt 中告訴 AI 要使用繁體中文回應、若有來源請告知等。  
-3. 測試一下該 AI 節點是否能產生正確文字輸出。
-
-### STEP 4. 合併資料並格式化輸出 (Code Node)
-
-1. 因為 **Webhook Node** 帶來 `replyToken`，而 **AI Node** 帶來 `AI 回應文字`，你需要一個 **Merge Node** 或透過 Code Node 同時取得這兩部分。  
-2. 在 Code Node 中，先拿到 `replyToken`、再拿到 AI 回傳的文字，並**特別使用 `JSON.stringify()`**，以避免其中包含 `\t` 或其他特殊字元破壞 JSON 格式。
-
-```js
-// 取得必要資料
-const replyToken = items[0].json.body.events[0].replyToken;
-const aiResponse = JSON.stringify((items[1].json.output || "").trim());
-
-// 如果沒有 replyToken 或 AI 回應，做基本錯誤處理
-if (!replyToken) {
-  throw new Error("Missing reply token");
-}
-
-if (!aiResponse) {
-  return [{
-    json: {
-      replyToken,
-      text: "抱歉，我現在無法正確處理您的請求。請稍後再試。"
-    }
-  }];
-}
-
-// 回傳格式化後的資料
-return [{
-  json: {
-    replyToken,
-    text: aiResponse
-  }
-}];
-```
-
-### STEP 5. 呼叫 LINE Reply API 回覆訊息
-
-1. 新增 **HTTP Request Node**，Method 選 **POST**，URL 設為 `https://api.line.me/v2/bot/message/reply`。  
-2. 在 Header 加上：
-   - `Content-Type: application/json`  
-   - `Authorization: Bearer <你的 Channel Access Token>`  
-3. 在 **JSON Body** 填入：
-   ```json
-   {
-     "replyToken": "{{ $json.replyToken }}",
-     "messages": [
-       {
-         "type": "text",
-         "text": {{ $json.text }}
-       }
-     ]
-   }
-   ```
-   這裡 `{{ $json.text }}` 即 Code Node 傳來的 AI 回應字串（已經被 JSON.stringify 包裹）。
-
-完成後，當使用者透過 LINE 傳訊息給你的 BOT，n8n 就會觸發流程並自動回應。
+在實際串接 LINE Bot 的過程中，我一開始直接使用 Webhook 節點回傳 Flex Message，但很快遇到了卡片數量彈性不足的問題。後來透過 AI 模型產生結構化 JSON，再透過 Function 節點處理，成功解決了動態調整訊息卡片數量的限制。
+![](https://cdn.gamma.app/5amqtd05ubl30wu/31378b60e1814944a242a4433ed059f9/original/image.png)
+[GitHub - willismax/n8n-templates: 自己設定可以分享的n8n模板](https://github.com/willismax/n8n-templates)
 
 
-## 兩個常見痛點與解法
+透過這種結構化的方式，Flex Message 不再受限於固定格式，訊息卡片可以依據需求自由增減，更能滿足用戶互動多元化的需求。
+![](https://cdn.gamma.app/5amqtd05ubl30wu/722ce43995914352ac9f6b3fcae967d2/original/Wei-Ming-Ming-She-Ji.gif)
 
-1. **先用測試參數進行除錯**  
-   - 在製作這個流程時，常見的困擾是要同時取得 LINE 的 `replyToken` 與 AI 輸出。可以在沒有實際呼叫 LINE 的情況下，手動模擬 `replyToken` 與訊息文字作為測試資料，檢查整個 Workflow 邏輯是否正確。這樣可大幅縮短除錯時間。  
-
-2. **確保傳遞的 JSON 合法，使用 `JSON.stringify()`**  
-   - AI 產生的文字中，可能出現 `\t`、`\n`、`"` 等特殊字元，若直接放入 JSON 字串會造成解析錯誤。  
-   - 建議在 Code Node 中，使用 `JSON.stringify(text)` 把回應包成一個合法的字串，再送到下一個節點，如此可避免因不合法字元導致的「JSON parameter needs to be valid JSON」錯誤。
+### RAG 增強生成檢索與 Supabase 搭配
+為了進一步增強 AI 的效能，我也嘗試在 n8n 中建構了增強生成檢索（RAG）系統，並使用 [Supabase](https://zeabur.com/templates/SUPABS) 儲存文字與向量混合資料。
+![](https://cdn.gamma.app/5amqtd05ubl30wu/20ff7e0b291e41c999e9d0432b5ad0ed/original/image.png)
 
 
+[Supabase 的預設資料庫結構](https://supabase.com/docs/guides/ai/langchain?database-method=sql)十分便捷，不過成本稍高，特別要注意 Kong 元件預設記憶體高達 700MB，[經過優化可以降到 100MB 左右](https://www.threads.net/@yuaanlin/post/DHleMbHS0t-)。
 
-## 完整 Workflow JSON 參考
+此外，Supabase 雖然功能強大，但成本效益需要特別留意，尤其在專案初期若資源有限，更需謹慎評估使用方式與頻率。
+![](https://cdn.gamma.app/5amqtd05ubl30wu/2751da2a0ffc43e0be3eed6faade917c/original/image.png)
 
-可參考以下範例 (敏感資訊已移除)。  
-[GitHub 範例連結 (Placeholder)](https://github.com/your-repo/n8n-line-ai-demo)
 
-```jsonc
-// （這裡省略示範，可參考實際上傳至 GitHub 的 JSON 檔） 
-```
+**提醒大家一點：** 建議不要將 Supabase 與 n8n 部署於同一個 Zeabur 專案內，因為底層都是 PostgreSQL 資料庫，可能會發生意想不到的衝突，創辦人戲稱為「薛丁格的資料庫」。
 
-> 請在匯入後，重新設定你的 **OpenAI Key**、**LINE Channel Access Token**、**Webhook URL** 等資訊。
+### 實際應用建議與經驗總結
 
----
+1.  對於沒有程式基礎的使用者，建議先熟悉基本 API 串接技巧，有助於加速 n8n 的使用與應用。
+    
+2.  透過 AI 模型輔助設計動態訊息結構，能有效解決 n8n 節點固定格式的問題。
+    
+3.  持續監控與優化資源使用狀況，特別是 Supabase 等耗資源服務，才能更有效地控制專案成本。
+    
 
-## 參考來源
+以自己的經驗而言，Zeabur 與 n8n 的結合確實能為自動化流程提供便捷快速的解決方案，但實務操作中還是需要特別留意技術細節及資源管理，才能避免不必要的問題。最終，親自動手實踐才是掌握這些工具最好的方式。
 
-- [n8n 官方文件](https://docs.n8n.io/)  
-- [LINE Messaging API](https://developers.line.biz/en/reference/messaging-api/)  
-- [OpenAI 官方文件](https://platform.openai.com/docs/introduction)  
-
-透過以上步驟與注意事項，你就能在 **n8n** 上輕鬆打造結合 **LINE BOT** 與 **AI** 的智慧回應機器人，並成功避開在實務中最容易踩到的坑。祝你開發順利！
+希望今天的分享能給大家帶來一些啟發，也感謝 AI 小聚能給予我這個破圈的機會，期待未來更多的交流與學習！
