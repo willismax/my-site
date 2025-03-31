@@ -16,23 +16,23 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   projectName: 'my-site', // Usually your repo name.
   githubHost: 'github.com',
   i18n: {
-    defaultLocale: 'zh-TW',     
-    locales: ['zh-TW','en'],  
+    defaultLocale: 'zh-TW',
+    locales: ['zh-TW', 'en'],
     localeConfigs: {
       en: {
         label: 'English',
-        direction: 'ltr',       
+        direction: 'ltr',
       },
       'zh-TW': {
-        label: '繁體中文（台灣）',
+        label: '繁體中文',
         direction: 'ltr',
       },
     },
-    
+
   },
 
   // scripts: [
-    
+
   //   // String format.
   //   'https://docusaurus.io/script.js',
   //   // Object format.
@@ -53,8 +53,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         },
         blog: {
           showReadingTime: true, // When set to false, the "x min read" won't be shown
-          readingTime: ({content, frontMatter, defaultReadingTime}) =>
-            defaultReadingTime({content, options: {wordsPerMinute: 300}}),
+          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
           blogTitle: 'Willismax 威力斯資訊技部落格!',
           blogDescription: '威力斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
           postsPerPage: 'ALL',
@@ -66,7 +66,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} willismax.`,
             createFeedItems: async (params) => {
-              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              const { blogPosts, defaultCreateFeedItems, ...rest } = params;
               return defaultCreateFeedItems({
                 // keep only the 15 most recent blog posts in the feed
                 blogPosts: blogPosts.filter((item, index) => index < 15),
@@ -74,13 +74,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
               });
             },
           },
-            
+
         },
         gtag: {
           trackingID: 'G-N364955R5S',
           anonymizeIP: true,
         },
-        
+
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
@@ -93,10 +93,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
     ],
   ],
-  
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({  
+    ({
       algolia: {
         appId: 'HRS5TFT9KD',
         apiKey: '079bfb99b9ac37548344f80d32d2e07e',
@@ -108,7 +108,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: true,
-      }, 
+      },
       navbar: {
         title: 'WillisMax',
         logo: {
@@ -117,13 +117,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         },
         items: [
           {
-            type: 'doc', 
+            type: 'doc',
             docId: 'intro',
             position: 'left',
             label: '教學與技術文',
           },
           {
-            to: "/blog", 
+            to: "/blog",
             activeBasePath: "blog",
             label: "文章",
             position: "left",
@@ -138,10 +138,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             //   },
             // ],
           },
-          { 
-            to: "about/", 
-            label: "關於我", 
-            position: "right" },
+          {
+            to: "about/",
+            label: "關於我",
+            position: "right"
+          },
 
           // {
           //   href: "https://hackmd.io/@wiimax",
@@ -191,12 +192,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         //   {
         //     title: 'Social',
         //     items: [
-              
+
         //       {
         //         label: 'LinkedIn',
         //         href: 'https://www.linkedin.com/in/willis-chen/',
         //       },
-              
+
         //       {
         //         label: 'Twitter',
         //         href: 'https://twitter.com/wiimax9527',
@@ -208,7 +209,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
       metadata: [
         { name: "robots", content: "max-image-preview:large" },
-        { name: '威力斯', content: 'Python, ICT, Tech'},
+        { name: '威力斯', content: 'Python, ICT, Tech' },
         { name: "robots", content: "max-image-preview:large" }
       ],
       prism: {
@@ -232,7 +233,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             enableInDevelopment: false, // optional
           },
           "giscus",
-           {
+          {
             repo: 'willismax/my-site',
             repoId: 'R_kgDOJEzR1A',
             category: 'Announcements',
@@ -242,6 +243,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           },
         ],
       ],
-    
+
     }),
 });
