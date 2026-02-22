@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_site=self.webpackChunkmy_site||[]).push([[3560],{5554:s=>{s.exports=JSON.parse('{"label":"ESG","permalink":"/my-site/blog/tags/esg","allTagsPath":"/my-site/blog/tags","count":1}')}}]);
