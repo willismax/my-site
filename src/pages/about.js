@@ -35,6 +35,33 @@ const experiences = [
     },
 ];
 
+const ironmanRecords = [
+    {
+        year: '2020',
+        edition: '第 12 屆',
+        title: '用 LINE 串起多媒體系統',
+        group: '自我挑戰組',
+        url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/3131',
+        stickerUrl: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/12/self.png?sticker',
+    },
+    {
+        year: '2021',
+        edition: '第 13 屆',
+        title: '從 AI 落地談 MLOps',
+        group: 'AI & Data 組',
+        url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/4015',
+        stickerUrl: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker',
+    },
+    {
+        year: '2022',
+        edition: '第 14 屆',
+        title: '小題大作的 30 個 HackMD 技巧',
+        group: 'self',
+        url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/5793',
+        stickerUrl: null,
+    },
+];
+
 const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/willismax', icon: '📦' },
     { name: 'HackMD', url: 'https://hackmd.io/@wiimax', icon: '📝' },
@@ -42,6 +69,60 @@ const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/willis-chen/', icon: '💼' },
     { name: 'Email', url: 'mailto:willismax.com@gmail.com', icon: '📧' },
 ];
+
+function IronmanBadge({ record }) {
+    const cardStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '1.2rem',
+        borderRadius: '12px',
+        background: 'var(--ifm-card-background-color, #fff)',
+        border: '2px solid var(--ifm-color-primary-lighter, #6366f1)',
+        textDecoration: 'none',
+        color: 'inherit',
+        transition: 'transform 0.2s, box-shadow 0.2s',
+        minWidth: '180px',
+        maxWidth: '220px',
+        flex: '1',
+    };
+    return (
+        <a href={record.url} target="_blank" rel="noopener noreferrer" style={cardStyle}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(99,102,241,0.18)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
+        >
+            {record.stickerUrl ? (
+                <img
+                    src={record.stickerUrl}
+                    alt={`ITHome ${record.year} 鐵人賽`}
+                    style={{ height: '120px', marginBottom: '0.75rem' }}
+                    loading="lazy"
+                />
+            ) : (
+                <div style={{
+                    height: '120px',
+                    width: '120px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem',
+                    marginBottom: '0.75rem',
+                    background: 'linear-gradient(135deg, #f59e0b, #ef4444)',
+                    borderRadius: '50%',
+                    color: '#fff',
+                }}>
+                    🏆
+                </div>
+            )}
+            <div style={{ fontWeight: 700, fontSize: '0.95rem', textAlign: 'center', lineHeight: 1.4 }}>
+                {record.title}
+            </div>
+            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted, #888)', marginTop: '0.3rem' }}>
+                {record.edition} · {record.year}
+            </div>
+        </a>
+    );
+}
 
 export default function About() {
     return (
@@ -97,31 +178,10 @@ export default function About() {
                     <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>
                         🏅 鐵人賽徽章
                     </h2>
-                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/3131" target="_blank" rel="noopener noreferrer">
-                            <img
-                                src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/12/self.png?sticker"
-                                alt="ITHome 2020 鐵人賽"
-                                style={{ height: '150px' }}
-                                loading="lazy"
-                            />
-                        </a>
-                        <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/4015" target="_blank" rel="noopener noreferrer">
-                            <img
-                                src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker"
-                                alt="ITHome 2021 鐵人賽"
-                                style={{ height: '150px' }}
-                                loading="lazy"
-                            />
-                        </a>
-                        <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/5793" target="_blank" rel="noopener noreferrer">
-                            <img
-                                src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/ithelp-14th-sticker.png?sticker"
-                                alt="ITHome 2022 鐵人賽"
-                                style={{ height: '150px' }}
-                                loading="lazy"
-                            />
-                        </a>
+                    <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        {ironmanRecords.map((record) => (
+                            <IronmanBadge key={record.year} record={record} />
+                        ))}
                     </div>
                 </div>
 
@@ -132,24 +192,18 @@ export default function About() {
                     </h2>
                     <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                         <img
-                            src="https://github-readme-stats-six.vercel.app/api?username=willismax&show_icons=true&theme=radical"
-                            alt="GitHub Stats"
+                            src="https://github-readme-streak-stats.herokuapp.com/?user=willismax&theme=radical"
+                            alt="GitHub Streak Stats"
                             loading="lazy"
-                            style={{ maxWidth: '100%' }}
-                        />
-                        <img
-                            src="https://github-readme-stats-six.vercel.app/api/top-langs/?username=willismax&layout=compact&theme=radical"
-                            alt="Top Languages"
-                            loading="lazy"
-                            style={{ maxWidth: '100%' }}
+                            style={{ maxWidth: '100%', borderRadius: '8px' }}
                         />
                     </div>
                     <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
                         <img
-                            src="https://raw.githubusercontent.com/willismax/willismax/output/github-contribution-grid-snake.svg"
-                            alt="GitHub Contribution Snake"
+                            src="https://ghchart.rshah.org/6366f1/willismax"
+                            alt="GitHub Contribution Chart"
                             loading="lazy"
-                            style={{ maxWidth: '100%' }}
+                            style={{ maxWidth: '100%', borderRadius: '8px' }}
                         />
                     </div>
                 </div>
