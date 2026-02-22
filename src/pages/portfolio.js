@@ -35,6 +35,19 @@ const portfolioItems = [
                 image:
                     'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker',
             },
+            {
+                title: '小題大作的 30 個 HackMD 技巧 (2022)',
+                description:
+                    '總結 HackMD 的各種進階使用技巧，從基礎筆記到自動化流程，提升知識管理的效率。',
+                tags: ['HackMD', 'Productivity', 'Tutorial'],
+                links: [
+                    {
+                        label: '鐵人賽文章',
+                        url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/5793',
+                    },
+                ],
+                image: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/ithelp-14th-sticker.png?sticker',
+            },
         ],
     },
     {

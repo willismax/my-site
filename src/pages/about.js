@@ -25,7 +25,7 @@ const experiences = [
     },
     {
         title: 'ITHome 鐵人賽參賽者',
-        description: '連續參加 ITHome 鐵人賽，完成「用 LINE 串起多媒體系統」與「從 AI 落地談 MLOps」系列。',
+        description: '三度完賽 ITHome 鐵人賽，系列包含「用 LINE 串起多媒體系統」、「從 AI 落地談 MLOps」以及「小題大作的 30 個 HackMD 技巧」。',
         icon: '🏆',
     },
     {
@@ -114,6 +114,14 @@ export default function About() {
                                 loading="lazy"
                             />
                         </a>
+                        <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/5793" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/ithelp-14th-sticker.png?sticker"
+                                alt="ITHome 2022 鐵人賽"
+                                style={{ height: '150px' }}
+                                loading="lazy"
+                            />
+                        </a>
                     </div>
                 </div>
 
@@ -124,13 +132,13 @@ export default function About() {
                     </h2>
                     <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                         <img
-                            src="https://github-readme-stats.vercel.app/api?username=willismax&show_icons=true&theme=tokyonight"
+                            src="https://github-readme-stats-six.vercel.app/api?username=willismax&show_icons=true&theme=radical"
                             alt="GitHub Stats"
                             loading="lazy"
                             style={{ maxWidth: '100%' }}
                         />
                         <img
-                            src="https://github-readme-stats.vercel.app/api/top-langs/?username=willismax&layout=compact&theme=tokyonight"
+                            src="https://github-readme-stats-six.vercel.app/api/top-langs/?username=willismax&layout=compact&theme=radical"
                             alt="Top Languages"
                             loading="lazy"
                             style={{ maxWidth: '100%' }}

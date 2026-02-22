@@ -1,3 +1,7 @@
+
+> my-site@2.0.0 build
+> docusaurus build
+
 [INFO] [zh-TW] Creating an optimized production build...
 [WARNING] Docusaurus found blog posts without truncation markers:
 - "blog/2025-05-26-uv-vs-venv.md"
@@ -21,7 +25,7 @@ We recommend using truncation markers (`<!-- truncate -->` or `{/* truncate */}`
 Tip: turn this security off with the `onUntruncatedBlogPosts: 'ignore'` blog plugin option.
 [90m[[90mwebpackbar[90m][39m [36m??[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [36m??[39m Compiling Server
-[90m[[90mwebpackbar[90m][39m [32m??[39m Server: Compiled successfully in 31.06s
-[90m[[90mwebpackbar[90m][39m [32m??[39m Client: Compiled successfully in 46.51s
+[90m[[90mwebpackbar[90m][39m [32m??[39m Server: Compiled successfully in 3.06s
+[90m[[90mwebpackbar[90m][39m [32m??[39m Client: Compiled successfully in 4.79s
 [SUCCESS] Generated static files in "build".
 [INFO] Use `npm run serve` command to test your build locally.
