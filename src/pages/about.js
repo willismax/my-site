@@ -58,7 +58,7 @@ const ironmanRecords = [
         title: '小題大作的 30 個 HackMD 技巧',
         group: 'self',
         url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/5793',
-        stickerUrl: null,
+        stickerUrl: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/self.png?sticker',
     },
 ];
 

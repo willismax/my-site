@@ -46,7 +46,7 @@ const portfolioItems = [
                         url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/5793',
                     },
                 ],
-                image: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/ithelp-14th-sticker.png?sticker',
+                image: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/self.png?sticker',
             },
         ],
     },
