@@ -210,7 +210,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['python', 'bash', 'json', 'yaml', 'docker'],
+        additionalLanguages: ['python', 'bash', 'json', 'yaml', 'docker', 'java'],
       },
       liveCodeBlock: {
         playgroundPosition: 'bottom',
