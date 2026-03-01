@@ -13,6 +13,7 @@ const config = {
   onBrokenLinks: 'warn',
   markdown: {
     format: 'detect',
+    mermaid: true,
   },
   favicon: 'img/favicon.ico',
   organizationName: 'willismax',
@@ -80,7 +81,7 @@ const config = {
     ],
   ],
 
-  themes: ['@docusaurus/theme-live-codeblock'],
+  themes: ['@docusaurus/theme-live-codeblock', '@docusaurus/theme-mermaid'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
