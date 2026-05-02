@@ -28,6 +28,8 @@ _圖：學員從 LINE 提問後，GAS 負責串接 Gemini、Google 試算表與 
 
 ## 這個 AI 助教能做到什麼？
 
+![image](https://hackmd.io/_uploads/SJvam0GA-l.png)
+
 這次的版本不只是單純的聊天機器人，而是加入了幾個在教學現場很實用的能力：
 
 - 上下文記憶：透過 GAS 的 CacheService，記住同一位學員最近 5 輪對話，回答不再像金魚腦。
@@ -41,6 +43,7 @@ _圖：學員從 LINE 提問後，GAS 負責串接 Gemini、Google 試算表與 
 ![image](https://hackmd.io/_uploads/HkEY2afRZl.png)
 
 ## 課前準備：先備好 4 把鑰匙
+![image](https://hackmd.io/_uploads/rkPkXCzAbl.png)
 
 在開始貼程式碼之前，先準備以下資源：
 
@@ -161,6 +164,8 @@ _圖：真正的 API Key 放在 Script Properties，程式碼只負責讀取，�
 ![image](https://hackmd.io/_uploads/r18mhnzCbg.png)
 
 `WEBHOOK_SECRET` 不是取代 LINE 官方簽章驗證的完整做法，但在純 GAS Web App 很實用：稍後把它加在 Webhook URL 的 query string 裡，可以擋掉一部分亂掃公開網址的請求。
+![image](https://hackmd.io/_uploads/HJq_E0GCZl.png)
+
 
 ### 步驟三：貼上完整程式碼
 
@@ -599,6 +604,7 @@ https://script.google.com/macros/s/你的部署ID/exec?key=你的_WEBHOOK_SECRET
 如果你想比較不同部署方式，我之前也寫過[在 Render 上快速部署 HackMD 與 LINE 的聊天機器人](https://willismax.github.io/my-site/blog/%E5%9C%A8%20Render%20%E4%B8%8A%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%20HackMD%20%E8%88%87%20LINE%20%E7%9A%84%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA)，以及[用 GitHub Codespace 建立並部署 LINE Bot](https://willismax.github.io/my-site/blog/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20GitHub%20Codespace%20%E5%BB%BA%E7%AB%8B%E4%B8%A6%E9%83%A8%E7%BD%B2%20LINE%20Bot)。這篇採用 GAS，是因為課程場景已經使用 Google 試算表，資料庫、程式與部署都放在同一個 Google 生態系裡，維護成本會更低。
 
 ### 步驟五：回到 LINE Developers 綁定 Webhook
+![image](https://hackmd.io/_uploads/r110E0zC-g.png)
 
 進入你的 Messaging API 設定頁面後：
 
@@ -612,7 +618,6 @@ https://script.google.com/macros/s/你的部署ID/exec?key=你的_WEBHOOK_SECRET
 這支範例程式會把學員的提問與 AI 回覆寫進 Google 試算表，這對教學分析很有幫助，但也代表你正在保存對話資料。實務上建議這樣處理：
 
 ![Webhook 部署與聊天紀錄資料保護](/img/blog/line-ai-course-assistant/deploy-and-data-protection.svg)
-![image](https://hackmd.io/_uploads/B1wWyAzAbe.png)
 
 _圖：Webhook URL 加上 shared secret 只是第一層門禁；真正上線後，聊天紀錄的權限與保存期限也要一起管理。_
 
@@ -623,8 +628,10 @@ _圖：Webhook URL 加上 shared secret 只是第一層門禁；真正上線後�
 - 課程結束後設定資料保存期限，例如保留 30 到 90 天，之後刪除或脫敏。
 
 如果你的場景真的會處理個資或企業內部資料，就不要把這篇範例直接當正式系統上線；至少要再補上權限控管、資料保存政策、錯誤告警與 API 使用量監控。
+![image](https://hackmd.io/_uploads/rJ6DH0fCbl.png)
 
 ## 完成後怎麼測？
+![image](https://hackmd.io/_uploads/HJq7SCfCbl.png)
 
 你可以先從最簡單的問題開始測，例如直接傳：
 
