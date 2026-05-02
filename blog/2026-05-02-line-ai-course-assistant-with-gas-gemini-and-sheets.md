@@ -1,13 +1,13 @@
 ---
-title: 零基礎也能做！用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫
-slug: 零基礎也能做！用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫
+title: 用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫
+slug: 用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫
 date: 2026-05-02T20:00
 authors: Willis
 GA: G-CH7FZ71WRC
 tags: [LINE, GAS, Gemini, Google試算表, AI]
 ---
 
-零基礎也能做！用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫
+用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫
 ![image](https://hackmd.io/_uploads/Bk5OpaGA-l.png)
 
 ---
