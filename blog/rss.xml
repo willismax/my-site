@@ -4,11 +4,146 @@
         <title>Will is MAX Blog</title>
         <link>https://willismax.github.io/my-site/blog</link>
         <description>Will is MAX Blog</description>
-        <lastBuildDate>Sat, 02 May 2026 20:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 07 Jun 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-TW</language>
         <copyright>Copyright © 2026 willismax.</copyright>
+        <item>
+            <title><![CDATA[用 Codex 串起 NotebookLM 與 Google 工具：一個公開 Skill 的設計與使用教學]]></title>
+            <link>https://willismax.github.io/my-site/blog/notebooklm-workflow-coach</link>
+            <guid>https://willismax.github.io/my-site/blog/notebooklm-workflow-coach</guid>
+            <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[這篇文章介紹 notebooklm-workflow-coach，一個協助使用者把模糊情境轉成 NotebookLM 與 Google Workspace 工作流的公開 Codex Skill。]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="NotebookLM Workflow Coach 主視覺" src="https://willismax.github.io/my-site/assets/images/cover-858c636e117c2bcfc38b532258fe6b05.png" width="1672" height="941" class="img_ev3q"></p>
+<p>很多人使用 AI 工具時，第一個困難其實不是「不會下指令」，而是還沒把問題說清楚。</p>
+<p>例如：</p>
+<ul>
+<li class="">我想整理問卷。</li>
+<li class="">我想做主管簡報。</li>
+<li class="">我想把資料丟進 NotebookLM 分析。</li>
+<li class="">我想讓 Google 表單送出後自動寄信。</li>
+<li class="">我想把這次做法保存成下次可重用的方法。</li>
+</ul>
+<p>這些想法都合理，但如果直接要求 AI 產出成品，常常會得到一份看起來漂亮、實際上不好落地的答案，特別是我在教學、顧問的經驗之中，在沒有很有效的框架思考之下，時常需要進一步的釐清與討論。</p>
+<p>所以我整理了一個公開 Codex Skill：</p>
+<p><a href="https://github.com/willismax/notebooklm-workflow-coach" target="_blank" rel="noopener noreferrer" class="">https://github.com/willismax/notebooklm-workflow-coach</a></p>
+<p>它的目標不是替你按一個魔法按鈕，而是陪你把一個模糊情境，整理成可以執行、可以查證、可以重複使用的 NotebookLM + Google Workspace 工作流，而這個工作流是基於一套系統化的思考框架、落實為6周訓練課程後得到的歸納與實踐成果。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="這個-skill-��解決什麼問題">這個 Skill 解決什麼問題<a href="https://willismax.github.io/my-site/blog/notebooklm-workflow-coach#%E9%80%99%E5%80%8B-skill-%E8%A7%A3%E6%B1%BA%E4%BB%80%E9%BA%BC%E5%95%8F%E9%A1%8C" class="hash-link" aria-label="這個 Skill 解決什麼問題的直接連結" title="這個 Skill 解決什麼問題的直接連結" translate="no">​</a></h2>
+<p><code>notebooklm-workflow-coach</code> 會先用三輪對話幫你釐清：</p>
+<ol>
+<li class="">你的情境與痛點是什麼。</li>
+<li class="">你有哪些資料來源，以及哪些資料不能上傳 AI。</li>
+<li class="">你希望最後產出什麼，怎樣才算有用。</li>
+</ol>
+<p>接著它會產生：</p>
+<ul>
+<li class="">PRD</li>
+<li class="">資料來源清單</li>
+<li class="">NotebookLM 筆記本規劃</li>
+<li class="">NotebookLM 提示詞</li>
+<li class="">Google 表單、試算表、文件、Drive、Apps Script 的分工</li>
+<li class="">報告、簡報、Podcast、Infographic 或 Data Table 的產出建議</li>
+<li class="">風險檢查表</li>
+<li class="">下次可重用的 Prompt 或 KnowHow</li>
+</ul>
+<p>這讓 Codex 比較像一個工作流中樞，而 NotebookLM 則是來源分析層。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="安裝方式">安裝方式<a href="https://willismax.github.io/my-site/blog/notebooklm-workflow-coach#%E5%AE%89%E8%A3%9D%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="安裝方式的直接連結" title="安裝方式的直接連結" translate="no">​</a></h2>
+<p>先下載或 clone repo：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">git</span><span class="token plain"> clone https://github.com/willismax/notebooklm-workflow-coach.git</span><br></span></code></pre></div></div>
+<p>把這個資料夾放到 Codex skills 目錄：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">skills/notebooklm-workflow-coach</span><br></span></code></pre></div></div>
+<p>接著重新啟動 Codex 或開新對話。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一句話怎麼下">第一句話怎麼下<a href="https://willismax.github.io/my-site/blog/notebooklm-workflow-coach#%E7%AC%AC%E4%B8%80%E5%8F%A5%E8%A9%B1%E6%80%8E%E9%BA%BC%E4%B8%8B" class="hash-link" aria-label="第一句話怎麼下的直接連結" title="第一句話怎麼下的直接連結" translate="no">​</a></h2>
+<p>你可以直接貼這句：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">使用 notebooklm-workflow-coach。我想用 NotebookLM 與 Google 雲端工具完成一個工作、研究、學習或生活任務，請先用三輪對話幫我釐清需求並產生 PRD。</span><br></span></code></pre></div></div>
+<p>如果你已經有具體情境，可以這樣說：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">使用 notebooklm-workflow-coach。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">我每週都要整理客戶回饋與服務紀錄，想找出常見問題、產生改善建議，並做成主管簡報。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">我有 Google 表單回覆、試算表、幾份服務 SOP 文件。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">請先用三輪對話幫我釐清需求，產生 PRD，並規劃 NotebookLM、Google 試算表、Google 文件與 Apps Script 可以怎麼串。</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三輪對話長什麼樣子">三輪對話長什麼樣子<a href="https://willismax.github.io/my-site/blog/notebooklm-workflow-coach#%E4%B8%89%E8%BC%AA%E5%B0%8D%E8%A9%B1%E9%95%B7%E4%BB%80%E9%BA%BC%E6%A8%A3%E5%AD%90" class="hash-link" aria-label="三輪對話長什麼樣子的直接連結" title="三輪對話長什麼樣子的直接連結" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="三輪對話到 PRD 與大禮包" src="https://willismax.github.io/my-site/assets/images/three-round-prd-0457c570b938391169c79e500c391344.png" width="1672" height="941" class="img_ev3q"></p>
+<p>第一輪通常會釐清情境：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">這件事發生在哪個工作或生活場景？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">目前最麻煩、最花時間、最容易出錯的是什麼？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">做完後誰會看或使用成果？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">你希望最後得到什麼？</span><br></span></code></pre></div></div>
+<p>第二輪會釐清資料：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">你手上有哪些資料來源？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">哪些資料有個資、商業機密或不能上傳到 AI？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">你目前能使用哪些工具？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">你希望今天完成，還是可以分階段完成？</span><br></span></code></pre></div></div>
+<p>第三輪會釐清成功標準：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">這份成果要幫你做什麼決定？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">成果要用什麼格式交付？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">什麼樣的結果你會覺得真的有用？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">這是一次性任務，還是之後要定期重複？</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="範例把課後問卷變成課程調整報告">範例：把課後問卷變成課程調整報告<a href="https://willismax.github.io/my-site/blog/notebooklm-workflow-coach#%E7%AF%84%E4%BE%8B%E6%8A%8A%E8%AA%B2%E5%BE%8C%E5%95%8F%E5%8D%B7%E8%AE%8A%E6%88%90%E8%AA%B2%E7%A8%8B%E8%AA%BF%E6%95%B4%E5%A0%B1%E5%91%8A" class="hash-link" aria-label="範例：把課後問卷變成課程調整報告的直接連結" title="範例：把課後問卷變成課程調整報告的直接連結" translate="no">​</a></h2>
+<p>假設你有一份 Google 表單回覆，裡面有滿意度、最有幫助的內容、還不清楚的地方、具體建議。</p>
+<p>這個 Skill 會幫你規劃：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>階段</th><th>工具</th><th>任務</th></tr></thead><tbody><tr><td>收資料</td><td>Google 表單</td><td>收集回饋</td></tr><tr><td>整理</td><td>Google 試算表</td><td>清理欄位、統計滿意度</td></tr><tr><td>分析</td><td>NotebookLM</td><td>找出常見問題、低滿意度原因</td></tr><tr><td>改寫</td><td>Codex</td><td>產生內部報告、公開公告、簡報大綱</td></tr><tr><td>自動化</td><td>Apps Script</td><td>低滿意度提醒、每週摘要</td></tr><tr><td>回寫</td><td>Codex</td><td>整理成下次可重用 KnowHow</td></tr></tbody></table>
+<p>NotebookLM 提示詞可能會長這樣：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">請根據這份課後回饋資料，整理：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">1. 本週最有幫助的三個內容。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2. 最常出現的不清楚問題。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3. 滿意度低於 3 分的可能原因。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4. 下週課程應優先補強的三件事。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5. 需要人工個別回覆的類型與原因。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">請用表格輸出，並在每一項後面標註依據來自哪些回饋內容。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">如果資料不足，請明確說明不能推論。</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="來源清單小工具">來源清單小工具<a href="https://willismax.github.io/my-site/blog/notebooklm-workflow-coach#%E4%BE%86%E6%BA%90%E6%B8%85%E5%96%AE%E5%B0%8F%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="來源清單小工具的直接連結" title="來源清單小工具的直接連結" translate="no">​</a></h2>
+<p>Repo 也附了一個小工具，可以把網址、檔案或筆記整理成 NotebookLM-ready source inventory：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">python skills/notebooklm-workflow-coach/scripts/build_source_inventory.py </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"https://example.com/report"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"feedback.csv"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"team SOP document"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token parameter variable" style="color:#36acaa">--sensitivity</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"public-or-sample"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token parameter variable" style="color:#36acaa">--role</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"practice"</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token parameter variable" style="color:#36acaa">--markdown</span><span class="token plain"> source_inventory.md </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token parameter variable" style="color:#36acaa">--json</span><span class="token plain"> source_inventory.json</span><br></span></code></pre></div></div>
+<p>它會幫你標出來源類型、是否適合 NotebookLM、敏感性與用途。這一步很重要，因為 NotebookLM 的品質很大程度取決於你餵給它的來源。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="我最希望使用者帶走的不是工具而是方法">我最希望使用者帶走的不是工具，而是方法<a href="https://willismax.github.io/my-site/blog/notebooklm-workflow-coach#%E6%88%91%E6%9C%80%E5%B8%8C%E6%9C%9B%E4%BD%BF%E7%94%A8%E8%80%85%E5%B8%B6%E8%B5%B0%E7%9A%84%E4%B8%8D%E6%98%AF%E5%B7%A5%E5%85%B7%E8%80%8C%E6%98%AF%E6%96%B9%E6%B3%95" class="hash-link" aria-label="我最希望使用者帶走的不是工具，而是方法的直接連結" title="我最希望使用者帶走的不是工具，而是方法的直接連結" translate="no">​</a></h2>
+<p>這個 Skill 真正想培養的是一套習慣：</p>
+<ol>
+<li class="">先把情境說清楚。</li>
+<li class="">把資料來源整理好。</li>
+<li class="">用 NotebookLM 做來源分析。</li>
+<li class="">用 Codex 把分析結果轉成可交付成果。</li>
+<li class="">把成功做法回寫成 KnowHow。</li>
+</ol>
+<p>AI 工具會一直變，但這條思考精神與實作路徑可以陪伴很久。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="安全提醒">安全提醒<a href="https://willismax.github.io/my-site/blog/notebooklm-workflow-coach#%E5%AE%89%E5%85%A8%E6%8F%90%E9%86%92" class="hash-link" aria-label="安全提醒的直接連結" title="安全提醒的直接連結" translate="no">​</a></h2>
+<ul>
+<li class="">不要把密碼、API Key、客戶名單、身分證字號、醫療資料、薪資資料直接貼進聊天。</li>
+<li class="">練習時優先使用假資料、公開資料或已匿名資料。</li>
+<li class="">Apps Script 的 API Key 要放在 Script Properties。</li>
+<li class="">NotebookLM 的額度與功能會變動，請以你登入後看到的介面為準。</li>
+<li class="">漂亮的 AI 報告不代表可信，仍要檢查來源、樣本數、反方觀點與推論邊界。</li>
+</ul>
+<p>現在就<a href="https://github.com/willismax/notebooklm-workflow-coach" target="_blank" rel="noopener noreferrer" class="">試試看</a>吧！如果你有任何問題、建議或想分享的使用心得，歡迎在 GitHub Repo 開 Issue 或 Pull Request。</p>]]></content:encoded>
+            <author>willismax.com@gmail.com (Willis Chen)</author>
+            <category>NotebookLM</category>
+            <category>Codex</category>
+            <category>Google Workspace</category>
+            <category>AI workflow</category>
+            <category>Apps Script</category>
+        </item>
         <item>
             <title><![CDATA[用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫]]></title>
             <link>https://willismax.github.io/my-site/blog/用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫</link>
@@ -223,7 +358,7 @@
 </blockquote>
 <p>這個推論很自然，但問題就出在這裡：<strong>「改得到同一個物件內容」不等於「呼叫端變數本身是被 reference 傳進去」</strong>。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="先建立一個基本觀念變數不是在搬整個陣列">先建立一個基本觀念：變數不是在搬整個陣列<a href="https://willismax.github.io/my-site/blog/Java%20%E9%99%A3%E5%88%97%E6%98%AF%20call%20by%20address%EF%BC%9FPython%20%E6%98%AF%20call%20by%20reference%EF%BC%9F%E5%85%A9%E5%80%8B%E5%B8%B8%E8%A6%8B%E8%AA%A4%E8%A7%A3%E4%B8%80%E6%AC%A1%E9%87%90%E6%B8%85#%E5%85%88%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5%E8%AE%8A%E6%95%B8%E4%B8%8D%E6%98%AF%E5%9C%A8%E6%90%AC%E6%95%B4%E5%80%8B%E9%99%A3%E5%88%97" class="hash-link" aria-label="先建立一個基本觀念：��變數不是在搬整個陣列的直接連結" title="先建立一個基本觀念：變數不是在搬整個陣列的直接連結" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="先建立一個基本觀念變數不是��在搬整個陣列">先建立一個基本觀念：變數不是在搬整個陣列<a href="https://willismax.github.io/my-site/blog/Java%20%E9%99%A3%E5%88%97%E6%98%AF%20call%20by%20address%EF%BC%9FPython%20%E6%98%AF%20call%20by%20reference%EF%BC%9F%E5%85%A9%E5%80%8B%E5%B8%B8%E8%A6%8B%E8%AA%A4%E8%A7%A3%E4%B8%80%E6%AC%A1%E9%87%90%E6%B8%85#%E5%85%88%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E5%9F%BA%E6%9C%AC%E8%A7%80%E5%BF%B5%E8%AE%8A%E6%95%B8%E4%B8%8D%E6%98%AF%E5%9C%A8%E6%90%AC%E6%95%B4%E5%80%8B%E9%99%A3%E5%88%97" class="hash-link" aria-label="先建立一個基本觀念：變數不是在搬整個陣列的直接連結" title="先建立一個基本觀念：變數不是在搬整個陣列的直接連結" translate="no">​</a></h2>
 <p><img decoding="async" loading="lazy" src="https://hackmd.io/_uploads/SJyldTEoWe.png" alt="image" class="img_ev3q"></p>
 <p>最容易卡住的地方，是腦中會把變數想成「盒子裡直接裝著整個陣列」。</p>
 <p>但比較接近實際的理解是：</p>
@@ -335,7 +470,7 @@
 <div class="language-java codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-java codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">arr</span><span class="token punctuation" style="color:#393A34">[</span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">100</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
 <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">arr</span><span class="token punctuation" style="color:#393A34">[</span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">]</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">100</span><br></span></code></pre></div></div>
 <p>這叫<strong>改同一個物件的內容</strong>。因為兩邊都還指向同一個陣列 / list，所以外面看得到。</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="如果是在改指向">如果是在改指向：<a href="https://willismax.github.io/my-site/blog/Java%20%E9%99%A3%E5%88%97%E6%98%AF%20call%20by%20address%EF%BC%9FPython%20%E6%98%AF%20call%20by%20reference%EF%BC%9F%E5%85%A9%E5%80%8B%E5%B8%B8%E8%A6%8B%E8%AA%A4%E8%A7%A3%E4%B8%80%E6%AC%A1%E9%87%90%E6%B8%85#%E5%A6%82%E6%9E%9C%E6%98%AF%E5%9C%A8%E6%94%B9%E6%8C%87%E5%90%91" class="hash-link" aria-label="如果是在改指向：的直接連結" title="如果是在改指向：的直接連結" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="如果是在改指向">如果是在改指向：<a href="https://willismax.github.io/my-site/blog/Java%20%E9%99%A3%E5%88%97%E6%98%AF%20call%20by%20address%EF%BC%9FPython%20%E6%98%AF%20call%20by%20reference%EF%BC%9F%E5%85%A9%E5%80%8B%E5%B8%B8%E8%A6%8B%E8%AA%A4%E8%A7%A3%E4%B8%80%E6%AC%A1%E9%87%90%E6%B8%85#%E5%A6%82%E6%9E%9C%EF%BF%BD%E6%98%AF%E5%9C%A8%E6%94%B9%E6%8C%87%E5%90%91" class="hash-link" aria-label="如果是在改指向：的直接連結" title="如果是在改指向：的直接連結" translate="no">​</a></h4>
 <div class="language-java codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-java codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">arr </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">int</span><span class="token punctuation" style="color:#393A34">[</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">{</span><span class="token number" style="color:#36acaa">9</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">9</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">9</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
 <div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">arr </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">[</span><span class="token number" style="color:#36acaa">9</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">9</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">9</span><span class="token punctuation" style="color:#393A34">]</span><br></span></code></pre></div></div>
 <p>這叫<strong>讓參數自己改去指向新物件</strong>。這時候只會影響函式裡的參數，不會改到外面的變數綁定。</p>
@@ -565,7 +700,7 @@ A：沒關係！只要重新啟動就好，就像忘記帶文具盒去教室，�
 <blockquote>
 <p>🎉 <strong>成功指標</strong>：看到終端機前面出現 <code>(.venv)</code> 就表示你已經進入虛擬環境了！就像看到房門上貼著你的名字一樣。</p>
 </blockquote>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-步驟-4安裝你需要的工具套件">📦 步驟 4：安裝你需要的工具（套件）<a href="https://willismax.github.io/my-site/blog/%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A9%B2%E7%94%A8%20uv%20%E5%8F%96%E4%BB%A3%E5%82%B3%E7%B5%B1%E7%9A%84%20Python%20venv%EF%BC%9F#-%E6%AD%A5%E9%A9%9F-4%E5%AE%89%E8%A3%9D%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6" class="hash-link" aria-label="📦 步驟 4：安裝你需要的工具（套件）的直接連結" title="📦 步驟 4：安裝你需要的工具（套件）的直接連結" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-步驟-4安裝你需要的工具套件">📦 步驟 4：安裝你需要的工具（套件）<a href="https://willismax.github.io/my-site/blog/%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A9%B2%E7%94%A8%20uv%20%E5%8F%96%E4%BB%A3%E5%82%B3%E7%B5%B1%E7%9A%84%20Python%20venv%EF%BC%9F#-%E6%AD%A5%E9%A9%9F-4%E5%AE%89%E8%A3%9D%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7%E5%A5%97%E4%BB%B6" class="hash-link" aria-label="📦 步驟 4：安裝你需要的工具（套件）��的直接連結" title="📦 步驟 4：安裝你需要的工具（套件）的直接連結" translate="no">​</a></h4>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 安裝單一套件（超快！）</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv pip </span><span class="token function" style="color:#d73a49">install</span><span class="token plain"> pandas</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 安裝多個套件</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv pip </span><span class="token function" style="color:#d73a49">install</span><span class="token plain"> pandas requests matplotlib</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 從檔案安裝所有套件（就像照購物清單買東西）</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv pip </span><span class="token function" style="color:#d73a49">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-r</span><span class="token plain"> requirements.txt</span><br></span></code></pre></div></div>
 <blockquote>
 <p>⚡ <strong>速度體驗分享</strong>：以前用 pip 安裝 pandas 要等 30 秒，用 uv 只要 3 秒！就像從撥接網路升級到光纖一樣爽快！</p>
@@ -654,7 +789,7 @@ A：沒關係！只要重新啟動就好，就像忘記帶文具盒去教室，�
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 建立虛擬環境（若沒安裝過指定版本會自動處理）</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv venv </span><span class="token parameter variable" style="color:#36acaa">--python</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">3.11</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 安裝套件</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv pip </span><span class="token function" style="color:#d73a49">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-r</span><span class="token plain"> requirements.txt</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 鎖檔與同步</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv pip compile requirements.in </span><span class="token parameter variable" style="color:#36acaa">-o</span><span class="token plain"> requirements.lock</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv pip </span><span class="token function" style="color:#d73a49">sync</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-r</span><span class="token plain"> requirements.lock</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-其他實用命令">✅ 其他實用命令<a href="https://willismax.github.io/my-site/blog/%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A9%B2%E7%94%A8%20uv%20%E5%8F%96%E4%BB%A3%E5%82%B3%E7%B5%B1%E7%9A%84%20Python%20venv%EF%BC%9F#-%E5%85%B6%E4%BB%96%E5%AF%A6%E7%94%A8%E5%91%BD%E4%BB%A4" class="hash-link" aria-label="✅ 其他實用命令的直接連結" title="✅ 其他實用命令的直接連結" translate="no">​</a></h4>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 快速執行一次性工具，不汙染環境</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv tool run black </span><span class="token builtin class-name">.</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 移除全部快取與工具</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">uv cache clean</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-為什麼資深開發者會選-uv">✅ 為什麼資深開發者會選 uv？<a href="https://willismax.github.io/my-site/blog/%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A9%B2%E7%94%A8%20uv%20%E5%8F%96%E4%BB%A3%E5%82%B3%E7%B5%B1%E7%9A%84%20Python%20venv%EF%BC%9F#-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%B3%87%E6%B7%B1%E9%96%8B%E7%99%BC%E8%80%85%E6%9C%83%E9%81%B8-uv" class="hash-link" aria-label="✅ 為什麼資深開發者會選 uv？的直接連結" title="✅ 為什麼��資深開發者會選 uv？的直接連結" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-為什麼資深開��發者會選-uv">✅ 為什麼資深開發者會選 uv？<a href="https://willismax.github.io/my-site/blog/%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A9%B2%E7%94%A8%20uv%20%E5%8F%96%E4%BB%A3%E5%82%B3%E7%B5%B1%E7%9A%84%20Python%20venv%EF%BC%9F#-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%B3%87%E6%B7%B1%E9%96%8B%E7%99%BC%E8%80%85%E6%9C%83%E9%81%B8-uv" class="hash-link" aria-label="✅ 為什麼資深開發者會選 uv？的直接連結" title="✅ 為什麼資深開發者會選 uv？的直接連結" translate="no">​</a></h4>
 <ul>
 <li class="">
 <p>節省時間：省略繁瑣安裝流程，一鍵完成</p>
@@ -830,7 +965,7 @@ A：沒關係！只要重新啟動就好，就像忘記帶文具盒去教室，�
 <li class="">選擇 "New codespace" 來建立一個新的開發環境。
 <img decoding="async" loading="lazy" src="https://hackmd.io/_uploads/SJnIn_cIT.png" alt="image" class="img_ev3q"></li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步驟二設置環境變數">步驟二：設置環境變數<a href="https://willismax.github.io/my-site/blog/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20GitHub%20Codespace%20%E5%BB%BA%E7%AB%8B%E4%B8%A6%E9%83%A8%E7%BD%B2%20LINE%20Bot#%E6%AD%A5%E9%A9%9F%E4%BA%8C%E8%A8%AD%E7%BD%AE%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8" class="hash-link" aria-label="步驟二：設置環境變數的直��接連結" title="步驟二：設置環境變數的直接連結" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="步驟二設置環境變數">步驟二：設置環境變數<a href="https://willismax.github.io/my-site/blog/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20GitHub%20Codespace%20%E5%BB%BA%E7%AB%8B%E4%B8%A6%E9%83%A8%E7%BD%B2%20LINE%20Bot#%E6%AD%A5%E9%A9%9F%E4%BA%8C%E8%A8%AD%E7%BD%AE%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8" class="hash-link" aria-label="步驟二：設置環境變數的直接連結" title="步驟二：設置環境變數的直接連結" translate="no">​</a></h3>
 <p>在 Codespace 中設置你的 LINE Bot 的環境變數：</p>
 <ol>
 <li class="">
@@ -966,7 +1101,7 @@ A：沒關係！只要重新啟動就好，就像忘記帶文具盒去教室，�
 <li class=""><strong>獲取 OpenAI API Token</strong>：保存好這個 Token，它是一次性的。 <img decoding="async" loading="lazy" src="https://hackmd.io/_uploads/SJFdUYbWT.png" alt="" class="img_ev3q"></li>
 </ol>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-步驟3設置-line-developer-channel-及獲取-secret-token-">🌟 步驟3：設置 LINE Developer Channel 及獲取 Secret, Token 🌟<a href="https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach#-%E6%AD%A5%E9%A9%9F3%E8%A8%AD%E7%BD%AE-line-developer-channel-%E5%8F%8A%E7%8D%B2%E5%8F%96-secret-token-" class="hash-link" aria-label="🌟 步驟3：設置 LINE Developer Channel 及獲取 Secret, Token 🌟的直接連結" title="🌟 步驟3：設置 LINE Developer Channel 及獲取 Secret, Token 🌟的直接連結" translate="no">​</a></h3>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-獲取-channel-secret-">3.1 獲取 <code>Channel Secret</code> 🔒<a href="https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach#31-%E7%8D%B2%E5%8F%96-channel-secret-" class="hash-link" aria-label="31-獲取-channel-secret-的直接連結" title="31-獲取-channel-secret-的直接連��結" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-獲取-channel-secret-">3.1 獲取 <code>Channel Secret</code> 🔒<a href="https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach#31-%E7%8D%B2%E5%8F%96-channel-secret-" class="hash-link" aria-label="31-獲取-channel-secret-的直接連結" title="31-獲取-channel-secret-的直接連結" translate="no">​</a></h4>
 <ul>
 <li class="">從 LINE 官方帳號或 LINE Developer Channel 都可獲取。 <img decoding="async" loading="lazy" src="https://hackmd.io/_uploads/ByaIpoWWT.png" alt="" class="img_ev3q"></li>
 </ul>
@@ -1003,7 +1138,7 @@ A：沒關係！只要重新啟動就好，就像忘記帶文具盒去教室，�
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-完成-">🎉 完成！ 🎉<a href="https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach#-%E5%AE%8C%E6%88%90-" class="hash-link" aria-label="🎉 完成！ 🎉的直接連結" title="🎉 完成！ 🎉的直接連結" translate="no">​</a></h3>
 <p>恭喜您，現在您已經成功建立了自己的 AI 助教！現在可以透過 LINE 官方帳號進行測試。</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-進階設定打造個性化的ai助手">🔧 進階設定：打造個性化的AI助手<a href="https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach#-%E9%80%B2%E9%9A%8E%E8%A8%AD%E5%AE%9A%E6%89%93%E9%80%A0%E5%80%8B%E6%80%A7%E5%8C%96%E7%9A%84ai%E5%8A%A9%E6%89%8B" class="hash-link" aria-label="🔧 進階設定：打造個性化的AI助手的直接連結" title="🔧 進階設定：打造個性化的AI助手的直接連結" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-進階設定打造個性化的ai助手">🔧 進階設定：打造個性化的AI助手<a href="https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach#-%E9%80%B2%E9%9A%8E%E8%A8%AD%E5%AE%9A%E6%89%93%E9%80%A0%E5%80%8B%E6%80%A7%E5%8C%96%E7%9A%84ai%E5%8A%A9%E6%89%8B" class="hash-link" aria-label="🔧 進階設定：打造個性化的AI助手的直接連結" title="🔧 進階設定：打��造個性化的AI助手的直接連結" translate="no">​</a></h3>
 <ul>
 <li class="">
 <p>若要讓AI助手更符合你的需求和風格，OpenAI API提供了一個彈性的方式讓你自行設定AI的角色。具體來說，你只需要在對話設定中添加 <code>messages: [{ role: "system", content: "你的AI助手人設" }]</code> 即可。</p>
@@ -1199,8 +1334,8 @@ A：沒關係！只要重新啟動就好，就像忘記帶文具盒去教室，�
 <p><img decoding="async" loading="lazy" src="https://hackmd.io/_uploads/Sym_k72wh.png" alt="部署狀態" class="img_ev3q"></p>
 </li>
 </ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="需要的-api-金鑰和資訊">需要的 API 金鑰和資訊<a href="https://willismax.github.io/my-site/blog/%E5%9C%A8%20Render%20%E4%B8%8A%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%20HackMD%20%E8%88%87%20LINE%20%E7%9A%84%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA#%E9%9C%80%E8%A6%81%E7%9A%84-api-%E9%87%91%E9%91%B0%E5%92%8C%E8%B3%87%E8%A8%8A" class="hash-link" aria-label="需要的 API 金鑰和資訊的直接連結" title="需要的 API 金鑰和資訊的直接連結" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hackmd-api">HackMD API<a href="https://willismax.github.io/my-site/blog/%E5%9C%A8%20Render%20%E4%B8%8A%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%20HackMD%20%E8%88%87%20LINE%20%E7%9A%84%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA#hackmd-api" class="hash-link" aria-label="HackMD API的直接連結" title="HackMD API的�直接連結" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="需要的-api-金鑰和資訊">需要的 API 金鑰和資訊<a href="https://willismax.github.io/my-site/blog/%E5%9C%A8%20Render%20%E4%B8%8A%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%20HackMD%20%E8%88%87%20LINE%20%E7%9A%84%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA#%E9%9C%80%E8%A6%81%E7%9A%84-api-%E9%87%91%E9%91%B0%E5%92%8C%E8%B3%87%E8%A8%8A" class="hash-link" aria-label="需要的 API 金鑰和資訊的直接連結" title="需要的 API 金鑰和資訊的直接�連結" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hackmd-api">HackMD API<a href="https://willismax.github.io/my-site/blog/%E5%9C%A8%20Render%20%E4%B8%8A%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%20HackMD%20%E8%88%87%20LINE%20%E7%9A%84%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA#hackmd-api" class="hash-link" aria-label="HackMD API的直接連結" title="HackMD API的直接連結" translate="no">​</a></h3>
 <ul>
 <li class="">請參考 HackMD 的官方文件以獲得 API 金鑰。</li>
 </ul>
@@ -1605,49 +1740,6 @@ A：沒關係！只要重新啟動就好，就像忘記帶文具盒去教室，�
             <author>willismax.com@gmail.com (Willis Chen)</author>
             <category>web</category>
             <category>Tech</category>
-        </item>
-        <item>
-            <title><![CDATA[從亞當斯密看不見的手認識ESG]]></title>
-            <link>https://willismax.github.io/my-site/blog/從亞當斯密看不見的手認識ESG</link>
-            <guid>https://willismax.github.io/my-site/blog/從亞當斯密看不見的手認識ESG</guid>
-            <pubDate>Thu, 25 May 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[為什麼會有這篇文章?]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="為什麼會有這篇文章">為什麼會有這篇文章?<a href="https://willismax.github.io/my-site/blog/%E5%BE%9E%E4%BA%9E%E7%95%B6%E6%96%AF%E5%AF%86%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E6%89%8B%E8%AA%8D%E8%AD%98ESG#%E7%82%BA%E4%BB%80%E9%BA%BC%E6%9C%83%E6%9C%89%E9%80%99%E7%AF%87%E6%96%87%E7%AB%A0" class="hash-link" aria-label="為什麼會有這篇文章?的直接連結" title="為什麼會有這篇文章?的直接連結" translate="no">​</a></h2>
-<ul>
-<li class="">近期工作與推動ESG高度相關，也記錄此時此刻的一些心得感想。</li>
-<li class="">本篇文章內容由Bing協作。</li>
-</ul>
-<h1>從亞當斯密的"看不見的手"討論ESG</h1>
-<p>你有沒有聽過亞當斯密的「看不見的手」？這是一個經濟學的名詞，指的是市場機能能夠自動調節供需，讓每個人都能追求自己的利益，同時也促進社會的福祉。聽起來很神奇，但是這個「看不見的手」其實有一個隱藏的秘密，那就是它其實是一隻「ESG」的手！今天我想和大家聊聊亞當斯密的"看不見的手"和ESG之間的關係。😊</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="什麼是esg">什麼是ESG？<a href="https://willismax.github.io/my-site/blog/%E5%BE%9E%E4%BA%9E%E7%95%B6%E6%96%AF%E5%AF%86%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E6%89%8B%E8%AA%8D%E8%AD%98ESG#%E4%BB%80%E9%BA%BC%E6%98%AFesg" class="hash-link" aria-label="什麼是ESG？的直接連結" title="什麼是ESG？的直接連結" translate="no">​</a></h2>
-<p>ESG是環境、社會和治理（Environmental, Social and Governance）的縮寫，它是一種評估企業對社會責任和可持續發展的影響的方法。ESG涵蓋了許多方面，例如減少碳排放、保護生物多樣性、改善勞工權益、反對貪腐和提高透明度等。🌎</p>
-<p>近年來，ESG越來越受到投資者、消費者和政策制定者的重視，因為它不僅關係到企業的道德和聲譽，也關係到企業的長期競爭力和風險管理。許多研究表明，高ESG表現的企業往往能夠創造更高的股東價值、更低的資金成本、更強的創新能力和更高的員工忠誠度。💰</p>
-<p><img decoding="async" loading="lazy" src="https://source.unsplash.com/960x640/?esg" alt="ESG" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="什麼是看不見的手">什麼是"看不見的手"？<a href="https://willismax.github.io/my-site/blog/%E5%BE%9E%E4%BA%9E%E7%95%B6%E6%96%AF%E5%AF%86%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E6%89%8B%E8%AA%8D%E8%AD%98ESG#%E4%BB%80%E9%BA%BC%E6%98%AF%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E6%89%8B" class="hash-link" aria-label="什麼是&quot;看不見的手&quot;？的直接連結" title="什麼是&quot;看不見的手&quot;？的直接連結" translate="no">​</a></h2>
-<p>"看不見的手"是一個出現在經濟學之父亞當斯密的《國富論》和《道德情操論》中的一個詞彙，它指的是在自由市場中，每個人追求自己的利益，通過價格機制，最終會促進社會整體的福利，就像有一隻看不見的手在指導經濟活動一樣。👋</p>
-<p>舉個例子，假設你想買一個蘋果，你會在市場上找到最便宜的蘋果賣家，而賣家則會根據供需關係設定一個合理的價格，這樣你們雙方都能得到最大的滿足。同時，這也會刺激其他蘋果生產者提高產量和品質，降低成本和價格，從而增加社會的總產出和消費。🍎</p>
-<p><img decoding="async" loading="lazy" src="https://source.unsplash.com/960x640/?apple" alt="蘋果" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="看不見的手和esg有什麼關係">"看不見的手"和ESG有什麼關係？<a href="https://willismax.github.io/my-site/blog/%E5%BE%9E%E4%BA%9E%E7%95%B6%E6%96%AF%E5%AF%86%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E6%89%8B%E8%AA%8D%E8%AD%98ESG#%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E6%89%8B%E5%92%8Cesg%E6%9C%89%E4%BB%80%E9%BA%BC%E9%97%9C%E4%BF%82" class="hash-link" aria-label="&quot;看不見的手&quot;和ESG有什麼關係？的直接連結" title="&quot;看不見的手&quot;和ESG有什麼關係？的直接連結" translate="no">​</a></h2>
-<p>你可能會覺得"看不見的手"和ESG是相互對立的概念，因為前者強調市場自由和個人利益，後者強調社會責任和公共利益。但其實，它們之間並不是那麼簡單的對立關係，而是有著複雜而微妙的互動。😉</p>
-<p>首先，亞當斯密在他的另一本著作《道德情操論》中，提出了一個重要的概念，那就是「同情心」（sympathy）。他認為人類是一種社會性的動物，具有與他人共感和同理的能力，這種能力讓我們能夠關心他人的利益和幸福，也讓我們能夠遵守道德規範和社會規則。這不就是ESG中的「社會」嗎？</p>
-<blockquote>
-<p>你可能會問，那他怎麼沒有提到「愛心」（love）呢？因為他知道愛情是盲目的，而市場是明智的！（笑）</p>
-</blockquote>
-<p>其次，亞當斯密在他的《國富論》中，也沒有忽視環境問題。他指出了農業對土地資源的消耗和浪費，並且主張應該通過稅收來抑制農業生產過剩和土地荒廢。他還提出了「公共工程」（public works）的概念，認為政府應該負責建設和維護基礎設施，如道路、橋樑、港口等，以促進交通和貿易，也以保護環境和公共安全。這不就是ESG中的「環境」嗎？</p>
-<blockquote>
-<p>你可能會問，那他怎麼沒有提到「節約」（save）呢？因為他知道節約是美德，但消費才能帶動經濟！（笑）</p>
-</blockquote>
-<p>最後，亞當斯密在他的《國富論》中，也強調了治理問題。他批判了當時英國政府對商業和貿易的過度干預和限制，例如重商主義政策、商業壟斷、關稅壁壘等。他主張政府應該放寬市場准入，保護私有財產權和契約自由，打擊貪污和腐敗，保障法治和司法公正。這不就是ESG中的「治理」嗎？</p>
-<blockquote>
-<p>你可能會問，那他怎麼沒有提到「民主」（democracy）呢？因為他知道民主是好事，但市場才是王道！（笑）</p>
-</blockquote>
-<p><img decoding="async" loading="lazy" src="https://source.unsplash.com/960x640/?competition" alt="競爭" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="結語">結語<a href="https://willismax.github.io/my-site/blog/%E5%BE%9E%E4%BA%9E%E7%95%B6%E6%96%AF%E5%AF%86%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E6%89%8B%E8%AA%8D%E8%AD%98ESG#%E7%B5%90%E8%AA%9E" class="hash-link" aria-label="結語的直接連結" title="結語的�直接連結" translate="no">​</a></h2>
-<p>所以你看，亞當斯密其實是一個ESG的先驅！他不僅提出了「看不見的手」這個偉大的經濟學思想，也提出了「ESG」這個偉大的企業社會責任思想！我們今天所看到的市場經濟和企業社會責任，都是他留給我們的寶貴遺產！。😊</p>
-<p>感謝大家閱讀我的部落格文章，如果你有任何意見或建議，歡迎在下面留言或聯絡我。下次再見！👋
-(本文笑點提供: Bing)</p>]]></content:encoded>
-            <author>willismax.com@gmail.com (Willis Chen)</author>
-            <category>ESG</category>
         </item>
     </channel>
 </rss>
