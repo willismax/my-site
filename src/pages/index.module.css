@@ -1,8 +1,32 @@
 .heroBanner {
   padding: 6rem 0;
+  min-height: 620px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+  background-color: #071526;
+  background-position: center;
+  background-size: cover;
+}
+
+.heroVideo {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg, rgba(3, 12, 24, 0.38), rgba(3, 12, 24, 0.66)),
+    radial-gradient(circle at center, rgba(8, 145, 178, 0.08), rgba(3, 12, 24, 0.4));
 }
 
 .heroContent {
@@ -10,6 +34,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
 
 .heroGreeting {
@@ -37,6 +62,60 @@
   animation: fadeInUp 0.6s ease-out 0.4s forwards;
 }
 
+.brandFilmSection {
+  padding: 5rem 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(8, 145, 178, 0.1), transparent 34%),
+    radial-gradient(circle at 85% 75%, rgba(99, 102, 241, 0.1), transparent 36%),
+    var(--surface-0);
+}
+
+.brandFilmHeading {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.brandFilmEyebrow {
+  margin-bottom: 0.65rem;
+  color: var(--ifm-color-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.brandFilmHeading h2 {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  letter-spacing: -0.03em;
+}
+
+.brandFilmHeading p:last-child {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.brandFilmFrame {
+  max-width: 1120px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(8, 145, 178, 0.25);
+  border-radius: 22px;
+  background: #030c18;
+  box-shadow:
+    0 28px 70px rgba(15, 23, 42, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+.brandFilmVideo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #030c18;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -51,10 +130,31 @@
 
 @media (max-width: 576px) {
   .heroBanner {
+    min-height: 560px;
     padding: 4rem 1rem;
   }
 
   .buttons {
     flex-direction: column;
+  }
+
+  .brandFilmSection {
+    padding: 3.5rem 0;
+  }
+
+  .brandFilmFrame {
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroVideo {
+    display: none;
+  }
+
+  .heroGreeting,
+  .heroDesc,
+  .buttons {
+    animation: none;
   }
 }
