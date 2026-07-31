@@ -30,7 +30,7 @@ const portfolioItems = [
                         label: '鐵人賽文章',
                         url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/4015',
                     },
-                    { label: '教學文件', url: '/docs/category/從ai落地談mlops2020ithome鐵人賽' },
+                    { label: '教學文件', url: '/docs/category/從ai落地談mlops2021ithome鐵人賽' },
                 ],
                 image:
                     'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker',
@@ -42,8 +42,16 @@ const portfolioItems = [
                 tags: ['HackMD', 'Productivity', 'Tutorial'],
                 links: [
                     {
-                        label: '鐵人賽文章',
+                        label: 'iThome 主要連載',
                         url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/5793',
+                    },
+                    {
+                        label: 'GitHub',
+                        url: 'https://github.com/willismax/Intro_HackMD',
+                    },
+                    {
+                        label: '教學文件',
+                        url: '/docs/category/小題大作的30個hackmd技巧2022ithome鐵人賽',
                     },
                 ],
                 image: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/self.png?sticker',

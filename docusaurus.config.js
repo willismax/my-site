@@ -36,8 +36,8 @@ const config = {
           showReadingTime: true,
           readingTime: ({ content, frontMatter, defaultReadingTime }) =>
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
-          blogTitle: 'Willismax 威力斯資訊技部落格!',
-          blogDescription: '威力斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
+          blogTitle: 'Willismax 威利斯資訊技部落格!',
+          blogDescription: '威利斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
           postsPerPage: 'ALL',
           blogSidebarTitle: '所有文章',
           blogSidebarCount: 'ALL',
