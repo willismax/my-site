@@ -30,7 +30,7 @@ const portfolioItems = [
                         label: '鐵人賽文章',
                         url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/4015',
                     },
-                    { label: '教學文件', url: '/docs/category/從ai落地談mlops2020ithome鐵人賽' },
+                    { label: '教學文件', url: '/docs/category/從ai落地談mlops2021ithome鐵人賽' },
                 ],
                 image:
                     'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/13/ai-and-data.png?sticker',
@@ -42,8 +42,16 @@ const portfolioItems = [
                 tags: ['HackMD', 'Productivity', 'Tutorial'],
                 links: [
                     {
-                        label: '鐵人賽文章',
+                        label: 'iThome 主要連載',
                         url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/5793',
+                    },
+                    {
+                        label: 'GitHub',
+                        url: 'https://github.com/willismax/Intro_HackMD',
+                    },
+                    {
+                        label: '教學文件',
+                        url: '/docs/category/小題大作的30個hackmd技巧2022ithome鐵人賽',
                     },
                 ],
                 image: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/self.png?sticker',
@@ -61,7 +69,7 @@ const portfolioItems = [
                 links: [
                     {
                         label: '專案介紹',
-                        url: '/blog/Customize Your AI Teaching Assistant - A Socratic Approach',
+                        url: '/blog/ai-teaching-assistant-socratic',
                     },
                 ],
             },
@@ -73,7 +81,7 @@ const portfolioItems = [
                 links: [
                     {
                         label: '專案介紹',
-                        url: '/blog/用HackMD API打造個人專屬LINE BOT助手',
+                        url: '/blog/hackmd-line-bot',
                     },
                     {
                         label: 'GitHub',
@@ -101,7 +109,7 @@ const portfolioItems = [
                 links: [
                     {
                         label: '教學文章',
-                        url: '/blog/在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗',
+                        url: '/blog/n8n-line-bot-zeabur',
                     },
                 ],
             },
@@ -111,10 +119,10 @@ const portfolioItems = [
                     '深入比較 venv、pipenv、uv 等 Python 虛擬環境管理工具，協助你選擇最適合的方案。',
                 tags: ['Python', 'uv', 'venv', 'pipenv'],
                 links: [
-                    { label: 'uv 教學', url: '/blog/為什麼該用 uv 取代傳統的 Python venv？' },
+                    { label: 'uv 教學', url: '/blog/uv-vs-venv' },
                     {
                         label: 'pipenv vs venv',
-                        url: '/blog/Python 虛擬環境管理 - pipenv 與 venv 比較',
+                        url: '/blog/pipenv-vs-venv',
                     },
                 ],
             },
@@ -129,7 +137,7 @@ const portfolioItems = [
                     '利用 OpenAI Whisper 模型在本地端完成語音辨識，無需網路連線即可使用。',
                 tags: ['AI', 'Whisper', 'Speech-to-Text'],
                 links: [
-                    { label: '教學文章', url: '/blog/使用 Whisper 離線完成聲音轉文字' },
+                    { label: '教學文章', url: '/blog/whisper-speech-to-text' },
                 ],
             },
             {
@@ -138,7 +146,7 @@ const portfolioItems = [
                     '使用 PlayWright 自動化瀏覽器抓取動態渲染網站的資料，適合處理 SPA 和 CSR 網站。',
                 tags: ['Python', 'PlayWright', 'Scraping'],
                 links: [
-                    { label: '教學文章', url: '/blog/用PlayWright抓取動態網站資料' },
+                    { label: '教學文章', url: '/blog/playwright-web-scraping' },
                 ],
             },
         ],

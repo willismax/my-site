@@ -1,6 +1,6 @@
 ---
 title: 🤖 客製化你的AI教學助手-蘇格拉底引導教學法
-slug: Customize Your AI Teaching Assistant - A Socratic Approach
+slug: ai-teaching-assistant-socratic
 date: 2023-10-10T10:00
 authors: Willis
 GA: G-CH7FZ71WRC

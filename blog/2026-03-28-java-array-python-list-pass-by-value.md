@@ -1,6 +1,6 @@
 ---
 title: Java 陣列是 call by address？Python 是 call by reference？兩個常見誤解一次釐清
-slug: Java 陣列是 call by address？Python 是 call by reference？兩個常見誤解一次釐清
+slug: java-array-python-list-pass-by-value
 date: 2026-03-28T20:00
 authors: Willis
 GA: G-CH7FZ71WRC

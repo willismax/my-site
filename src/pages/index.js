@@ -36,11 +36,11 @@ function HomepageHeader() {
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className="container">
         <div className={styles.heroContent}>
-          <p className={styles.heroGreeting}>👋 嗨，我是威力斯</p>
+          <p className={styles.heroGreeting}>👋 嗨，我是威利斯</p>
           <h1 className="hero__title">Willismax</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <p className={styles.heroDesc}>
-            Training institution administrator & Tech lecturer<br />
+            Instructor Ranked Specialist, NUTC<br />
             持續學習與分享 Python、AI、LINE Bot 等技術應用
           </p>
           <div className={styles.buttons}>
@@ -95,7 +95,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title} - 技術教學與分享`}
-      description="威力斯學習筆記 - Python, AI, LINE Bot, MLOps 教學與技術分享"
+      description="威利斯學習筆記 - Python, AI, LINE Bot, MLOps 教學與技術分享"
     >
       <HomepageHeader />
       <main>

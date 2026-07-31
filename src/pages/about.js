@@ -19,8 +19,8 @@ const skills = [
 
 const experiences = [
     {
-        title: 'Training institution administrator & Tech lecturer',
-        description: '職訓機構管理暨科技講師，專注於 Python、AI、LINE Bot 等技術教學。',
+        title: 'Instructor Ranked Specialist, NUTC',
+        description: '國立臺中科技大學資訊工程系講師，專注於 Python、AI、LINE Bot 等技術教學。',
         icon: '🧑‍🏫',
     },
     {
@@ -126,7 +126,7 @@ function IronmanBadge({ record }) {
 
 export default function About() {
     return (
-        <Layout title="關於我" description="Willis - Training institution administrator & Tech lecturer">
+        <Layout title="關於我" description="Willis Chen - Instructor Ranked Specialist, NUTC">
             <div className="container" style={{ padding: '3rem 0', maxWidth: '900px' }}>
                 {/* Hero Section */}
                 <div className="about-hero">
@@ -135,7 +135,7 @@ export default function About() {
                         Willis Chen
                     </h1>
                     <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
-                        Training institution administrator & Tech Lecturer
+                        Instructor Ranked Specialist, NUTC
                     </p>
                     <p style={{ fontSize: '1rem', color: 'var(--text-muted)' }}>
                         🌱 Keep learning by sharing, hoping to learn unlimited possibilities in a limited time.

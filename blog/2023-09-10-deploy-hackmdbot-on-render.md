@@ -1,6 +1,6 @@
 ---
 title: 在 Render 上快速部署 HackMD 與 LINE 的聊天機器人
-slug: 在 Render 上快速部署 HackMD 與 LINE 的聊天機器人
+slug: hackmd-line-bot-render
 date: 2023-09-10T12:00
 authors: Willis
 GA: G-CH7FZ71WRC

@@ -36,8 +36,8 @@ const config = {
           showReadingTime: true,
           readingTime: ({ content, frontMatter, defaultReadingTime }) =>
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
-          blogTitle: 'Willismax 威力斯資訊技部落格!',
-          blogDescription: '威力斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
+          blogTitle: 'Willismax 威利斯資訊技部落格!',
+          blogDescription: '威利斯在技術上不停地踩坑與填坑，分享技術與應用的心得',
           postsPerPage: 'ALL',
           blogSidebarTitle: '所有文章',
           blogSidebarCount: 'ALL',
@@ -71,6 +71,57 @@ const config = {
   ],
 
   plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/blog/用HackMD API打造個人專屬LINE BOT助手',
+            to: '/blog/hackmd-line-bot',
+          },
+          {
+            from: '/blog/用PlayWright抓取動態網站資料',
+            to: '/blog/playwright-web-scraping',
+          },
+          {
+            from: '/blog/在 Render 上快速部署 HackMD 與 LINE 的聊天機器人',
+            to: '/blog/hackmd-line-bot-render',
+          },
+          {
+            from: '/blog/Python 虛擬環境管理 - pipenv 與 venv 比較',
+            to: '/blog/pipenv-vs-venv',
+          },
+          {
+            from: '/blog/Customize Your AI Teaching Assistant - A Socratic Approach',
+            to: '/blog/ai-teaching-assistant-socratic',
+          },
+          {
+            from: '/blog/如何使用 GitHub Codespace 建立並部署 LINE Bot',
+            to: '/blog/github-codespaces-line-bot',
+          },
+          {
+            from: '/blog/使用 Whisper 離線完成聲音轉文字',
+            to: '/blog/whisper-speech-to-text',
+          },
+          {
+            from: '/blog/在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗',
+            to: '/blog/n8n-line-bot-zeabur',
+          },
+          {
+            from: '/blog/為什麼該用 uv 取代傳統的 Python venv？',
+            to: '/blog/uv-vs-venv',
+          },
+          {
+            from: '/blog/Java 陣列是 call by address？Python 是 call by reference？兩個常見誤解一次釐清',
+            to: '/blog/java-array-python-list-pass-by-value',
+          },
+          {
+            from: '/blog/用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫',
+            to: '/blog/line-ai-course-assistant',
+          },
+        ],
+      },
+    ],
     [
       'posthog-docusaurus',
       {
