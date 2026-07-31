@@ -1,6 +1,6 @@
 ---
 title: Python 虛擬環境管理 - pipenv 與 venv 比較
-slug: Python 虛擬環境管理 - pipenv 與 venv 比較
+slug: pipenv-vs-venv
 date: 2023-09-23T10:00
 authors: Willis
 GA: G-CH7FZ71WRC

@@ -1,6 +1,6 @@
 ---
 title: 在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗
-slug: 在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗
+slug: n8n-line-bot-zeabur
 date: 2025-03-31T20:00
 authors: Willis
 GA: G-CH7FZ71WRC

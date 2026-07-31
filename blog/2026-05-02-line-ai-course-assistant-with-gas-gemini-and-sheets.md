@@ -1,6 +1,6 @@
 ---
 title: 用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫
-slug: 用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫
+slug: line-ai-course-assistant
 date: 2026-05-02T20:00
 authors: Willis
 GA: G-CH7FZ71WRC
@@ -20,7 +20,7 @@ tags: [LINE, GAS, Gemini, Google試算表, AI]
 
 ![image](https://hackmd.io/_uploads/rkSpRpfAWx.png)
 
-如果你是第一次碰 LINE Bot，建議先看我之前寫的[用 HackMD API 打造個人專屬 LINE BOT 助手](https://willismax.github.io/my-site/blog/%E7%94%A8HackMD%20API%E6%89%93%E9%80%A0%E5%80%8B%E4%BA%BA%E5%B0%88%E5%B1%ACLINE%20BOT%E5%8A%A9%E6%89%8B)，那篇比較偏 LINE Developers、Channel、Webhook 與 Token 的入門流程。若你關心的是「AI 助教要怎麼設計角色與教學互動」，也可以搭配[客製化你的 AI 教學助手：蘇格拉底引導教學法](https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach)一起看。
+如果你是第一次碰 LINE Bot，建議先看我之前寫的[用 HackMD API 打造個人專屬 LINE BOT 助手](/blog/hackmd-line-bot)，那篇比較偏 LINE Developers、Channel、Webhook 與 Token 的入門流程。若你關心的是「AI 助教要怎麼設計角色與教學互動」，也可以搭配[客製化你的 AI 教學助手：蘇格拉底引導教學法](/blog/ai-teaching-assistant-socratic)一起看。
 
 ![LINE AI 課程助教系統架構](/img/blog/line-ai-course-assistant/architecture-overview.svg)
 
@@ -48,7 +48,7 @@ _圖：學員從 LINE 提問後，GAS 負責串接 Gemini、Google 試算表與 
 在開始貼程式碼之前，先準備以下資源：
 
 1. Google 帳號：用來建立 Google 試算表與撰寫 Google Apps Script。
-2. LINE Developer 帳號：前往 LINE Developers 建立 Provider 與 Messaging API Channel，取得長效的 Channel Access Token。如果你還不熟悉 Provider、Channel 與 Webhook 的關係，可以先參考[這篇 LINE Bot 基礎教學](https://willismax.github.io/my-site/blog/%E7%94%A8HackMD%20API%E6%89%93%E9%80%A0%E5%80%8B%E4%BA%BA%E5%B0%88%E5%B1%ACLINE%20BOT%E5%8A%A9%E6%89%8B)。
+2. LINE Developer 帳號：前往 LINE Developers 建立 Provider 與 Messaging API Channel，取得長效的 Channel Access Token。如果你還不熟悉 Provider、Channel 與 Webhook 的關係，可以先參考[這篇 LINE Bot 基礎教學](/blog/hackmd-line-bot)。
 3. Gemini API Key：前往 Google AI Studio 點選 Get API key，免費申請一把 API Key。
 4. Google 試算表：建立一份空白試算表，作為 QA 知識庫與聊天紀錄資料庫。
 
@@ -173,7 +173,7 @@ _圖：真正的 API Key 放在 Script Properties，程式碼只負責讀取，�
 
 這版程式會從 Script Properties 讀取 `LINE_CHANNEL_ACCESS_TOKEN`、`GEMINI_API_KEY`、`SPREADSHEET_ID` 與 `WEBHOOK_SECRET`，所以不要再把真正的 API Key 貼進程式碼。
 
-這裡的實作重點和我在[Zeabur 使用 n8n 開發 LINE Bot](https://willismax.github.io/my-site/blog/%E5%9C%A8%20Zeabur%20%E4%BD%BF%E7%94%A8%20n8n%20%E9%96%8B%E7%99%BC%20LINE%20Bot%EF%BC%9A%E6%96%B0%E6%89%8B%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E7%9C%9F%E5%AF%A6%E9%AB%94%E9%A9%97)那篇文章提到的概念很像：先讓 AI 回傳結構化 JSON，再由程式把內容轉成 Flex Message。差別在於這次不靠 n8n 節點，而是直接用 GAS 完成整個流程。
+這裡的實作重點和我在[Zeabur 使用 n8n 開發 LINE Bot](/blog/n8n-line-bot-zeabur)那篇文章提到的概念很像：先讓 AI 回傳結構化 JSON，再由程式把內容轉成 Flex Message。差別在於這次不靠 n8n 節點，而是直接用 GAS 完成整個流程。
 
 
 ```javascript
@@ -601,7 +601,7 @@ https://script.google.com/macros/s/你的部署ID/exec?key=你的_WEBHOOK_SECRET
 
 這就是等一下要貼回 LINE Developers 的 Webhook URL。這個做法的目標不是做到銀行等級的驗證，而是避免任何人只要猜到 GAS Web App 網址就能直接送假資料進來。若你要做更嚴謹的正式服務，建議改用 Cloud Run、Cloudflare Workers 或其他能讀取 HTTP Header 的後端，並驗證 LINE 的 `X-Line-Signature`。
 
-如果你想比較不同部署方式，我之前也寫過[在 Render 上快速部署 HackMD 與 LINE 的聊天機器人](https://willismax.github.io/my-site/blog/%E5%9C%A8%20Render%20%E4%B8%8A%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%20HackMD%20%E8%88%87%20LINE%20%E7%9A%84%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA)，以及[用 GitHub Codespace 建立並部署 LINE Bot](https://willismax.github.io/my-site/blog/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20GitHub%20Codespace%20%E5%BB%BA%E7%AB%8B%E4%B8%A6%E9%83%A8%E7%BD%B2%20LINE%20Bot)。這篇採用 GAS，是因為課程場景已經使用 Google 試算表，資料庫、程式與部署都放在同一個 Google 生態系裡，維護成本會更低。
+如果你想比較不同部署方式，我之前也寫過[在 Render 上快速部署 HackMD 與 LINE 的聊天機器人](/blog/hackmd-line-bot-render)，以及[用 GitHub Codespace 建立並部署 LINE Bot](/blog/github-codespaces-line-bot)。這篇採用 GAS，是因為課程場景已經使用 Google 試算表，資料庫、程式與部署都放在同一個 Google 生態系裡，維護成本會更低。
 
 ### 步驟五：回到 LINE Developers 綁定 Webhook
 ![image](https://hackmd.io/_uploads/r110E0zC-g.png)
@@ -654,18 +654,18 @@ _圖：Webhook URL 加上 shared secret 只是第一層門禁；真正上線後�
 
 以前很多人做 LINE Bot，做到最後會卡在兩個問題：第一是 AI 很會講，但講錯也很敢講；第二是訊息送出去之後，完全沒有留下可分析的資料。這篇文章的做法，剛好就是針對這兩個問題下手。
 
-你把課程資訊、FAQ、標準說法寫在 Google 試算表裡，AI 每次回覆前都先參考它，等於先幫助教建立了「說話邊界」。這個方向延續了我在[客製化 AI 教學助手](https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach)裡談過的角色設定概念，只是這次再往前多做了知識庫、圖片理解與對話紀錄。再配合 CacheService 的短期上下文記憶，以及 Flex Message 的結構化輸出，就能把原本散亂的問答體驗，變成更像真人助教的服務流程。
+你把課程資訊、FAQ、標準說法寫在 Google 試算表裡，AI 每次回覆前都先參考它，等於先幫助教建立了「說話邊界」。這個方向延續了我在[客製化 AI 教學助手](/blog/ai-teaching-assistant-socratic)裡談過的角色設定概念，只是這次再往前多做了知識庫、圖片理解與對話紀錄。再配合 CacheService 的短期上下文記憶，以及 Flex Message 的結構化輸出，就能把原本散亂的問答體驗，變成更像真人助教的服務流程。
 
 ![image](https://hackmd.io/_uploads/HyAbxCMCbx.png)
 
 
 ## 延伸閱讀：如果你想繼續改造這個 LINE AI 助教
 
-- [用 HackMD API 打造個人專屬 LINE BOT 助手](https://willismax.github.io/my-site/blog/%E7%94%A8HackMD%20API%E6%89%93%E9%80%A0%E5%80%8B%E4%BA%BA%E5%B0%88%E5%B1%ACLINE%20BOT%E5%8A%A9%E6%89%8B)：適合補 LINE Developers、Webhook、Token 與基本 Bot 流程。
-- [客製化你的 AI 教學助手：蘇格拉底引導教學法](https://willismax.github.io/my-site/blog/Customize%20Your%20AI%20Teaching%20Assistant%20-%20A%20Socratic%20Approach)：適合思考 AI 助教的人設、互動語氣與教學定位。
-- [在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗](https://willismax.github.io/my-site/blog/%E5%9C%A8%20Zeabur%20%E4%BD%BF%E7%94%A8%20n8n%20%E9%96%8B%E7%99%BC%20LINE%20Bot%EF%BC%9A%E6%96%B0%E6%89%8B%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E7%9C%9F%E5%AF%A6%E9%AB%94%E9%A9%97)：適合比較 Low Code、Flex Message、RAG 與節點式自動化流程。
-- [在 Render 上快速部署 HackMD 與 LINE 的聊天機器人](https://willismax.github.io/my-site/blog/%E5%9C%A8%20Render%20%E4%B8%8A%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%20HackMD%20%E8%88%87%20LINE%20%E7%9A%84%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA)：適合想把 Bot 部署到一般雲端服務的讀者。
-- [如何使用 GitHub Codespace 建立並部署 LINE Bot](https://willismax.github.io/my-site/blog/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20GitHub%20Codespace%20%E5%BB%BA%E7%AB%8B%E4%B8%A6%E9%83%A8%E7%BD%B2%20LINE%20Bot)：適合想用雲端開發環境完成 LINE Bot 實作的人。
+- [用 HackMD API 打造個人專屬 LINE BOT 助手](/blog/hackmd-line-bot)：適合補 LINE Developers、Webhook、Token 與基本 Bot 流程。
+- [客製化你的 AI 教學助手：蘇格拉底引導教學法](/blog/ai-teaching-assistant-socratic)：適合思考 AI 助教的人設、互動語氣與教學定位。
+- [在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗](/blog/n8n-line-bot-zeabur)：適合比較 Low Code、Flex Message、RAG 與節點式自動化流程。
+- [在 Render 上快速部署 HackMD 與 LINE 的聊天機器人](/blog/hackmd-line-bot-render)：適合想把 Bot 部署到一般雲端服務的讀者。
+- [如何使用 GitHub Codespace 建立並部署 LINE Bot](/blog/github-codespaces-line-bot)：適合想用雲端開發環境完成 LINE Bot 實作的人。
 
 ## 小結
 ![image](https://hackmd.io/_uploads/H1ENeRGA-g.png)

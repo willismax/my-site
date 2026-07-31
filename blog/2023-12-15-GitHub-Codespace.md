@@ -1,6 +1,6 @@
 ---
 title: 如何使用 GitHub Codespace 建立並部署 LINE Bot
-slug: 如何使用 GitHub Codespace 建立並部署 LINE Bot
+slug: github-codespaces-line-bot
 date: 2023-12-15T10:00
 authors: Willis
 GA: G-CH7FZ71WRC
