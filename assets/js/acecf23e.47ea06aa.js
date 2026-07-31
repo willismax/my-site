@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_site=globalThis.webpackChunkmy_site||[]).push([[1903],{1912(s){s.exports=JSON.parse('{"blogBasePath":"/my-site/blog","blogTitle":"Willismax \u5a01\u5229\u65af\u8cc7\u8a0a\u6280\u90e8\u843d\u683c!","authorsListPath":"/my-site/blog/authors"}')}}]);
