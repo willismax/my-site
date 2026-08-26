@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-TW" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Day 03：兩個職務的責任界面——誰該負責什麼 | Will is MAX</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://willismax.github.io/my-site/blog/ironman-2026-day-03"><meta data-rh="true" property="og:locale" content="zh_TW"><meta data-rh="true" name="docusaurus_locale" content="zh-TW"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="zh-TW"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" name="robots" content="max-image-preview:large"><meta data-rh="true" name="keywords" content="Python, AI, Machine Learning, LINE Bot, 教學, Tech, Willis"><meta data-rh="true" name="author" content="willismax"><meta data-rh="true" property="og:title" content="Day 03：兩個職務的責任界面——誰該負責什麼 | Will is MAX"><meta data-rh="true" name="description" content="昨天我們確認了就業市場的徵才概況。今天要處理一個很多人心裡的疑問：這些事，不是資料科學家、DevOps、後端本來就在做的嗎？為什麼要多兩個職務？"><meta data-rh="true" property="og:description" content="昨天我們確認了就業市場的徵才概況。今天要處理一個很多人心裡的疑問：這些事，不是資料科學家、DevOps、後端本來就在做的嗎？為什麼要多兩個職務？"><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2026-08-11T00:00:00.000Z"><meta data-rh="true" property="article:author" content="https://willismax.github.io/my-site/"><meta data-rh="true" property="article:tag" content="2026 iThome 鐵人賽,AI Engineering,MLOps,GenAI"><link data-rh="true" rel="icon" href="/my-site/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://willismax.github.io/my-site/blog/ironman-2026-day-03"><link data-rh="true" rel="alternate" href="https://willismax.github.io/my-site/blog/ironman-2026-day-03" hreflang="zh-TW"><link data-rh="true" rel="alternate" href="https://willismax.github.io/my-site/blog/ironman-2026-day-03" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://HRS5TFT9KD-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://willismax.github.io/my-site/blog/ironman-2026-day-03","mainEntityOfPage":"https://willismax.github.io/my-site/blog/ironman-2026-day-03","url":"https://willismax.github.io/my-site/blog/ironman-2026-day-03","headline":"Day 03：兩個職務的責任界面——誰該負責什麼","name":"Day 03：兩個職務的責任界面——誰該負責什麼","description":"昨天我們確認了就業市場的徵才概況。今天要處理一個很多人心裡的疑問：這些事，不是資料科學家、DevOps、後端本來就在做的嗎？為什麼要多兩個職務？","datePublished":"2026-08-11T00:00:00.000Z","author":{"@type":"Person","name":"Willis Chen","description":"Tech Instructor","url":"https://willismax.github.io/my-site/","email":"willismax.com@gmail.com","image":"https://github.com/willismax.png"},"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://willismax.github.io/my-site/blog","name":"Willismax 威利斯資訊技部落格!"}}</script><link rel="alternate" type="application/rss+xml" href="/my-site/blog/rss.xml" title="Will is MAX RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/my-site/blog/atom.xml" title="Will is MAX Atom Feed">
+<link rel="alternate" type="application/json" href="/my-site/blog/feed.json" title="Will is MAX JSON Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N364955R5S"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-N364955R5S",{anonymize_ip:!0})</script>
+
+
+
+<link rel="search" type="application/opensearchdescription+xml" title="Will is MAX" href="/my-site/opensearch.xml">
+
+<link rel="preconnect" href="https://app.posthog.com">
+<script>!function(t,e){var o,s,r,a;e.__SV||(window.posthog=e,e._i=[],e.init=function(p,i,n){function c(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(r=t.createElement("script")).type="text/javascript",r.async=!0,r.src=i.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(a=t.getElementsByTagName("script")[0]).parentNode.insertBefore(r,a);var g=e;for(void 0!==n?g=e[n]=[]:n="posthog",g.people=g.people||[],g.toString=function(t){var e="posthog";return"posthog"!==n&&(e+="."+n),t||(e+=" (stub)"),e},g.people.toString=function(){return g.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),s=0;s<o.length;s++)c(g,o[s]);e._i.push([p,i,n])},e.__SV=1)}(document,window.posthog||[]),posthog.init('"phc_yaxyZeg5hbsJYsZpYtJ5JVO1WHu1wzs9lTAE5E26GRi"',{api_host:"https://app.posthog.com",id:"default"})</script><link rel="stylesheet" href="/my-site/assets/css/styles.2dd3e01a.css">
+<script src="/my-site/assets/js/runtime~main.751b2d71.js" defer="defer"></script>
+<script src="/my-site/assets/js/main.7bfe74a4.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const a=new URLSearchParams(window.location.search).entries();for(var[t,e]of a)if(t.startsWith("docusaurus-data-")){var n=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(n,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><div role="region" aria-label="跳至主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳至主要内容</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#0d1117;color:#e6edf3" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY">🎉 部落格全新改版！歡迎回來！如果覺得有幫助，歡迎給個 ⭐️ <a target="_blank" rel="noopener noreferrer" href="https://github.com/willismax/my-site">GitHub</a></div><button type="button" aria-label="關閉" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="主導航" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="切換導覽列" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/my-site/"><div class="navbar__logo"><img src="/my-site/img/logo.svg" alt="WillisMax Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/my-site/img/logo.svg" alt="WillisMax Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">WillisMax</b></a><a class="navbar__item navbar__link" href="/my-site/docs/intro">📚 教學文件</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/my-site/blog">✏️ 文章</a><a class="navbar__item navbar__link" href="/my-site/portfolio">🏆 作品集</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/my-site/about">👤 關於我</a><a href="https://hackmd.io/@wiimax" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">HackMD<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://github.com/willismax/my-site" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="搜尋 (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">搜尋</span></span><span class="DocSearch-Button-Keys"></span></button></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="切換淺色/深色模式（當前為system mode）"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="最近部落格文章導覽"><div class="sidebarItemTitle_pO2u margin-bottom--md">所有文章</div><div role="group"><h3 class="yearGroupHeading_rMGB">2026</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-18">Day 18：RAG（一）索引端 — 八成的失敗在提問之前就決定了</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-17">Day 17：LLM 應用骨架 — 從 LINE Bot 到會自己決定的系統</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-16">Day 16：從 Prompt 到 Context Engineering — 輸入視窗是一份預算</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-15">Day 15：AI 平臺與成本治理——損益平衡點與 GPU 利用率</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-14">Day 14：監控與漂移 — 模型無聲壞掉的那 14 天</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-13">Day 13：推論服務 — 延遲 vs 吞吐的取捨曲線</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-12">Day 12：容器與 Kubernetes — GPU 排程與那些會讓 Pod 重啟的坑</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-11">Day 11：訓練管線與 CI／CD—品質門檻設定</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-10">Day 10：實驗追蹤與模型註冊—MLflow 與 champion／challenger</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-09">Day 09：資料與特徵——DVC、資料驗證與訓練—服務偏斜</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-08">Day 08：MLOps 成熟度——你的團隊在 Level 幾？</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-07">Day 07：LLM 原理速成——token 經濟與成本的真相</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-06">Day 06：ML 生命週期與「筆記本到產品的鴻溝」</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-05">Day 05：工程基礎最小集合——環境、Git、容器、金鑰</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-04">Day 04：從職缺任務到學習地圖——您走哪條路？</a></li><li class="sidebarItem__DBe"><a aria-current="page" class="sidebarItemLink_mo7H sidebarItemLinkActive_I1ZP" href="/my-site/blog/ironman-2026-day-03">Day 03：兩個職務的責任界面——誰該負責什麼</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-02">Day 02：用資料說話——4,343 筆職缺的任務訊號解剖</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ironman-2026-day-01">Day 01：五年後再談 AI 落地——為什麼是「雙主軸」？</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/notebooklm-workflow-coach">用 Codex 串起 NotebookLM 與 Google 工具：一個公開 Skill 的設計與使用教學</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/line-ai-course-assistant">用 GAS 打造專屬 LINE AI 課程助教，整合 Gemini、上下文記憶與 Google 試算表 QA 知識庫</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/java-array-python-list-pass-by-value">Java 陣列是 call by address？Python 是 call by reference？兩個常見誤解一次釐清</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2025</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/uv-vs-venv">為什麼該用 uv 取代傳統的 Python venv？</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/n8n-line-bot-zeabur">在 Zeabur 使用 n8n 開發 LINE Bot：新手與開發者的真實體驗</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2023</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/whisper-speech-to-text">使用 Whisper 離線完成聲音轉文字</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/github-codespaces-line-bot">如何使 用 GitHub Codespace 建立並部署 LINE Bot</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/ai-teaching-assistant-socratic">🤖 客製化你的AI教學助手-蘇格拉底引導教學法</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/pipenv-vs-venv">Python 虛擬環境管理 - pipenv 與 venv 比較</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/hackmd-line-bot-render">在 Render 上快速部署 HackMD 與 LINE 的聊天機器人</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/使用 LM Studio 輕鬆在筆電上建立自己的聊天機器人">使用 LM Studio 輕鬆在筆電上建立自己的聊天機器人</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/Selenium升級4.x版修正筆記">Selenium升級4.x版修正筆記</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/playwright-web-scraping">用PlayWright抓取動態網站資料</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/hackmd-line-bot">用HackMD API打造個人專屬LINE BOT助手</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/2023六角學院軟體工程師體驗營心得">2023六角學院軟體工程師體驗營心得</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/從亞當斯密看不見的手認識ESG">從亞當斯密看不見的手認識ESG</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO">使用 GitHub Actions 自動部署 Docusaurus 網誌並優化 SEO</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/用 Colab 免費體驗 AI 繪圖">用 Colab 免費體驗 AI 繪圖</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/my-site/blog/使用GitHubPages部署Docusaurus">使用GitHubPages部署Docusaurus</a></li></ul></div></nav></aside><main class="col col--7"><article class=""><header><h1 class="title_f1Hy">Day 03：兩個職務的責任界面——誰該負責什麼</h1><div class="container_mt6G margin-vert--md"><time datetime="2026-08-11T00:00:00.000Z">2026年8月11日</time> · <!-- -->閱讀時間約 5 分鐘</div><div class="margin-top--md margin-bottom--sm row"><div class="col col--12 authorCol_Hf19"><div class="avatar margin-bottom--sm"><a href="https://willismax.github.io/my-site/" target="_blank" rel="noopener noreferrer" class="avatar__photo-link"><img class="avatar__photo authorImage_XqGP" src="https://github.com/willismax.png" alt="Willis Chen"></a><div class="avatar__intro authorDetails_lV9A"><div class="avatar__name"><a href="https://willismax.github.io/my-site/" target="_blank" rel="noopener noreferrer"><span class="authorName_yefp" translate="no">Willis Chen</span></a></div><small class="authorTitle_nd0D" title="Tech Instructor">Tech Instructor</small><div class="authorSocials_rSDt"></div></div></div></div></div></header><div id="__blog-post-container" class="markdown"><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="站在哪裡往前走">站在哪裡往前走<a href="#站在哪裡往前走" class="hash-link" aria-label="站在哪裡往前走的直接連結" title="站在哪裡往前走的直接連結" translate="no">​</a></h2>
+<p>昨天我們確認了就業市場的徵才概況。今天要處理一個很多人心裡的疑問：<strong>這些事，不是資料科學家、DevOps、後端本來就在做的嗎？為什麼要多兩個職務？</strong></p>
+<p>這個問題很好，而且答錯的代價很實際——它決定了您面試時該強調什麼、進團隊後該對齊誰、以及出事時該誰負責。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今天要解決的問題">今天要解決的問題<a href="#今天要解決的問題" class="hash-link" aria-label="今天要解決的問題的直接連結" title="今天要解決的問題的直接連結" translate="no">​</a></h2>
+<p>一個真實的失敗案例，您可能經歷過：</p>
+<p>模型上線後準確率下滑。開會時，資料科學家說「我的模型在測試集上是好的，是資料變了」；資料工程師說「我照規格把資料送過去了，規格沒改」；後端說「我只是照 API 文件呼叫，回傳什麼我不知道」；SRE 說「我的服務可用性 99.95%，沒有異常」。</p>
+<p><strong>每個人都是對的，而模型卻還是壞的。</strong></p>
+<p>這就是責任界面沒定義清楚的代價：<strong>每個人都對自己的產出負責，但沒有人對「模型的線上效果」負責。</strong></p>
+<blockquote>
+<p>📊 <strong>職缺訊號</strong></p>
+<p>「需求分析與系統架構」出現在 <strong>15.0%</strong> 的生成式 AI 職缺、「治理、安全與權限」出現在 <strong>13.8%</strong> 的 MLOps 職缺——這兩項比例都不高，卻是資深職與初階職最明顯的分水嶺。原因可以推測為：<strong>初階做被分配的任務，資深定義誰做什麼任務。</strong></p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一現象兩個職務的技能重心重疊在哪分岔在哪">一、現象：兩個職務的技能重心，重疊在哪、分岔在哪<a href="#一現象兩個職務的技能重心重疊在哪分岔在哪" class="hash-link" aria-label="一、現象：兩個職務的技能重心，重疊在哪、分岔在哪的直接連結" title="一、現象：兩個職務的技能重心，重疊在哪、分岔在哪的直接連結" translate="no">​</a></h2>
+<p>先用一張圖看兩個職務的形狀：</p>
+<p><img decoding="async" loading="lazy" src="https://hackmd.io/_uploads/SydatiEIze.png" alt="兩職務的技能重心雷達圖" class="img_ev3q"></p>
+<p><em>圖 3-1：兩職務的技能重心（依 2026-07-25 職缺任務訊號比例換算為 0–5 分的示意圖）。重疊處是兩條路都要的，分岔處是你要選的。</em></p>
+<p>用圖可以比較清楚的呈現：<strong>「部署與推論服務」「評測與安全」是兩者都有一定份量的重疊區</strong>，而「平臺與基礎設施」對 MLOps、「檢索與知識庫／代理與工具串接」對生成式 AI 應用，則是各自的主場。</p>
+<p>這張圖也解釋為什麼「LLMOps」這個交會地帶最缺人——<strong>它需要同時具備兩邊各自的主場能力，而多數人只練了一邊。</strong></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二原理用工作產出而非技術劃界線">二、原理：用「工作產出」而非「技術」劃界線<a href="#二原理用工作產出而非技術劃界線" class="hash-link" aria-label="二、原理：用「工作產出」而非「技術」劃界線的直接連結" title="二、原理：用「工作產出」而非「技術」劃界線的直接連結" translate="no">​</a></h2>
+<p>劃分責任最常見的錯誤，是<strong>用技術劃線</strong>：「會 Python 的是資料科學家、會 K8s 的是 MLOps」。這行不通，因為技術會重疊。</p>
+<p>正確的方法是用<strong>工作產出</strong>（deliverable）與<strong>最終責任</strong>（accountability）劃線。同樣一件事，問「誰的名字要簽在上面」：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>工作項目</th><th style="text-align:center">資料科學家</th><th style="text-align:center">資料工程師</th><th style="text-align:center"><strong>MLOps／LLMOps 工程師</strong></th><th style="text-align:center"><strong>生成式 AI 應用工程師</strong></th><th style="text-align:center">DevOps／SRE</th><th style="text-align:center">後端工程師</th></tr></thead><tbody><tr><td>定義業務指標與成功標準</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">C</td><td style="text-align:center">C</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">I</td><td style="text-align:center">C</td></tr><tr><td>資料管線與資料品質</td><td style="text-align:center">C</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">C</td><td style="text-align:center">I</td><td style="text-align:center">I</td><td style="text-align:center">I</td></tr><tr><td>模型選型與訓練</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">I</td><td style="text-align:center">C</td><td style="text-align:center">C</td><td style="text-align:center">–</td><td style="text-align:center">–</td></tr><tr><td>特徵一致性（訓練 vs 線上）</td><td style="text-align:center">C</td><td style="text-align:center">C</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">I</td><td style="text-align:center">–</td><td style="text-align:center">C</td></tr><tr><td>訓練管線自動化與 CI/CD</td><td style="text-align:center">I</td><td style="text-align:center">C</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">I</td><td style="text-align:center">C</td><td style="text-align:center">I</td></tr><tr><td>推論服務效能與擴縮</td><td style="text-align:center">I</td><td style="text-align:center">–</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">C</td><td style="text-align:center">C</td><td style="text-align:center">C</td></tr><tr><td><strong>模型線上效果</strong>（本文開頭的破口）</td><td style="text-align:center">C</td><td style="text-align:center">I</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">I</td><td style="text-align:center">I</td></tr><tr><td>提示與檢索設定的版本管理</td><td style="text-align:center">I</td><td style="text-align:center">–</td><td style="text-align:center">C</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">–</td><td style="text-align:center">I</td></tr><tr><td>RAG 檢索品質</td><td style="text-align:center">C</td><td style="text-align:center">C</td><td style="text-align:center">I</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">–</td><td style="text-align:center">I</td></tr><tr><td>Agent 工具設計與權限</td><td style="text-align:center">I</td><td style="text-align:center">–</td><td style="text-align:center">C</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">C</td><td style="text-align:center">C</td></tr><tr><td>評測集與品質門檻</td><td style="text-align:center">C</td><td style="text-align:center">–</td><td style="text-align:center">C</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">–</td><td style="text-align:center">I</td></tr><tr><td>叢集與網路基礎設施</td><td style="text-align:center">–</td><td style="text-align:center">I</td><td style="text-align:center">C</td><td style="text-align:center">I</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">I</td></tr><tr><td>token 成本與 GPU 用量</td><td style="text-align:center">I</td><td style="text-align:center">I</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">C</td><td style="text-align:center">C</td><td style="text-align:center">I</td></tr><tr><td>存取控制與稽核軌跡</td><td style="text-align:center">I</td><td style="text-align:center">C</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">C</td><td style="text-align:center">C</td><td style="text-align:center">C</td></tr></tbody></table>
+<blockquote>
+<p>A＝最終負責（Accountable，只能有一個）、C＝共同參與（Consulted）、I＝需被告知（Informed）、–＝不涉及</p>
+</blockquote>
+<p><strong>兩個關鍵觀察：</strong></p>
+<ol>
+<li class=""><strong>「模型線上效果」這一列  ，A 落在兩個新職務身上。</strong> 這正是它們存在的理由——傳統角色分工中，這一格是空的。</li>
+<li class=""><strong>MLOps 工程師與 DevOps／SRE 的差別，不在會不會 K8s，而在「模型」這個字。</strong> SRE 對「服務可用性」負責（服務有沒有回應），MLOps 對「模型有效性」負責（回應對不對）。服務 200 OK 但模型全預測成同一類，SRE 的儀表板是綠的，MLOps 的應該是紅的。</li>
+</ol>
+<p>把這張 RACI 對回昨天的價值鏈圖，會更清楚：兩個新職務不是插進既有分工的縫隙，而是<strong>接管了整條鏈上「模型行為」這一維</strong>——上游的資料品質、下游的系統可用性各有其主，但「模型在線上表現如何」這件事，過去沒有主人。</p>
+<p><img decoding="async" loading="lazy" src="https://hackmd.io/_uploads/ryBVoj48fe.png" alt="雙主軸的價值鏈分工與 LLMOps 交會地帶" class="img_ev3q"></p>
+<p><em>圖 3-2：把 RACI 對回價值鏈（依職缺任務訊號整理的示意架構）。上排各格的 A 屬 MLOps／LLMOps 工程師，下排屬生成式 AI 應用工程師，中間黃色交會帶則是兩人必須共同維護、且最常沒人負責的地方。</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三動手用三個問題定位任何一個模糊任務">三、動手：用三個問題定位任何一個模糊任務<a href="#三動手用三個問題定位任何一個模糊任務" class="hash-link" aria-label="三、動手：用三個問題定位任何一個模糊任務的直接連結" title="三、動手：用三個問題定位任何一個模糊任務的直接連結" translate="no">​</a></h2>
+<p>實務上您會遇到大量灰色地帶。用這三個問題依序判斷，可以解決九成爭議：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">問題 1：這件事做壞了，最先被業務單位罵的是誰？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        → 那個人就是 A（最終負責者）。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">問題 2：這件事需要的關鍵知識，是「模型/資料的行為」還是「系統的行為」？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        → 模型/資料 → 偏兩個 AI 職務</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        → 系統     → 偏 DevOps/SRE/後端</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">問題 3：這件事的產出物是什麼？誰交付、誰驗收？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        → 交付者是 A，驗收者是 C。講不出產出物 = 這件事還沒被定義清楚，</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">          先別分工，先定義。</span><br></span></code></pre></div></div>
+<p><strong>舉例實測</strong>——「向量資料庫掛了誰處理？」</p>
+<ul>
+<li class="">問題 1：使用者問不到東西 → 生成式 AI 應用工程師先被找。</li>
+<li class="">問題 2：如果是「服務起不來、磁碟滿了」→ 系統行為 → SRE／MLOps；如果是「服務正常但檢索結果爛掉」→ 資料行為 → 生成式 AI 應用工程師。</li>
+<li class="">問題 3：產出物是「可用的檢索服務」與「檢索品質達標」——兩個不同的產出物，<strong>所以本來就該是兩個負責人</strong>。</li>
+</ul>
+<p>這個例子說明了灰色地帶的本質：不是「誰該負責」講不清，而是<strong>大家在講不同的產出物</strong>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="四取捨小團隊怎麼辦">四、取捨：小團隊怎麼辦？<a href="#四取捨小團隊怎麼辦" class="hash-link" aria-label="四、取捨：小團隊怎麼辦？的直接連結" title="四、取捨：小團隊怎麼辦？的直接連結" translate="no">​</a></h2>
+<p>現實是，台灣多數團隊沒有六種角色，可能只有兩三個人。這時候可以用<strong>優先順序</strong>配置。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>團隊規模</th><th>建議配置</th><th>優先順序（不夠人時先放棄什麼）</th></tr></thead><tbody><tr><td>1 人</td><td>全包</td><td>保留：可重現、線上監控、評測集。放棄：自建平臺、微調、多代理</td></tr><tr><td>2–3 人</td><td>一人偏應用、一人偏維運，共用治理</td><td>保留：兩人各自主場＋共同維護一份評測集。放棄：自建推論引擎、複雜 IaC</td></tr><tr><td>4–8 人</td><td>兩個職務各 1–2 人＋DS／DE</td><td>開始建立內部平臺，但<strong>先做自助部署，再做自助訓練</strong></td></tr><tr><td>8 人以上</td><td>依上表 RACI 完整分工</td><td>此時的瓶頸通常是治理與成本，不是技術</td></tr></tbody></table>
+<blockquote>
+<p>💡 <strong>一人團隊的鐵律</strong></p>
+<p>如果你是團隊裡唯一的工程師，請記得：<strong>可以不做微調、不做自建平臺，但不能不做監控與評測。</strong> 前兩者的代價是「做得慢」，後兩者的代價是「壞掉了不知道」——後者對專案影響是比較嚴重的。</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日小結">今 日小結<a href="#今日小結" class="hash-link" aria-label="今日小結的直接連結" title="今日小結的直接連結" translate="no">​</a></h2>
+<ul>
+<li class="">責任要用<strong>工作產出與最終責任</strong>劃分，不要用技術劃分——技術一定會重疊。</li>
+<li class="">兩個新職務存在的理由，是傳統分工中「<strong>模型線上效果</strong>」這一格沒有人簽名。</li>
+<li class="">MLOps 與 SRE 的分野在於：SRE 對「服務有沒有回應」負責，MLOps 對「回應對不對」負責。</li>
+<li class="">灰色地帶用三個問題判斷（誰先被罵／是模型還是系統的知識／產出物是什麼），多數爭議其實是「大家在講不同的產出物」。</li>
+<li class="">小團隊不是不分工，是排優先序：<strong>監控與評測永遠不能砍</strong>。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="明天預告">明天預告<a href="#明天預告" class="hash-link" aria-label="明天預告的直接連結" title="明天預告的直接連結" translate="no">​</a></h2>
+<p>明天是第一部曲的收尾：把任務訊號轉成一張你能照著走的學習地圖。文章將提供三條主流轉職路線（後端／DevOps、資料科學、前後端應用）各自的<strong>既有優勢與待補缺口</strong>，以及這 30 天該怎麼取用——包括「只有週末有空」的讀者版本。</p>
+<hr>
+<p><a class="" href="/my-site/blog/ironman-2026-day-02">← Day 02</a> ｜ <a class="" href="/my-site/blog/ironman-2026-day-04">Day 04 →</a></p>
+<blockquote>
+<p>本文同步發布於 <a href="https://ithelp.ithome.com.tw/articles/10402400" target="_blank" rel="noopener noreferrer" class="">iThome 鐵人賽</a>；Blog 版本為站內閱讀與系列導覽的主要版本。</p>
+</blockquote></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>標籤：</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/my-site/blog/tags/2026-i-thome-鐵人賽">2026 iThome 鐵人賽</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/my-site/blog/tags/ai-engineering">AI Engineering</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/my-site/blog/tags/ml-ops">MLOps</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/my-site/blog/tags/gen-ai">GenAI</a></li></ul></div></div><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/willismax/my-site/blob/main/blog/2026-08-11-ironman-2026-day-03.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>編輯此頁</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="部落格文章分頁導覽"><a class="pagination-nav__link pagination-nav__link--prev" href="/my-site/blog/ironman-2026-day-04"><div class="pagination-nav__sublabel">較新一篇</div><div class="pagination-nav__label">Day 04：從職缺任務到學習地圖——您走哪條路？</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/my-site/blog/ironman-2026-day-02"><div class="pagination-nav__sublabel">較舊一篇</div><div class="pagination-nav__label">Day 02：用資料說話——4,343 筆職缺的任務訊號解剖</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#站在哪裡往前走" class="table-of-contents__link toc-highlight">站在哪裡往前走</a></li><li><a href="#今天要解決的問題" class="table-of-contents__link toc-highlight">今天要解決的問題</a></li><li><a href="#一現象兩個職務的技能重心重疊在哪分岔在哪" class="table-of-contents__link toc-highlight">一、現象：兩個職務的技能重心，重疊在哪、分岔在哪</a></li><li><a href="#二原理用工作產出而非技術劃界線" class="table-of-contents__link toc-highlight">二、原理：用「工作產出」而非「技術」劃界線</a></li><li><a href="#三動手用三個問題定位任何一個模糊任務" class="table-of-contents__link toc-highlight">三、動手：用三個問題定位任何一個模糊任務</a></li><li><a href="#四取捨小團隊怎麼辦" class="table-of-contents__link toc-highlight">四、取捨：小團隊怎麼辦？</a></li><li><a href="#今日小結" class="table-of-contents__link toc-highlight">今日小結</a></li><li><a href="#明天預告" class="table-of-contents__link toc-highlight">明天預告</a></li></ul></div></div></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">內容</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/my-site/docs/intro">教學文件</a></li><li class="footer__item"><a class="footer__link-item" href="/my-site/blog">文章</a></li><li class="footer__item"><a class="footer__link-item" href="/my-site/portfolio">作品集</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">社群</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://hackmd.io/@wiimax" target="_blank" rel="noopener noreferrer" class="footer__link-item">HackMD<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/willismax" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://ithelp.ithome.com.tw/users/20121130/" target="_blank" rel="noopener noreferrer" class="footer__link-item">iThome<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.linkedin.com/in/willis-chen/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">更多</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://willismax.github.io/my-site/blog/rss.xml" target="_blank" rel="noopener noreferrer" class="footer__link-item">RSS Feed<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://willismax.github.io/my-site/blog/atom.xml" target="_blank" rel="noopener noreferrer" class="footer__link-item">Atom Feed<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022-2026 willismax. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

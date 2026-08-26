@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_site=globalThis.webpackChunkmy_site||[]).push([[3883],{82979(i){i.exports=JSON.parse('{"authors":[{"name":"Willis Chen","title":"Tech Instructor","url":"https://willismax.github.io/my-site/","email":"willismax.com@gmail.com","imageURL":"https://github.com/willismax.png","key":"Willis","page":null,"count":37}]}')}}]);
