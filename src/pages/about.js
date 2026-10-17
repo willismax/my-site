@@ -25,7 +25,7 @@ const experiences = [
     },
     {
         title: 'ITHome 鐵人賽參賽者',
-        description: '三度完賽 ITHome 鐵人賽，系列包含「用 LINE 串起多媒體系統」、「從 AI 落地談 MLOps」以及「小題大作的 30 個 HackMD 技巧」。',
+        description: '四度完賽 ITHome 鐵人賽，系列包含「用 LINE 串起多媒體系統」、「從 AI 落地談 MLOps」、「小題大作的 30 個 HackMD 技巧」以及「RE: 從 4,343 筆職缺到 AI Engineer」。',
         icon: '🏆',
     },
     {
@@ -59,6 +59,14 @@ const ironmanRecords = [
         group: 'self',
         url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/5793',
         stickerUrl: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/14/self.png?sticker',
+    },
+    {
+        year: '2026',
+        edition: '第 18 屆',
+        title: 'RE: 從 4,343 筆職缺到 AI Engineer',
+        group: 'AI Engineering 組',
+        url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/9620',
+        stickerUrl: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/18/ai-engineering.png?sticker',
     },
 ];
 

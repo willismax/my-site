@@ -7,6 +7,24 @@ const portfolioItems = [
         category: '🏆 ITHome 鐵人賽',
         items: [
             {
+                title: 'RE: 從 4,343 筆職缺到 AI Engineer (2026)',
+                description:
+                    '延續 2021《從 AI 落地談 MLOps》，以 4,343 筆 AI 職缺的任務訊號為依據，採 MLOps × GenAI Engineering 雙主軸，涵蓋資料與模型管理、部署監控、RAG、Agent、評測、LLMOps 與治理。完賽 30 天連續技術文章。',
+                tags: ['MLOps', 'LLMOps', 'RAG', 'AI Agent'],
+                links: [
+                    {
+                        label: 'iThome 主要連載',
+                        url: 'https://ithelp.ithome.com.tw/users/20121130/ironman/9620',
+                    },
+                    { label: 'Blog 全系列', url: '/blog/ironman-2026-day-01' },
+                    {
+                        label: 'HackMD 系列目錄',
+                        url: 'https://hackmd.io/@wiimax/HkY_aH4Ufg',
+                    },
+                ],
+                image: 'https://d1dwq032kyr03c.cloudfront.net/images/ironman_sticker/18/ai-engineering.png?sticker',
+            },
+            {
                 title: '用 LINE 串起多媒體系統 (2020)',
                 description:
                     '以 LINE Messaging API 為核心，串接多媒體服務打造完整聊天機器人系統。完賽 30 天連續技術文章。',
