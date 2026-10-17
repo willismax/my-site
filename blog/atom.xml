@@ -127,7 +127,6 @@
 <p>歡迎在留言區告訴我你的進度，或在 <a href="https://github.com/willismax/mlops-genai-agent-book" target="_blank" rel="noopener noreferrer" class="">GitHub</a> 上提 issue——<strong>這 30 篇的原始稿都在那裡，包括所有圖表的產生程式碼，你可以自己重算一次。</strong></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="延伸閱讀">延伸閱讀<a href="https://willismax.github.io/my-site/blog/ironman-2026-day-30#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80" class="hash-link" aria-label="延伸閱讀的直接連結" title="延伸閱讀的直接連結" translate="no">​</a></h2>
 <ul>
-<li class="">📘 <a href="https://github.com/willismax/books/tree/main/mlops-genai-agent" target="_blank" rel="noopener noreferrer" class="">完整教科書版</a>——21 章 + 6 附錄，含 168 條術語表、50 題面試題、80 題考古題型題庫</li>
 <li class="">🔗 <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/4015" target="_blank" rel="noopener noreferrer" class="">2021 鐵人賽《從 AI 落地談 MLOps》</a> · <a href="https://github.com/willismax/ML-in-Production-30-days-sharing" target="_blank" rel="noopener noreferrer" class="">GitHub</a>——本系列的前傳</li>
 <li class="">🔗 <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/5793" target="_blank" rel="noopener noreferrer" class="">2022 鐵人賽《小題大作的 30 個 HackMD 技巧》</a> · <a href="https://github.com/willismax/Intro_HackMD" target="_blank" rel="noopener noreferrer" class="">GitHub</a>——文件與知識管理</li>
 <li class="">🔗 <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/3131" target="_blank" rel="noopener noreferrer" class="">2020 鐵人賽《用 LINE 串起多媒體系統》</a> · <a href="https://github.com/willismax/LINE-chact-bot-with-multimedia-systems" target="_blank" rel="noopener noreferrer" class="">GitHub</a>——系統整合的起點</li>
@@ -277,7 +276,6 @@
 <p>也會誠實回顧這個系列做對與沒做好的地方。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="延伸閱讀">延伸閱讀<a href="https://willismax.github.io/my-site/blog/ironman-2026-day-29#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80" class="hash-link" aria-label="延伸閱讀的直接連結" title="延伸閱讀的直接連結" translate="no">​</a></h2>
 <ul>
-<li class="">📘 教科書對應章節：<a href="https://github.com/willismax/books/blob/main/mlops-genai-agent/appendix/D-mock-interview.md" target="_blank" rel="noopener noreferrer" class="">附錄 D　職能檢核與面試題庫</a>（50 題含詳解）、<a href="https://github.com/willismax/books/blob/main/mlops-genai-agent/appendix/F-past-exam-bank.md" target="_blank" rel="noopener noreferrer" class="">附錄 F　考古題與能力鑑定實戰題庫</a>（80 題含詳解與落點分析）</li>
 <li class="">🔗 <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/5793" target="_blank" rel="noopener noreferrer" class="">2022 鐵人賽《小題大作的 30 個 HackMD 技巧》</a>——把學習與專案過程寫成可搜尋的筆記，長期下來就是最好的作品集素材</li>
 </ul>
 <hr>
@@ -541,7 +539,6 @@
 <p>作品做完了，明天把它變成<strong>別人看得懂的能力證明</strong>：雙職能自我檢核表怎麼用、80 題考古題型怎麼練、面試最常考的五類題目怎麼答，以及一份作品集該怎麼呈現才會被記住。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="延伸閱讀">延伸閱讀<a href="https://willismax.github.io/my-site/blog/ironman-2026-day-28#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80" class="hash-link" aria-label="延伸閱讀的直接連結" title="延伸閱讀的直接連結" translate="no">​</a></h2>
 <ul>
-<li class="">📘 教科書對應章節：<a href="https://github.com/willismax/books/blob/main/mlops-genai-agent/chapters/ch21-architecture-capstone.md" target="_blank" rel="noopener noreferrer" class="">第 21 章　需求分析、系統架構與綜合專題</a></li>
 <li class="">📄 <a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions" target="_blank" rel="noopener noreferrer" class="">Michael Nygard, <em>Documenting Architecture Decisions</em></a>——ADR 格式的原始出處，一頁講完</li>
 <li class="">🔗 <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/5793" target="_blank" rel="noopener noreferrer" class="">2022 鐵人賽《小題大作的 30 個 HackMD 技巧》</a>——專題文件與 ADR 的寫作與協作，用得上其中的版本控制與共筆技巧</li>
 </ul>
@@ -677,7 +674,6 @@
 <p>Day 28 是綜合專題——一個能寫進履歷的「企業內部知識助理」，我會給完整的架構、八週里程碑與每階段的驗收標準。這也是我建議每位讀者真的動手做一次的作品。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="延伸閱讀">延伸閱讀<a href="https://willismax.github.io/my-site/blog/ironman-2026-day-27#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80" class="hash-link" aria-label="延伸閱�讀的直接連結" title="延伸閱讀的直接連結" translate="no">​</a></h2>
 <ul>
-<li class="">📘 教科書對應章節：<a href="https://github.com/willismax/books/blob/main/mlops-genai-agent/chapters/ch20-governance-security.md" target="_blank" rel="noopener noreferrer" class="">第 20 章　治理、安全與權限</a></li>
 <li class="">📄 <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer" class="">NIST AI Risk Management Framework</a>——Govern／Map／Measure／Manage 四大功能，是目前最實用的治理框架</li>
 <li class="">📄 <a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener noreferrer" class="">歐盟 AI Act 官方文本與適用時程</a>——查風險分級與義務的第一手來源</li>
 </ul>
@@ -1345,7 +1341,6 @@
 <p>品質有了，明天處理<strong>安全</strong>：OWASP LLM Top 10 的實務解讀、提示注入為什麼沒有單一解、以及一個真實的事故拆解——<strong>代理如何把內部成本表寄給了外部廠商</strong>，以及該補上的四層防禦。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="延伸閱讀">延伸閱讀<a href="https://willismax.github.io/my-site/blog/ironman-2026-day-24#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80" class="hash-link" aria-label="延伸閱讀的直接連結" title="延伸閱讀的直接連結" translate="no">​</a></h2>
 <ul>
-<li class="">📘 教科書對應章節：<a href="https://github.com/willismax/books/blob/main/mlops-genai-agent/chapters/ch18-eval-safety-quality.md" target="_blank" rel="noopener noreferrer" class="">第 18 章　評測、安全與品質</a></li>
 <li class="">📄 Zheng et al., <em>Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena</em> (2023)——位置偏誤、冗長偏誤的系統性研究出處</li>
 <li class="">📄 <a href="https://www.promptfoo.dev/docs/intro/" target="_blank" rel="noopener noreferrer" class="">promptfoo 文件</a>——把評測寫成 YAML 設定並納入 CI 的現成工具</li>
 </ul>
