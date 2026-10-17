@@ -104,7 +104,7 @@
 <p><strong>限制一：資料是單日橫斷面。</strong> 2026-07-25 的 4,343 筆去重職缺，來自單一平臺、12 組關鍵字。它能回答「哪些任務被反覆提及」，<strong>不能回答「市場總量多大、成長多快」</strong>。所有引用請一併標示擷取日期與這項限制。</p>
 <p><strong>限制二：職缺文字 ≠ 實際工作。</strong> 招募文字反映的是<strong>期待</strong>，不是實際工時分配。一份寫著「熟悉 K8s」的 JD，實際上可能只需要你會 <code>kubectl logs</code>。</p>
 <p><strong>限制三：兩個職務名稱可能會變。</strong> 它們目前是 iCAP 職能基準的<strong>預擬方案</strong>，正式版可能調整名稱或分類。<strong>但這個系列以「工作任務」為主體敘事</strong>——任務不會因為職稱改變而消失。</p>
-<p><strong>限制四：深度受篇幅所限。</strong> 30 天、每天 2,000–3,000 字，只能做到「從 0 到 1」。想要更深的推導、完整的 Lab 步驟與題庫，請看<a href="https://github.com/willismax/books/tree/main/mlops-genai-agent" target="_blank" rel="noopener noreferrer" class="">教科書版</a>（21 章 + 6 附錄）。</p>
+<p><strong>限制四：深度受篇幅所限。</strong> 30 天、每天 2,000–3,000 字，只能做到「從 0 到 1」。</p>
 <p><strong>限制五：我也有盲區。</strong> 我在 MLOps 這一邊的實務年份較長，生成式 AI 應用這邊的內容更多來自近兩年的專案與公開資料。如果你在某個主題上有更深的實戰經驗，<strong>歡迎在留言區或 GitHub issue 指正</strong>——這也是我把原始稿放在 GitHub 的原因。</p>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日小結">今日小結<a href="https://willismax.github.io/my-site/blog/ironman-2026-day-30#%E4%BB%8A%E6%97%A5%E5%B0%8F%E7%B5%90" class="hash-link" aria-label="今日小結的直接連結" title="今日小結的直接連結" translate="no">​</a></h2>
@@ -124,7 +124,6 @@
 <p><strong>標準還沒定下來的時候，做出成果的人就在定義標準。</strong></p>
 </blockquote>
 <p>謝謝陪我走完這 30 天。五年前我寫《從 AI 落地談 MLOps》時沒想過會有這個續集；五年後如果還有人在問「模型訓練好了，然後呢」，我大概還會再寫一次。</p>
-<p>歡迎在留言區告訴我你的進度，或在 <a href="https://github.com/willismax/mlops-genai-agent-book" target="_blank" rel="noopener noreferrer" class="">GitHub</a> 上提 issue——<strong>這 30 篇的原始稿都在那裡，包括所有圖表的產生程式碼，你可以自己重算一次。</strong></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="延伸閱讀">延伸閱讀<a href="https://willismax.github.io/my-site/blog/ironman-2026-day-30#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80" class="hash-link" aria-label="延伸閱讀的直接連結" title="延伸閱讀的直接連結" translate="no">​</a></h2>
 <ul>
 <li class="">🔗 <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/4015" target="_blank" rel="noopener noreferrer" class="">2021 鐵人賽《從 AI 落地談 MLOps》</a> · <a href="https://github.com/willismax/ML-in-Production-30-days-sharing" target="_blank" rel="noopener noreferrer" class="">GitHub</a>——本系列的前傳</li>

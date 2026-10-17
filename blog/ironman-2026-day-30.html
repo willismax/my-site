@@ -18,7 +18,7 @@
 
 <link rel="preconnect" href="https://app.posthog.com">
 <script>!function(t,e){var o,s,r,a;e.__SV||(window.posthog=e,e._i=[],e.init=function(p,i,n){function c(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(r=t.createElement("script")).type="text/javascript",r.async=!0,r.src=i.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(a=t.getElementsByTagName("script")[0]).parentNode.insertBefore(r,a);var g=e;for(void 0!==n?g=e[n]=[]:n="posthog",g.people=g.people||[],g.toString=function(t){var e="posthog";return"posthog"!==n&&(e+="."+n),t||(e+=" (stub)"),e},g.people.toString=function(){return g.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),s=0;s<o.length;s++)c(g,o[s]);e._i.push([p,i,n])},e.__SV=1)}(document,window.posthog||[]),posthog.init('"phc_yaxyZeg5hbsJYsZpYtJ5JVO1WHu1wzs9lTAE5E26GRi"',{api_host:"https://app.posthog.com",id:"default"})</script><link rel="stylesheet" href="/my-site/assets/css/styles.2dd3e01a.css">
-<script src="/my-site/assets/js/runtime~main.0bf9179f.js" defer="defer"></script>
+<script src="/my-site/assets/js/runtime~main.c4af173c.js" defer="defer"></script>
 <script src="/my-site/assets/js/main.fc32dfbb.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -115,7 +115,7 @@
 <p><strong>限制一：資料是單日橫斷面。</strong> 2026-07-25 的 4,343 筆去重職缺，來自單一平臺、12 組關鍵字。它能回答「哪些任務被反覆提及」，<strong>不能回答「市場總量多大、成長多快」</strong>。所有引用請一併標示擷取日期與這項限制。</p>
 <p><strong>限制二：職缺文字 ≠ 實際工作。</strong> 招募文字反映的是<strong>期待</strong>，不是實際工時分配。一份寫著「熟悉 K8s」的 JD，實際上可能只需要你會 <code>kubectl logs</code>。</p>
 <p><strong>限制三：兩個職務名稱可能會變。</strong> 它們目前是 iCAP 職能基準的<strong>預擬方案</strong>，正式版可能調整名稱或分類。<strong>但這個系列以「工作任務」為主體敘事</strong>——任務不會因為職稱改變而消失。</p>
-<p><strong>限制四：深度受篇幅所限。</strong> 30 天、每天 2,000–3,000 字，只能做到「從 0 到 1」。想要更深的推導、完整的 Lab 步驟與題庫，請看<a href="https://github.com/willismax/books/tree/main/mlops-genai-agent" target="_blank" rel="noopener noreferrer" class="">教科書版</a>（21 章 + 6 附錄）。</p>
+<p><strong>限制四：深度受篇幅所限。</strong> 30 天、每天 2,000–3,000 字，只能做到「從 0 到 1」。</p>
 <p><strong>限制五：我也有盲區。</strong> 我在 MLOps 這一邊的實務年份較長，生成式 AI 應用這邊的內容更多來自近兩年的專案與公開資料。如果你在某個主題上有更深的實戰經驗，<strong>歡迎在留言區或 GitHub issue 指正</strong>——這也是我把原始稿放在 GitHub 的原因。</p>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日小結">今日小結<a href="#今日小結" class="hash-link" aria-label="今日小結的直接連結" title="今日小結的直接連結" translate="no">​</a></h2>
@@ -134,8 +134,7 @@
 <blockquote>
 <p><strong>標準還沒定下來的時候，做出成果的人就在定義標準。</strong></p>
 </blockquote>
-<p>謝謝  陪我走完這 30 天。五年前我寫《從 AI 落地談 MLOps》時沒想過會有這個續集；五年後如果還有人在問「模型訓練好了，然後呢」，我大概還會再寫一次。</p>
-<p>歡迎在留言區告訴我你的進度，或在 <a href="https://github.com/willismax/mlops-genai-agent-book" target="_blank" rel="noopener noreferrer" class="">GitHub</a> 上提 issue——<strong>這 30 篇的原始稿都在那裡，包括所有圖表的產生程式碼，你可以自己重算一次。</strong></p>
+<p>謝謝陪我走完這 30 天。五年前我寫《從 AI 落地談 MLOps》時沒想過會有這個續集；五年後如果還有人在問「模型訓練好了，然後呢」，我大概還會再寫一次。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="延伸閱讀">延伸閱讀<a href="#延伸閱讀" class="hash-link" aria-label="延伸閱讀的直接連結" title="延伸閱讀的直接連結" translate="no">​</a></h2>
 <ul>
 <li class="">🔗 <a href="https://ithelp.ithome.com.tw/users/20121130/ironman/4015" target="_blank" rel="noopener noreferrer" class="">2021 鐵人賽《從 AI 落地談 MLOps》</a> · <a href="https://github.com/willismax/ML-in-Production-30-days-sharing" target="_blank" rel="noopener noreferrer" class="">GitHub</a>——本系列的前傳</li>
